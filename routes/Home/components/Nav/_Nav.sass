@@ -1,23 +1,62 @@
 .nav__dsk
-    width: 80%
+    width: 100%
+    padding: 0 10%
     height: 100px
-    @include pos(fixed, 10000, 0, 10%, 0, 10%)
+    background-color: rgba(0, 0, 0, .2)
+    backdrop-filter: blur(4px)
+    @include pos(fixed, 10000, 0, 0, 0, 0)
     @include flex(row, center, space-between)
     .nav__title
+        font-size: 2rem
+        @media screen and ( max-width: 1600px )
+            font-size: 1.6rem
+        @media screen and ( max-width: 1200px )
+            font-size: 1.4rem
         line-height: 100%
         color: $color__light
         span
             color: $color__primary
-            height: fit-content
     .nav__list
         width: 26%
+        @media screen and ( max-width: 1600px )
+            width: 36%
+        @media screen and ( max-width: 1200px )
+            width: 32%
         @include flex(row, center, space-between)
         li
             font-size: 1.2rem
+            @media screen and ( max-width: 1600px )
+                font-size: 1rem
+            @media screen and ( max-width: 1200px )
+                font-size: .8rem
             a
                 transition-duration: 300ms
                 &:hover
                     color: $color__primary
     .nav__social
         width: 10%
+        @media screen and ( max-width: 1200px )
+            width: 12%
         @include flex(row, center, space-between)
+
+.nav__mob
+    width: 100%
+    height: 100px
+    @include pos(fixed, 10, 0, 0, unset, unset)
+    .navbar
+        padding: 0 1rem
+        width: 100%
+        height: 100%
+        @include flex(row, center, space-between)
+        .nav__title
+            font-size: 1.4rem
+            span
+                color: $color__primary
+    .nav__drawer
+        width: 100vw
+        height: 100vh
+        background-color: $color__primary
+        @include pos(fixed, 100, 0, 0, 0, 0)
+        @include flex(column, center, space-between)
+        .menu__close
+            @include pos(fixed, 100, 40px, 1rem, unset, unset)

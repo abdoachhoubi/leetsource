@@ -8,7 +8,8 @@ const DesNav = ({ width }) => {
   const [col3, setCol3] = useState("#FFF");
   let size;
 
-  if (width > 900 && width <= 1600) size = 24;
+  if (width > 900 && width <= 1200) size = 20;
+  if (width > 1200 && width <= 1600) size = 24;
   else if (width > 1600) size = 30;
 
   return (
