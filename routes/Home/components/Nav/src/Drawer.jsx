@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Drawer = ({ menu, setMenu }) => {
   const variants = {
     in: { x: 0, opacity: 1 },
-    out: { x: "100vw", opacity: 0 },
+    out: { x: "100%", opacity: 0 },
   };
   return (
     <motion.div
