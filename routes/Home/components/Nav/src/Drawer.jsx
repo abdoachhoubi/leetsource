@@ -19,16 +19,16 @@ const Drawer = ({ menu, setMenu }) => {
         <X size={26} color="rgb(16, 16, 16)" />
       </div>
       <ul className="nav__list">
-        <li className="nav__list__item">
+        <li className="nav__list__item" onClick={() => setMenu("out")}>
           <Link href="/">Home</Link>
         </li>
-        <li className="nav__list__item">
+        <li className="nav__list__item" onClick={() => setMenu("out")}>
           <Link href="/pool">1337 Pool</Link>
         </li>
-        <li className="nav__list__item">
+        <li className="nav__list__item" onClick={() => setMenu("out")}>
           <Link href="/cusus">42 Cursus</Link>
         </li>
-        <li className="nav__list__item">
+        <li className="nav__list__item" onClick={() => setMenu("out")}>
           <Link href="/other">Other</Link>
         </li>
       </ul>
