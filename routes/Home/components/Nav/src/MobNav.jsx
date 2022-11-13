@@ -11,7 +11,7 @@ const MobNav = () => {
           <span>* </span>Leet Source
         </h1>
         <div className="menu__open" onClick={() => setMenu("in")}>
-          <Menu size={20} color="#FFFFFF" />
+          <Menu size={26} color="#FFFFFF" />
         </div>
       </div>
       <Drawer menu={menu} setMenu={setMenu} />

@@ -59,4 +59,18 @@
         @include pos(fixed, 100, 0, 0, 0, 0)
         @include flex(column, center, space-between)
         .menu__close
-            @include pos(fixed, 100, 40px, 1rem, unset, unset)
+            @include pos(absolute, 100, 37px, 1rem, unset, unset)
+        .nav__list
+            @include pos(absolute, 1, 0, 0, 10vh, 0)
+            @include flex(column, center, center)
+            .nav__list__item
+                a
+                    color: $color__dark
+                    text-align: center
+                    font-size: 1.4rem
+                &:not(:last-child)
+                    margin-bottom: 2rem
+        .nav__social
+            width: 40%
+            @include flex(row, center, space-between)
+            @include pos(absolute, 1, unset, unset, 10vh, unset)

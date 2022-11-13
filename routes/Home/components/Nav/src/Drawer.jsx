@@ -16,7 +16,7 @@ const Drawer = ({ menu, setMenu }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div className="menu__close" onClick={() => setMenu("out")}>
-        <X size={20} color="rgb(16, 16, 16)" />
+        <X size={26} color="rgb(16, 16, 16)" />
       </div>
       <ul className="nav__list">
         <li className="nav__list__item">
@@ -38,7 +38,7 @@ const Drawer = ({ menu, setMenu }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <GitHub size={20} color="rgb(16, 16, 16)" />
+          <GitHub size={26} color="rgb(16, 16, 16)" />
         </Link>
         <Link
           href="https://linkedin.com/in/abdoachhoubi"
@@ -47,7 +47,7 @@ const Drawer = ({ menu, setMenu }) => {
           onMouseOver={() => setCol2("#63ff33")}
           onMouseLeave={() => setCol2("rgb(16, 16, 16)")}
         >
-          <Linkedin size={20} color="rgb(16, 16, 16)" />
+          <Linkedin size={26} color="rgb(16, 16, 16)" />
         </Link>
         <Link
           href="http://instagram.com/astroboy.dev"
@@ -56,7 +56,7 @@ const Drawer = ({ menu, setMenu }) => {
           onMouseOver={() => setCol3("#63ff33")}
           onMouseLeave={() => setCol3("rgb(16, 16, 16)")}
         >
-          <Instagram size={20} color="rgb(16, 16, 16)" />
+          <Instagram size={26} color="rgb(16, 16, 16)" />
         </Link>
       </div>
     </motion.div>

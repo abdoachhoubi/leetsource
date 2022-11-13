@@ -442,12 +442,45 @@ ul {
   align-items: center;
 }
 .nav__mob .nav__drawer .menu__close {
-  position: fixed;
-  top: 40px;
+  position: absolute;
+  top: 37px;
   left: unset;
   right: 1rem;
   bottom: unset;
   z-index: 100;
+}
+.nav__mob .nav__drawer .nav__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 10vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav__mob .nav__drawer .nav__list .nav__list__item a {
+  color: rgb(16, 16, 16);
+  text-align: center;
+  font-size: 1.4rem;
+}
+.nav__mob .nav__drawer .nav__list .nav__list__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.nav__mob .nav__drawer .nav__social {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: unset;
+  left: unset;
+  right: unset;
+  bottom: 10vh;
+  z-index: 1;
 }
 
 .home__banner {
