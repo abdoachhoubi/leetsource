@@ -1,0 +1,32 @@
+@import url(https://api.fontshare.com/v2/css?f[]=sora@400,700,200,800,500,300,100,600&display=swap)
+@import ./_Normalize
+@import ./_Var
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+
+body
+    width: 100%
+    scrollbar-width: auto
+    scrollbar-color: $color__primary $color__dark
+    &::-webkit-scrollbar
+        width: 12px
+    &::-webkit-scrollbar-track
+        background: $color__dark
+    &::-webkit-scrollbar-thumb
+        background-color: $color__primary
+
+h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea
+    font-family: "Sora", sans-serif
+    text-decoration: none
+    color: $color__light
+
+ul
+    list-style: none
+
+@import ./pages/_home

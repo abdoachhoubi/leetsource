@@ -1,0 +1,19 @@
+// Color Palette
+$color__primary: rgb(99, 255, 51)
+$color__dark: rgb(16, 16, 16)
+$color__light: rgb(255, 255, 255)
+
+// Mixins    
+@mixin flex($direction, $align, $justify)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
+
+@mixin pos($position, $zi, $top, $right, $bottom, $left)
+    position: $position
+    top: $top
+    left: $left
+    right: $right
+    bottom: $bottom
+    z-index: $zi

@@ -1,0 +1,23 @@
+.nav__dsk
+    width: 80%
+    height: 100px
+    @include pos(fixed, 10000, 0, 10%, 0, 10%)
+    @include flex(row, center, space-between)
+    .nav__title
+        line-height: 100%
+        color: $color__light
+        span
+            color: $color__primary
+            height: fit-content
+    .nav__list
+        width: 26%
+        @include flex(row, center, space-between)
+        li
+            font-size: 1.2rem
+            a
+                transition-duration: 300ms
+                &:hover
+                    color: $color__primary
+    .nav__social
+        width: 10%
+        @include flex(row, center, space-between)
