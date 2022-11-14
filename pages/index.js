@@ -1,9 +1,14 @@
 import React, { createContext, useState, useEffect } from "react";
 import Head from "next/head";
+import { gql } from "@apollo/client";
+import client from "../lib";
 import { Header, Main, Footer } from "../routes/Home/containers";
 
 export var HomeContext = createContext();
-export default function Home() {
+
+export default function Home({ pool }) {
+  const { pools } = pool;
+  const data = [pool];
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
   useEffect(() => {
@@ -12,7 +17,7 @@ export default function Home() {
   }, [size]);
 
   return (
-    <HomeContext.Provider value={{ width: width }}>
+    <HomeContext.Provider value={{ width: width, data: data }}>
       <div className="home__container">
         <Head>
           <title>Leet Source</title>
@@ -28,4 +33,24 @@ export default function Home() {
       </div>
     </HomeContext.Provider>
   );
+}
+
+export async function getStaticProps() {
+  const { data } = await client.query({
+    query: gql`
+      query Pools {
+        pools {
+          id
+          title
+          content
+        }
+      }
+    `,
+  });
+
+  return {
+    props: {
+      pool: data,
+    },
+  };
 }

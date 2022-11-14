@@ -278,6 +278,14 @@ template, [hidden] {
 
 /**
  * * Add the correct display in IE 10. */
+.ais__center {
+  align-self: center;
+}
+
+.mt__6 {
+  margin-top: 6rem !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -311,7 +319,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(99, 255, 51);
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea {
+h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea, quote {
   font-family: "Sora", sans-serif;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -332,6 +340,75 @@ ul {
 .home__header {
   width: 100%;
   height: 100vh;
+}
+
+.home__main {
+  width: 100%;
+  height: 100vh;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.home__main .paths__heading {
+  width: 80%;
+  font-size: 6rem;
+  color: rgb(99, 255, 51);
+  margin-bottom: 1rem;
+}
+.home__main .paths__content {
+  margin-bottom: 10%;
+  font-size: 4rem;
+  width: 80%;
+  font-weight: 300;
+}
+.home__main .home__main__info {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.home__main .info__section {
+  width: 40%;
+}
+.home__main .info__section .info__heading {
+  font-size: 3rem;
+  color: rgb(99, 255, 51);
+  margin-bottom: 1rem;
+}
+.home__main .info__section .info__content {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  line-height: 150%;
+  font-weight: 300;
+}
+.home__main .info__section a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  background-color: rgb(47, 47, 47);
+  border: 1px solid transparent;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.home__main .info__section a:hover {
+  border: 1px solid rgb(99, 255, 51);
+  background-color: transparent;
+}
+.home__main .info__section a * {
+  color: rgb(99, 255, 51);
+}
+.home__main .info__section a span {
+  margin-right: 0.6rem;
 }
 
 .nav__dsk {
@@ -572,7 +649,7 @@ ul {
   font-size: 1.5rem;
   font-weight: 200;
   line-height: 180%;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 @media screen and (max-width: 2400px) {
   .home__banner .banner__content {
@@ -636,12 +713,15 @@ ul {
 .home__banner .banner__cta {
   font-size: 1.4rem;
   font-weight: 300;
-  margin-top: 4rem;
   color: rgb(99, 255, 51);
-  text-decoration: underline;
+  border-radius: 8px;
   line-height: 110%;
-  letter-spacing: 0;
   transition: 300ms ease-in-out;
+  padding: 1rem 2rem;
+  background-color: rgb(47, 47, 47);
+  border: 1px solid transparent;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 @media screen and (max-width: 2200px) {
   .home__banner .banner__cta {
@@ -665,7 +745,8 @@ ul {
   }
 }
 .home__banner .banner__cta:hover {
-  letter-spacing: 0.2rem;
+  border: 1px solid rgb(99, 255, 51);
+  background-color: transparent;
 }
 .home__banner .banner__scroll {
   display: flex;
@@ -732,4 +813,33 @@ ul {
   100% {
     transform: translateY(50px);
   }
+}
+.home__banner__card__container {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+  position: relative;
+  display: block;
+  height: stretch;
+  border: 2px solid rgb(99, 255, 51);
+  border-radius: 8px;
+  background-color: rgb(16, 16, 16);
+}
+.home__banner__card__container .home__banner__card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  cursor: pointer;
+}
+.home__banner__card__container .home__banner__card * {
+  cursor: pointer;
+}
+.home__banner__card__container .home__banner__card .title {
+  margin-bottom: 1rem;
+}
+.home__banner__card__container .home__banner__card .content {
+  line-height: 130%;
+  font-weight: 300;
 }/*# sourceMappingURL=index.css.map */

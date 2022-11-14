@@ -35,7 +35,7 @@
         font-size: 1.5rem
         font-weight: 200
         line-height: 180%
-        margin-bottom: 4rem
+        margin-bottom: 6rem
         @media screen and ( max-width: 2400px )
             font-size: 1.4rem
         @media screen and ( max-width: 2200px )
@@ -66,12 +66,15 @@
     .banner__cta
         font-size: 1.4rem
         font-weight: 300
-        margin-top: 4rem
         color: $color__primary
-        text-decoration: underline
+        border-radius: 8px
         line-height: 110%
-        letter-spacing: 0
         transition: 300ms ease-in-out
+        padding: 1rem 2rem
+        background-color: $color__gray
+        border: 1px solid transparent
+        transition-duration: .3s
+        transition-timing-function: ease-in-out
         @media screen and ( max-width: 2200px )
             font-size: 1.3rem
         @media screen and ( max-width: 1700px )
@@ -82,7 +85,8 @@
             font-size: .8rem
             margin-top: 0
         &:hover
-            letter-spacing: .2rem
+            border: 1px solid $color__primary
+            background-color: transparent
     .banner__scroll
         @include flex(column, center, center)
         @include pos(absolute, 6, unset, 0, 10%, 0)
