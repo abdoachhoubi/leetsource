@@ -12,6 +12,7 @@ const Drawer = ({ menu, setMenu }) => {
     <motion.div
       className="nav__drawer"
       variants={variants}
+      initial={variants.out}
       animate={menu == "in" ? "in" : "out"}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >

@@ -572,6 +572,7 @@ ul {
   font-size: 1.5rem;
   font-weight: 200;
   line-height: 180%;
+  margin-bottom: 4rem;
 }
 @media screen and (max-width: 2400px) {
   .home__banner .banner__content {
@@ -587,6 +588,7 @@ ul {
 @media screen and (max-width: 1700px) {
   .home__banner .banner__content {
     font-size: 1.2rem;
+    margin-bottom: 2rem;
     width: 56%;
   }
 }
@@ -653,7 +655,7 @@ ul {
 }
 @media screen and (max-width: 1300px) {
   .home__banner .banner__cta {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 900px) {
