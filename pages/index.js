@@ -6,9 +6,8 @@ import { Header, Main, Footer } from "../routes/Home/containers";
 
 export var HomeContext = createContext();
 
-export default function Home({ pool }) {
-  const { pools } = pool;
-  const data = [pool];
+export default function Home({ pool, about }) {
+  const data = [pool, about];
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
   useEffect(() => {
@@ -48,9 +47,22 @@ export async function getStaticProps() {
     `,
   });
 
+  const { data: about } = await client.query({
+    query: gql`
+      query Abouts {
+        abouts {
+          id
+          title
+          content
+        }
+      }
+    `,
+  });
+
   return {
     props: {
       pool: data,
+      about: about,
     },
   };
 }

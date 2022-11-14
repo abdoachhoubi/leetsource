@@ -279,11 +279,23 @@ template, [hidden] {
 /**
  * * Add the correct display in IE 10. */
 .ais__center {
-  align-self: center;
+  align-self: center !important;
 }
 
 .mt__6 {
   margin-top: 6rem !important;
+}
+
+.mb__10vh {
+  margin-bottom: 5vh !important;
+}
+
+.start {
+  align-self: flex-start;
+}
+
+.end {
+  align-self: flex-end;
 }
 
 * {
@@ -319,7 +331,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(99, 255, 51);
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea, quote {
+h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea, q {
   font-family: "Sora", sans-serif;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -344,47 +356,47 @@ ul {
 
 .home__main {
   width: 100%;
-  height: 100vh;
   padding: 0 10%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.home__main .paths__heading {
+.home__main .main__heading {
   width: 80%;
   font-size: 6rem;
   color: rgb(99, 255, 51);
   margin-bottom: 1rem;
 }
-.home__main .paths__content {
-  margin-bottom: 10%;
+.home__main .main__content {
+  margin-bottom: 10vh;
   font-size: 4rem;
   width: 80%;
   font-weight: 300;
 }
 .home__main .home__main__info {
+  margin-bottom: 10vh;
   width: 80%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.home__main .info__section {
-  width: 40%;
+.home__main .home__main__info .info__section {
+  width: 50%;
 }
-.home__main .info__section .info__heading {
+.home__main .home__main__info .info__section .info__heading {
   font-size: 3rem;
   color: rgb(99, 255, 51);
   margin-bottom: 1rem;
 }
-.home__main .info__section .info__content {
+.home__main .home__main__info .info__section .info__content {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   line-height: 150%;
   font-weight: 300;
 }
-.home__main .info__section a {
+.home__main .home__main__info .info__section a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -400,15 +412,163 @@ ul {
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
-.home__main .info__section a:hover {
+.home__main .home__main__info .info__section a:hover {
   border: 1px solid rgb(99, 255, 51);
   background-color: transparent;
 }
-.home__main .info__section a * {
+.home__main .home__main__info .info__section a * {
   color: rgb(99, 255, 51);
 }
-.home__main .info__section a span {
+.home__main .home__main__info .info__section a span {
   margin-right: 0.6rem;
+}
+.home__main .main__quote {
+  display: block;
+  background-color: rgb(99, 255, 51);
+  margin-bottom: 10vh;
+  width: 80%;
+  padding: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home__main .main__quote q {
+  text-align: center;
+  color: rgb(16, 16, 16);
+  font-size: 2.5rem;
+  line-height: 150%;
+}
+.home__main .main__quote p {
+  text-align: center;
+  color: rgb(16, 16, 16);
+  font-size: 2.5rem;
+  margin-top: 4rem;
+}
+.home__main .home__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  margin-bottom: 10vh;
+}
+.home__main .home__about .wide {
+  width: 100%;
+}
+.home__main .home__about .main__article {
+  width: 60%;
+}
+.home__main .home__about .main__article:not(:last-child) {
+  margin-bottom: 10vh;
+}
+.home__main .home__about .main__article .article__heading {
+  font-size: 3rem;
+  color: rgb(99, 255, 51);
+  margin-bottom: 2rem;
+}
+.home__main .home__about .main__article .article__content {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  line-height: 160%;
+  font-weight: 300;
+}
+.home__main .home__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  margin-bottom: 10vh;
+}
+.home__main .home__contact .contact__area {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.home__main .home__contact .contact__area .contact__illustration {
+  max-width: 40%;
+}
+.home__main .home__contact .contact__area .contact__form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.home__main .home__contact .contact__area .contact__form input:not(:last-child) {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgb(99, 255, 51);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.home__main .home__contact .contact__area .contact__form input:not(:last-child):focus {
+  outline: none;
+  border: 2px solid rgb(255, 255, 255);
+}
+.home__main .home__contact .contact__area .contact__form textarea {
+  width: 100%;
+  height: 20vh;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid rgb(99, 255, 51);
+  border-radius: 8px;
+  padding: 1rem;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.home__main .home__contact .contact__area .contact__form textarea:focus {
+  outline: none;
+  border: 2px solid rgb(255, 255, 255);
+}
+.home__main .home__contact .contact__area .contact__form .submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 6rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  color: rgb(16, 16, 16);
+  background-color: rgb(99, 255, 51);
+  border: 1px solid transparent;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.home__main .home__contact .contact__area .contact__form .submit:hover {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+}
+
+.home__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 0 10%;
+  background-color: rgb(99, 255, 51);
+}
+.home__footer * {
+  color: rgb(16, 16, 16);
+  font-size: 1.1rem;
+}
+.home__footer .footer__green {
+  text-decoration: underline;
 }
 
 .nav__dsk {

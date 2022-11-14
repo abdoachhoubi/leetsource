@@ -1,47 +1,137 @@
 .home__main
     width: 100%
-    height: 100vh
     padding: 0 10%
     @include flex(column, center, flex-start)
-    .paths__heading
+    .main__heading
         width: 80%
         font-size: 6rem
         color: $color__primary
         margin-bottom: 1rem
-    .paths__content
-        margin-bottom: 10%
+    .main__content
+        margin-bottom: 10vh
         font-size: 4rem
         width: 80%
         font-weight: 300
     .home__main__info
+        margin-bottom: 10vh
         width: 80%
-        @include flex(row, center, space-between)
-    .info__section
-        width: 40%
-        .info__heading
-            font-size: 3rem
-            color: $color__primary
-            margin-bottom: 1rem
-        .info__content
-            font-size: 1.3rem
-            margin-bottom: 1rem
-            line-height: 150%
-            font-weight: 300
-        a
-            @include flex(row, center, space-between)
-            width: fit-content
-            padding: 1rem 2rem
-            border-radius: 8px
-            margin-top: 2rem
-            background-color: $color__gray
-            border: 1px solid transparent
-            transition-duration: .3s
-            transition-timing-function: ease-in-out
-            &:hover
-                border: 1px solid $color__primary
-                background-color: transparent
-            *
+        @include flex(column, center, space-between)
+        .info__section
+            width: 50%
+            .info__heading
+                font-size: 3rem
                 color: $color__primary
-            span
-                margin-right: .6rem
-    
+                margin-bottom: 1rem
+            .info__content
+                font-size: 1.3rem
+                margin-bottom: 1rem
+                line-height: 150%
+                font-weight: 300
+            a
+                @include flex(row, center, space-between)
+                width: fit-content
+                padding: 1rem 2rem
+                border-radius: 8px
+                margin-top: 2rem
+                background-color: $color__gray
+                border: 1px solid transparent
+                transition-duration: .3s
+                transition-timing-function: ease-in-out
+                &:hover
+                    border: 1px solid $color__primary
+                    background-color: transparent
+                *
+                    color: $color__primary
+                span
+                    margin-right: .6rem
+    .main__quote
+        display: block
+        background-color: $color__primary
+        margin-bottom: 10vh
+        width: 80%
+        padding: 4rem
+        border-radius: 1rem
+        @include flex(column, center, center)
+        q
+            text-align: center
+            color: $color__dark
+            font-size: 2.5rem
+            line-height: 150%
+        p
+            text-align: center
+            color: $color__dark
+            font-size: 2.5rem
+            margin-top: 4rem
+    .home__about
+        @include flex(column, flex-start, flex-start)
+        width: 80%
+        margin-bottom: 10vh
+        .wide
+            width: 100%
+        .main__article
+            width: 60%
+            &:not(:last-child)
+                margin-bottom: 10vh
+            .article__heading
+                font-size: 3rem
+                color: $color__primary
+                margin-bottom: 2rem
+            .article__content
+                font-size: 1.3rem
+                margin-bottom: 1rem
+                line-height: 160%
+                font-weight: 300
+    .home__contact
+        @include flex(column, flex-start, flex-start)
+        width: 80%
+        margin-bottom: 10vh
+        .contact__area
+            width: 100%
+            @include flex(row-reverse, center, space-between)
+            .contact__illustration
+                max-width: 40%
+            .contact__form
+                width: 40%
+                @include flex(column, flex-start, center)
+                input:not(:last-child)
+                    width: 100%
+                    background-color: transparent
+                    border: 1px solid $color__primary
+                    border-radius: 8px
+                    padding: 1rem
+                    margin-bottom: 1rem
+                    transition-duration: .3s
+                    transition-timing-function: ease-in-out
+                    &:focus
+                        outline: none
+                        border: 2px solid $color__light
+                textarea
+                    width: 100%
+                    height: 20vh
+                    resize: none
+                    background-color: transparent
+                    border: 1px solid $color__primary
+                    border-radius: 8px
+                    padding: 1rem
+                    transition-duration: .3s
+                    transition-timing-function: ease-in-out
+                    &:focus
+                        outline: none
+                        border: 2px solid $color__light
+                .submit
+                    @include flex(row, center, space-between)
+                    align-self: center
+                    cursor: pointer
+                    width: fit-content
+                    padding: 1rem 6rem
+                    border-radius: 8px
+                    margin-top: 2rem
+                    color: $color__dark
+                    background-color: $color__primary
+                    border: 1px solid transparent
+                    transition-duration: .3s
+                    transition-timing-function: ease-in-out
+                    &:hover
+                        color: $color__light
+                        border: 1px solid $color__light
+                        background-color: transparent
