@@ -5,7 +5,7 @@
     @include flex(column, flex-start, center)
     @media screen and ( max-width: 900px )
         @include flex(column, flex-start, flex-start)
-        padding: calc(10% + 80px) 1rem
+        padding: 80px 1rem
     .banner__title
         font-size: 7rem
         font-weight: 500
@@ -83,7 +83,7 @@
             letter-spacing: .2rem
     .banner__scroll
         @include flex(column, center, center)
-        @include pos(absolute, 20, unset, calc(50% - 30px), 10%, unset)
+        @include pos(absolute, 20, unset, 0, 10%, 0)
         p
             font-size: 1.2rem
             color: $color__primary

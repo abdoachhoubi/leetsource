@@ -517,7 +517,7 @@ ul {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: calc(10% + 80px) 1rem;
+    padding: 80px 1rem;
   }
 }
 .home__banner .banner__title {
@@ -669,8 +669,8 @@ ul {
   align-items: center;
   position: absolute;
   top: unset;
-  left: unset;
-  right: calc(50% - 30px);
+  left: 0;
+  right: 0;
   bottom: 10%;
   z-index: 20;
 }
