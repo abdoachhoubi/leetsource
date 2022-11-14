@@ -421,7 +421,7 @@ ul {
 
 .nav__mob {
   width: 100%;
-  height: 100px;
+  height: 80px;
   position: fixed;
   top: 0;
   left: unset;
@@ -511,26 +511,101 @@ ul {
   justify-content: center;
   align-items: flex-start;
 }
+@media screen and (max-width: 900px) {
+  .home__banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: calc(10% + 80px) 1rem;
+  }
+}
 .home__banner .banner__title {
   font-size: 7rem;
   font-weight: 500;
-  width: 64%;
+  width: 70%;
   padding: 0;
   margin: 0 0 4rem 0;
 }
-.home__banner .banner__title span {
-  color: rgb(99, 255, 51);
+@media screen and (max-width: 2400px) {
+  .home__banner .banner__title {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 2200px) {
+  .home__banner .banner__title {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1700px) {
+  .home__banner .banner__title {
+    font-size: 4rem;
+    margin: 0 0 3rem 0;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .home__banner .banner__title {
+    font-size: 3.4rem;
+    margin: 0 0 2rem 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .home__banner .banner__title {
+    font-size: 2.8rem;
+    margin: 0 0 2rem 0;
+  }
 }
 @media screen and (max-width: 900px) {
   .home__banner .banner__title {
-    font-size: 2rem;
+    font-size: 1.76rem;
+    width: 100%;
   }
+}
+.home__banner .banner__title span {
+  color: rgb(99, 255, 51);
 }
 .home__banner .banner__content {
   width: 36%;
   font-size: 1.5rem;
   font-weight: 200;
   line-height: 180%;
+}
+@media screen and (max-width: 2400px) {
+  .home__banner .banner__content {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 2200px) {
+  .home__banner .banner__content {
+    font-size: 1.3rem;
+    width: 46%;
+  }
+}
+@media screen and (max-width: 1700px) {
+  .home__banner .banner__content {
+    font-size: 1.2rem;
+    width: 56%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .home__banner .banner__content {
+    font-size: 1.1rem;
+    width: 56%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .home__banner .banner__content {
+    font-size: 1rem;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__banner .banner__content {
+    line-height: 160%;
+    font-size: 0.8rem;
+    width: 80%;
+    margin-bottom: 1rem;
+  }
 }
 .home__banner .banner__illustration {
   height: 80%;
@@ -539,7 +614,19 @@ ul {
   left: unset;
   right: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 4;
+}
+@media screen and (max-width: 900px) {
+  .home__banner .banner__illustration {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    left: unset;
+    right: 0;
+    bottom: unset;
+    z-index: 4;
+  }
 }
 .home__banner .banner__cta {
   font-size: 1.4rem;
@@ -550,6 +637,27 @@ ul {
   line-height: 110%;
   letter-spacing: 0;
   transition: 300ms ease-in-out;
+}
+@media screen and (max-width: 2200px) {
+  .home__banner .banner__cta {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 1700px) {
+  .home__banner .banner__cta {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .home__banner .banner__cta {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__banner .banner__cta {
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
 }
 .home__banner .banner__cta:hover {
   letter-spacing: 0.2rem;
@@ -569,6 +677,21 @@ ul {
 .home__banner .banner__scroll p {
   font-size: 1.2rem;
   color: rgb(99, 255, 51);
+}
+@media screen and (max-width: 1700px) {
+  .home__banner .banner__scroll p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .home__banner .banner__scroll p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .home__banner .banner__scroll p {
+    font-size: 1rem;
+  }
 }
 .home__banner .banner__scroll .svg__arrow {
   transform: translateY(50px);

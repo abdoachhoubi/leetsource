@@ -3,24 +3,64 @@
     padding: 100px 10%
     position: relative
     @include flex(column, flex-start, center)
+    @media screen and ( max-width: 900px )
+        @include flex(column, flex-start, flex-start)
+        padding: calc(10% + 80px) 1rem
     .banner__title
         font-size: 7rem
         font-weight: 500
-        width: 64%
+        width: 70%
         padding: 0
         margin: 0 0 4rem 0
+        @media screen and ( max-width: 2400px )
+            font-size: 6rem
+        @media screen and ( max-width: 2200px )
+            font-size: 5rem
+        @media screen and ( max-width: 1700px )
+            font-size: 4rem
+            margin: 0 0 3rem 0
+        @media screen and ( max-width: 1300px )
+            font-size: 3.4rem
+            margin: 0 0 2rem 0
+        @media screen and ( max-width: 1100px )
+            font-size: 2.8rem
+            margin: 0 0 2rem 0
+        @media screen and ( max-width: 900px )
+            font-size: 1.76rem
+            width: 100%
         span
             color: $color__primary
-        @media screen and ( max-width: 900px )
-            font-size: 2rem
     .banner__content
         width: 36%
         font-size: 1.5rem
         font-weight: 200
         line-height: 180%
+        @media screen and ( max-width: 2400px )
+            font-size: 1.4rem
+        @media screen and ( max-width: 2200px )
+            font-size: 1.3rem
+            width: 46%
+        @media screen and ( max-width: 1700px )
+            font-size: 1.2rem
+            width: 56%
+        @media screen and ( max-width: 1300px )
+            font-size: 1.1rem
+            width: 56%
+        @media screen and ( max-width: 1100px )
+            font-size: 1rem
+            width: 60%
+        @media screen and ( max-width: 900px )
+            line-height: 160%
+            font-size: .8rem
+            width: 80%
+            margin-bottom: 1rem
     .banner__illustration
         height: 80%
-        @include pos(absolute, 10, 10%, 0, 0, unset)
+        @include pos(absolute, 4, 10%, 0, 0, unset)
+        @media screen and ( max-width: 900px )
+            height: 50%
+            width: 100%
+            @include pos(absolute, 4, 35%, 0, unset, unset)
     .banner__cta
         font-size: 1.4rem
         font-weight: 300
@@ -30,6 +70,15 @@
         line-height: 110%
         letter-spacing: 0
         transition: 300ms ease-in-out
+        @media screen and ( max-width: 2200px )
+            font-size: 1.3rem
+        @media screen and ( max-width: 1700px )
+            font-size: 1.2rem
+        @media screen and ( max-width: 1300px )
+            font-size: 1.1rem
+        @media screen and ( max-width: 900px )
+            font-size: .8rem
+            margin-top: 0
         &:hover
             letter-spacing: .2rem
     .banner__scroll
@@ -38,6 +87,12 @@
         p
             font-size: 1.2rem
             color: $color__primary
+            @media screen and ( max-width: 1700px )
+                font-size: 1.2rem
+            @media screen and ( max-width: 1300px )
+                font-size: 1.1rem
+            @media screen and ( max-width: 1100px )
+                font-size: 1rem
         .svg__arrow
             transform: translateY(50px)
             animation-name: updown

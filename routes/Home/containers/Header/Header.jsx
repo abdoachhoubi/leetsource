@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="home__header">
       <Nav width={width} />
-      <Banner />
+      <Banner width={width} />
     </header>
   );
 };
