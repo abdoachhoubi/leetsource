@@ -292,6 +292,23 @@ body {
   width: 100%;
   background-color: rgb(16, 16, 16);
   overflow-x: hidden;
+  scrollbar-width: auto;
+  scrollbar-color: rgb(99, 255, 51) rgb(16, 16, 16);
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+@media screen and (max-width: 900) {
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+}
+body::-webkit-scrollbar-track {
+  background: rgb(16, 16, 16);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(99, 255, 51);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea {
@@ -488,13 +505,103 @@ ul {
 .home__banner {
   height: 100%;
   padding: 100px 10%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 .home__banner .banner__title {
-  font-size: 4rem;
-  width: 50%;
+  font-size: 7rem;
+  font-weight: 500;
+  width: 64%;
+  padding: 0;
+  margin: 0 0 4rem 0;
+}
+.home__banner .banner__title span {
+  color: rgb(99, 255, 51);
 }
 @media screen and (max-width: 900px) {
   .home__banner .banner__title {
     font-size: 2rem;
+  }
+}
+.home__banner .banner__content {
+  width: 36%;
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 180%;
+}
+.home__banner .banner__illustration {
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: unset;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.home__banner .banner__cta {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-top: 4rem;
+  color: rgb(99, 255, 51);
+  text-decoration: underline;
+  line-height: 110%;
+  letter-spacing: 0;
+  transition: 300ms ease-in-out;
+}
+.home__banner .banner__cta:hover {
+  letter-spacing: 0.2rem;
+}
+.home__banner .banner__scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: unset;
+  left: unset;
+  right: calc(50% - 30px);
+  bottom: 10%;
+  z-index: 20;
+}
+.home__banner .banner__scroll p {
+  font-size: 1.2rem;
+  color: rgb(99, 255, 51);
+}
+.home__banner .banner__scroll .svg__arrow {
+  transform: translateY(50px);
+  -webkit-animation-name: updown;
+          animation-name: updown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes updown {
+  0% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(50px);
   }
 }/*# sourceMappingURL=index.css.map */

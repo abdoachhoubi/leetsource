@@ -1,8 +1,55 @@
 .home__banner
     height: 100%
     padding: 100px 10%
+    position: relative
+    @include flex(column, flex-start, center)
     .banner__title
-        font-size: 4rem
-        width: 50%
+        font-size: 7rem
+        font-weight: 500
+        width: 64%
+        padding: 0
+        margin: 0 0 4rem 0
+        span
+            color: $color__primary
         @media screen and ( max-width: 900px )
             font-size: 2rem
+    .banner__content
+        width: 36%
+        font-size: 1.5rem
+        font-weight: 200
+        line-height: 180%
+    .banner__illustration
+        height: 80%
+        @include pos(absolute, 10, 10%, 0, 0, unset)
+    .banner__cta
+        font-size: 1.4rem
+        font-weight: 300
+        margin-top: 4rem
+        color: $color__primary
+        text-decoration: underline
+        line-height: 110%
+        letter-spacing: 0
+        transition: 300ms ease-in-out
+        &:hover
+            letter-spacing: .2rem
+    .banner__scroll
+        @include flex(column, center, center)
+        @include pos(absolute, 20, unset, calc(50% - 30px), 10%, unset)
+        p
+            font-size: 1.2rem
+            color: $color__primary
+        .svg__arrow
+            transform: translateY(50px)
+            animation-name: updown
+            animation-duration: 1s
+            animation-timing-function: ease-in-out
+            animation-iteration-count: infinite
+
+@keyframes updown
+    0%
+        transform: translateY(50px)
+    50%
+        transform: translateY(10px)
+    100%
+        transform: translateY(50px)
+        
