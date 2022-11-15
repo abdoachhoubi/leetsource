@@ -291,13 +291,22 @@ template, [hidden] {
 }
 
 .start {
-  align-self: flex-start;
+  align-self: flex-start !important;
 }
 
 .end {
-  align-self: flex-end;
+  align-self: flex-end !important;
 }
 
+.wide {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 1600px) {
+  .in {
+    font-size: 0.6rem;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -362,17 +371,55 @@ ul {
   justify-content: flex-start;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  .home__main {
+    padding: 0 1rem;
+  }
+}
 .home__main .main__heading {
   width: 80%;
   font-size: 6rem;
   color: rgb(99, 255, 51);
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 2200px) {
+  .home__main .main__heading {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .home__main .main__heading {
+    font-size: 4rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__main .main__heading {
+    font-size: 2.4rem;
+  }
+}
 .home__main .main__content {
   margin-bottom: 10vh;
   font-size: 4rem;
   width: 80%;
   font-weight: 300;
+}
+@media screen and (max-width: 2200px) {
+  .home__main .main__content {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .home__main .main__content {
+    font-size: 2rem;
+    width: 100%;
+    align-self: flex-start;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__main .main__content {
+    font-size: 1rem;
+  }
 }
 .home__main .home__main__info {
   margin-bottom: 10vh;
@@ -382,19 +429,50 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 1600px) {
+  .home__main .home__main__info {
+    width: 100%;
+  }
+}
 .home__main .home__main__info .info__section {
   width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .home__main .home__main__info .info__section {
+    width: 100%;
+    margin-bottom: 10vh !important;
+  }
 }
 .home__main .home__main__info .info__section .info__heading {
   font-size: 3rem;
   color: rgb(99, 255, 51);
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 1600px) {
+  .home__main .home__main__info .info__section .info__heading {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__main .home__main__info .info__section .info__heading {
+    font-size: 1.6rem;
+  }
+}
 .home__main .home__main__info .info__section .info__content {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   line-height: 150%;
   font-weight: 300;
+}
+@media screen and (max-width: 1600px) {
+  .home__main .home__main__info .info__section .info__content {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__main .home__main__info .info__section .info__content {
+    font-size: 0.9rem;
+  }
 }
 .home__main .home__main__info .info__section a {
   display: flex;
@@ -434,17 +512,83 @@ ul {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1600px) {
+  .home__main .main__quote {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__main .main__quote {
+    padding: 1rem;
+    border-radius: 0.6rem;
+  }
+}
 .home__main .main__quote q {
   text-align: center;
   color: rgb(16, 16, 16);
   font-size: 2.5rem;
   line-height: 150%;
 }
+@media screen and (max-width: 2200px) {
+  .home__main .main__quote q {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 2000px) {
+  .home__main .main__quote q {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .home__main .main__quote q {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .home__main .main__quote q {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .home__main .main__quote q {
+    font-size: 1.1rem;
+  }
+}
 .home__main .main__quote p {
   text-align: center;
   color: rgb(16, 16, 16);
   font-size: 2.5rem;
   margin-top: 4rem;
+}
+@media screen and (max-width: 2200px) {
+  .home__main .main__quote p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 2000px) {
+  .home__main .main__quote p {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .home__main .main__quote p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .home__main .main__quote p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .home__main .main__quote p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__main .main__quote p {
+    margin-top: 2rem;
+  }
 }
 .home__main .home__about {
   display: flex;
@@ -454,8 +598,10 @@ ul {
   width: 80%;
   margin-bottom: 10vh;
 }
-.home__main .home__about .wide {
-  width: 100%;
+@media screen and (max-width: 1600px) {
+  .home__main .home__about {
+    width: 100%;
+  }
 }
 .home__main .home__about .main__article {
   width: 60%;
@@ -463,16 +609,31 @@ ul {
 .home__main .home__about .main__article:not(:last-child) {
   margin-bottom: 10vh;
 }
+@media screen and (max-width: 900px) {
+  .home__main .home__about .main__article {
+    width: 100%;
+  }
+}
 .home__main .home__about .main__article .article__heading {
   font-size: 3rem;
   color: rgb(99, 255, 51);
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 1600px) {
+  .home__main .home__about .main__article .article__heading {
+    font-size: 2.4rem;
+  }
 }
 .home__main .home__about .main__article .article__content {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   line-height: 160%;
   font-weight: 300;
+}
+@media screen and (max-width: 1600px) {
+  .home__main .home__about .main__article .article__content {
+    font-size: 1rem;
+  }
 }
 .home__main .home__contact {
   display: flex;
@@ -482,6 +643,11 @@ ul {
   width: 80%;
   margin-bottom: 10vh;
 }
+@media screen and (max-width: 1600px) {
+  .home__main .home__contact {
+    width: 100%;
+  }
+}
 .home__main .home__contact .contact__area {
   width: 100%;
   display: flex;
@@ -489,8 +655,21 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  .home__main .home__contact .contact__area {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .home__main .home__contact .contact__area .contact__illustration {
   max-width: 40%;
+}
+@media screen and (max-width: 900px) {
+  .home__main .home__contact .contact__area .contact__illustration {
+    max-width: 100%;
+  }
 }
 .home__main .home__contact .contact__area .contact__form {
   width: 40%;
@@ -498,6 +677,11 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media screen and (max-width: 900px) {
+  .home__main .home__contact .contact__area .contact__form {
+    width: 100%;
+  }
 }
 .home__main .home__contact .contact__area .contact__form input:not(:last-child) {
   width: 100%;
@@ -563,9 +747,33 @@ ul {
   padding: 0 10%;
   background-color: rgb(99, 255, 51);
 }
+@media screen and (max-width: 1200px) {
+  .home__footer {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+}
 .home__footer * {
   color: rgb(16, 16, 16);
   font-size: 1.1rem;
+}
+@media screen and (max-width: 1600px) {
+  .home__footer * {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__footer * {
+    font-size: 0.6rem;
+  }
 }
 .home__footer .footer__green {
   text-decoration: underline;
@@ -583,11 +791,16 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10000;
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  .nav__dsk {
+    height: 80px;
+  }
 }
 .nav__dsk .nav__title {
   font-size: 2rem;
@@ -702,7 +915,7 @@ ul {
 }
 .nav__mob .nav__drawer .menu__close {
   position: absolute;
-  top: 37px;
+  top: 27px;
   left: unset;
   right: 1rem;
   bottom: unset;
@@ -744,7 +957,7 @@ ul {
 
 .home__banner {
   height: 100%;
-  padding: 100px 10%;
+  padding: 100px 10% 0 10%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -757,7 +970,7 @@ ul {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 80px 1rem;
+    padding: 80px 1rem 0 1rem;
   }
 }
 .home__banner .banner__title {
@@ -792,12 +1005,12 @@ ul {
 @media screen and (max-width: 1100px) {
   .home__banner .banner__title {
     font-size: 2.8rem;
-    margin: 0 0 2rem 0;
   }
 }
 @media screen and (max-width: 900px) {
   .home__banner .banner__title {
     font-size: 1.76rem;
+    margin: 0 0 1rem 0;
     width: 100%;
   }
 }
@@ -860,18 +1073,21 @@ ul {
 }
 @media screen and (max-width: 900px) {
   .home__banner .banner__illustration {
-    height: 50%;
-    width: 100%;
+    height: 40%;
+    width: 60%;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: unset;
-    right: 0;
+    right: 20%;
     bottom: unset;
-    z-index: 4;
+    z-index: 0;
   }
 }
 .home__banner .banner__cta {
-  font-size: 1.4rem;
+  display: block;
+  font-size: 1.2rem;
   font-weight: 300;
   color: rgb(99, 255, 51);
   border-radius: 8px;
@@ -885,23 +1101,24 @@ ul {
 }
 @media screen and (max-width: 2200px) {
   .home__banner .banner__cta {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 1700px) {
   .home__banner .banner__cta {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 1300px) {
   .home__banner .banner__cta {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 900px) {
   .home__banner .banner__cta {
     font-size: 0.8rem;
     margin-top: 0;
+    z-index: 1;
   }
 }
 .home__banner .banner__cta:hover {
@@ -973,33 +1190,4 @@ ul {
   100% {
     transform: translateY(50px);
   }
-}
-.home__banner__card__container {
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: stretch;
-  position: relative;
-  display: block;
-  height: stretch;
-  border: 2px solid rgb(99, 255, 51);
-  border-radius: 8px;
-  background-color: rgb(16, 16, 16);
-}
-.home__banner__card__container .home__banner__card {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
-  cursor: pointer;
-}
-.home__banner__card__container .home__banner__card * {
-  cursor: pointer;
-}
-.home__banner__card__container .home__banner__card .title {
-  margin-bottom: 1rem;
-}
-.home__banner__card__container .home__banner__card .content {
-  line-height: 130%;
-  font-weight: 300;
 }/*# sourceMappingURL=index.css.map */

@@ -79,18 +79,25 @@ const Main = () => {
           <form
             action="mailto:leetsource@gmail.com"
             method="POST"
-            enctype="text/plain"
+            encType="text/plain"
             name="contact__form"
             className="contact__form"
           >
             <input
+              className="in"
               type="email"
               name="email"
               id="form__mail"
               placeholder="Email"
             />
-            <input name="subject" id="form__subject" placeholder="Subject" />
+            <input
+              className="in"
+              name="subject"
+              id="form__subject"
+              placeholder="Subject"
+            />
             <textarea
+              className="in"
               type="text"
               name="subject"
               id="form__content"

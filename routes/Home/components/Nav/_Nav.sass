@@ -4,8 +4,10 @@
     height: 100px
     background-color: rgba(0, 0, 0, .2)
     backdrop-filter: blur(4px)
-    @include pos(fixed, 10000, 0, 0, 0, 0)
+    @include pos(fixed, 1000, 0, 0, 0, 0)
     @include flex(row, center, space-between)
+    @media screen and ( max-width: 1200px )
+        height: 80px
     .nav__title
         font-size: 2rem
         @media screen and ( max-width: 1600px )
@@ -62,7 +64,7 @@
         @include pos(fixed, 100, 0, 0, 0, 0)
         @include flex(column, center, space-between)
         .menu__close
-            @include pos(absolute, 100, 37px, 1rem, unset, unset)
+            @include pos(absolute, 100, 27px, 1rem, unset, unset)
         .nav__list
             @include pos(absolute, 1, 0, 0, 10vh, 0)
             @include flex(column, center, center)

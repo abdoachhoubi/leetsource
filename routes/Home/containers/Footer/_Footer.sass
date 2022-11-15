@@ -4,8 +4,17 @@
     height: 100px
     padding: 0 10%
     background-color: $color__primary
+    @media screen and ( max-width: 1200px )
+        height: 80px
+    @media screen and ( max-width: 900px )
+        @include flex(column, center, space-between)
+        padding: 1rem
     *
         color: $color__dark
         font-size: 1.1rem
+        @media screen and ( max-width: 1600px )
+            font-size: .7rem
+        @media screen and ( max-width: 900px )
+            font-size: .6rem
     .footer__green
         text-decoration: underline
