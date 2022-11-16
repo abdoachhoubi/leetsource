@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
-import { Header } from "../routes/Pool/containers";
+import { Header, Main } from "../routes/Pool/containers";
 
 export var PoolContext = createContext();
 
@@ -30,6 +30,7 @@ const Pool = ({ pool }) => {
         </Head>
         <Header source={source} />
       </div>
+      <Main benifits={benifits} link={links} skills={skills} tips={tips} />
     </PoolContext.Provider>
   );
 };
