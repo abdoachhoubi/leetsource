@@ -1213,6 +1213,11 @@ ul {
   height: 100vh;
   padding: 100px 10%;
 }
+@media screen and (max-width: 900px) {
+  .pool__header {
+    padding: 100px 1rem;
+  }
+}
 .pool__header .banner {
   width: 100%;
   height: 100%;
