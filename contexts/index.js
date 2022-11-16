@@ -1,1 +1,2 @@
-export { HomeContext } from "../pages";
+export { HomeContext } from "../pages/index";
+export { PoolContext } from "../pages/pool";

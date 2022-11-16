@@ -22,7 +22,7 @@ export default function Home({ pool, about }) {
           <title>Leet Source</title>
           <meta
             name="description"
-            content="A list of resources that every 1337FIL Student need in order to get better in programming"
+            content="A list of resources that every programmer need in order to get better in programming"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
