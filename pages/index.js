@@ -6,7 +6,8 @@ import { Header, Main, Footer } from "../routes/Home/containers";
 
 export var HomeContext = createContext();
 
-export default function Home({ pool, about }) {
+export default function Home({ res }) {
+  const { pool, about } = res;
   const data = [pool, about];
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
@@ -34,7 +35,7 @@ export default function Home({ pool, about }) {
   );
 }
 
-export async function getStaticProps() {
+Home.getInitialProps = async (ctx) => {
   const { data } = await client.query({
     query: gql`
       query Pools {
@@ -59,10 +60,5 @@ export async function getStaticProps() {
     `,
   });
 
-  return {
-    props: {
-      pool: data,
-      about: about,
-    },
-  };
-}
+  return { res: { pool: data, about: about } };
+};

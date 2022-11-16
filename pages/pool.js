@@ -35,7 +35,7 @@ const Pool = ({ pool }) => {
   );
 };
 
-export async function getStaticProps() {
+Pool.getInitialProps = async (ctx) => {
   const { data } = await client.query({
     query: gql`
       query Pool {
@@ -86,10 +86,8 @@ export async function getStaticProps() {
   });
 
   return {
-    props: {
-      pool: data,
-    },
+    pool: data,
   };
-}
+};
 
 export default Pool;
