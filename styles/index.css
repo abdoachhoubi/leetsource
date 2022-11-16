@@ -1292,6 +1292,12 @@ ul {
     line-height: 160%;
   }
 }
+.pool__header .banner .banner__content span {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
 .pool__header .banner .banner__scroll {
   margin-top: 10vh;
   display: flex;
@@ -1340,7 +1346,7 @@ ul {
   0% {
     transform: translateY(50px);
   }
-  50% {
+  80% {
     transform: translateY(10px);
   }
   100% {

@@ -40,6 +40,11 @@
                 text-align: start
                 font-size: 1.1rem
                 line-height: 160%
+            span
+                cursor: pointer
+                color: $color__light
+                transition-duration: .3s
+                transition-timing-function: ease-in-out
         .banner__scroll
             margin-top: 10vh
             @include flex(column, center, center)
@@ -65,7 +70,7 @@
 @keyframes updown
     0%
         transform: translateY(50px)
-    50%
+    80%
         transform: translateY(10px)
     100%
         transform: translateY(50px)
