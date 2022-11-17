@@ -311,6 +311,10 @@ template, [hidden] {
   flex-direction: row-reverse !important;
 }
 
+.column {
+  flex-direction: column-reverse !important;
+}
+
 @media screen and (max-width: 1600px) {
   .in {
     font-size: 0.6rem;
@@ -1383,17 +1387,36 @@ ul {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  .pool__main {
+    padding: 5vh 1rem;
+  }
+}
 
 .pool__tip {
   width: 100%;
   margin-bottom: 10vh;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  .pool__tip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .pool__tip .tip__meta {
   width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .pool__tip .tip__meta {
+    width: 100%;
+  }
 }
 .pool__tip .tip__meta .tip__title {
   color: rgb(122, 255, 51);
@@ -1402,9 +1425,21 @@ ul {
   font-size: 6rem;
   font-weight: 600;
 }
+@media screen and (max-width: 900px) {
+  .pool__tip .tip__meta .tip__title {
+    font-size: 2.6rem;
+  }
+}
 .pool__tip .tip__meta .tip__description {
   font-size: 2rem;
   margin-bottom: 4rem;
+}
+@media screen and (max-width: 900px) {
+  .pool__tip .tip__meta .tip__description {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    line-height: 140%;
+  }
 }
 .pool__tip .tip__meta .tip__list {
   margin-left: 1rem;
@@ -1416,8 +1451,18 @@ ul {
 .pool__tip .tip__meta .tip__list .tip__list__item:not(:last-child) {
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 900px) {
+  .pool__tip .tip__meta .tip__list .tip__list__item {
+    font-size: 1rem;
+  }
+}
 .pool__tip .tip__illustration {
   width: 40%;
+}
+@media screen and (max-width: 900px) {
+  .pool__tip .tip__illustration {
+    width: 100%;
+  }
 }
 .pool__tip .tip__illustration .illustration {
   width: 100%;

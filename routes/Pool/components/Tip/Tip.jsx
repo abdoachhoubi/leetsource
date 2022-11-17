@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import img from "../../../../public/team.svg";
+import { PoolContext } from "../../../../contexts";
 
 const Tip = ({ data, i }) => {
+  // Setting flex direction utility class for each size and case
+  const { width } = useContext(PoolContext);
+  let cname = "rowrev";
+  if (width > 900) {
+    if (i % 2) cname = "row";
+  } else {
+    cname = "column";
+  }
+
+  // Getting illustration url
   let { src } = img;
   if (data?.illustration) src = data.illustration.url;
-  console.log(i);
-  let cname = "rowrev";
-  if (i % 2) cname = "row";
   return (
     <section className={`pool__tip ${cname}`}>
       <article className="tip__meta">

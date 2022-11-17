@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { PoolContext } from "../../../../contexts";
 import { Nav } from "../../../Home/components";
-import { motion } from "framer-motion";
 import { ArrowDown } from "react-feather";
 
 const Header = ({ source }) => {
@@ -17,40 +16,25 @@ const Header = ({ source }) => {
     <header className="pool__header">
       <Nav width={width} />
       <section className="banner">
-        <motion.h1
-          className="banner__heading"
-          initial={{ scale: 0.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        >
+        <h1 className="banner__heading">
           {source.category.split(" ").map((e, i) => (
             <span className={e} key={i}>
               {e}
               <> </>
             </span>
           ))}
-        </motion.h1>
-        <motion.p
-          className="banner__content"
-          initial={{ scale: 0.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        >
+        </h1>
+        <p className="banner__content">
           {source.introduction.split("").map((e, i) => (
             <span key={i}>{e}</span>
           ))}
-        </motion.p>
-        <motion.div
-          className="banner__scroll"
-          initial={{ scale: 0.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        >
+        </p>
+        <div className="banner__scroll">
           <p>Scoll Down</p>
           <div className="svg__arrow">
             <ArrowDown size={size} color="rgb(99, 255, 51)" />
           </div>
-        </motion.div>
+        </div>
       </section>
     </header>
   );

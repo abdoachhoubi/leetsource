@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { GitHub, Linkedin, Instagram } from "react-feather";
-import { motion } from "framer-motion";
 
 const DesNav = ({ width }) => {
   const [col1, setCol1] = useState("#FFF");
@@ -16,55 +15,25 @@ const DesNav = ({ width }) => {
   return (
     <nav className="nav__dsk">
       <Link href="/">
-        <motion.h1
-          initial={{ scale: 0.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="nav__title"
-        >
+        <h1 className="nav__title">
           <span>* </span>Leet Source
-        </motion.h1>
+        </h1>
       </Link>
       <ul className="nav__list">
-        <motion.li
-          initial={{ scale: 0.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="nav__list__item"
-        >
+        <li className="nav__list__item">
           <Link href="/">Home</Link>
-        </motion.li>
-        <motion.li
-          initial={{ scale: 0.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="nav__list__item"
-        >
+        </li>
+        <li className="nav__list__item">
           <Link href="/pool">1337 Pool</Link>
-        </motion.li>
-        <motion.li
-          initial={{ scale: 0.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="nav__list__item"
-        >
+        </li>
+        <li className="nav__list__item">
           <Link href="/cusus">42 Cursus</Link>
-        </motion.li>
-        <motion.li
-          initial={{ scale: 0.2, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="nav__list__item"
-        >
+        </li>
+        <li className="nav__list__item">
           <Link href="/other">Other</Link>
-        </motion.li>
+        </li>
       </ul>
-      <motion.div
-        className="nav__social"
-        initial={{ scale: 0.2, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-      >
+      <div className="nav__social">
         <Link
           href="https://github.com/abdoachhoubi"
           target="_blank"
@@ -92,7 +61,7 @@ const DesNav = ({ width }) => {
         >
           <Instagram size={size} color={col3} />
         </Link>
-      </motion.div>
+      </div>
     </nav>
   );
 };
