@@ -13,13 +13,6 @@ const Header = ({ source }) => {
   else if (width > 1200 && width <= 1600) size = 26;
   else size = 30;
 
-  const switchColor = (target) => {
-    console.log(target.color);
-    if (target.color == "rgb(122, 255, 51)")
-      target.color = "rgb(255, 255, 255)";
-    else target.color = "rgb(122, 255, 51)";
-  };
-
   return (
     <header className="pool__header">
       <Nav width={width} />
@@ -44,9 +37,7 @@ const Header = ({ source }) => {
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           {source.introduction.split("").map((e, i) => (
-            <span key={i} onMouseEnter={(e) => switchColor(e.target.style)}>
-              {e}
-            </span>
+            <span key={i}>{e}</span>
           ))}
         </motion.p>
         <motion.div

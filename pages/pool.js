@@ -48,6 +48,11 @@ Pool.getInitialProps = async (ctx) => {
           id
           title
           list
+          description
+          illustration {
+            id
+            url
+          }
           source {
             id
             category

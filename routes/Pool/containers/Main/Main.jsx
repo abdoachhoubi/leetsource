@@ -1,10 +1,15 @@
 import React from "react";
+import Tip from "../../components/Tip/Tip";
 
-const Main = () => {
+const Main = ({ benifits, links, skills, tips }) => {
+  const [benifits__data] = benifits;
+  const [tips__data] = tips;
   return (
-    <div>
-      <h1>main</h1>
-    </div>
+    <main className="pool__main">
+      {tips.map((e, i) => (
+        <Tip key={e.id} data={e} i={i} />
+      ))}
+    </main>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowDown } from "react-feather";
-import { motion } from "framer-motion";
 import pic from "../../../../public/banner__illustration.svg";
 
 const { src: img } = pic;
@@ -15,15 +14,15 @@ const Banner = ({ width }) => {
   return (
     <section className="home__banner">
       <article className="banner__hero">
-        <motion.h1
+        <h1
           className="banner__title"
           initial={{ scale: 0.2, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           Your guide to become a <span>successful</span> developer
-        </motion.h1>
-        <motion.p
+        </h1>
+        <p
           className="banner__content"
           initial={{ scale: 0.2, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -31,8 +30,8 @@ const Banner = ({ width }) => {
         >
           Leetsource is where 1337 students can find any resource related to
           1337 pool, 42 cursus, and programming generally
-        </motion.p>
-        <motion.div
+        </p>
+        <div
           initial={{ scale: 0.2, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -45,9 +44,9 @@ const Banner = ({ width }) => {
           >
             About 1337 School
           </Link>
-        </motion.div>
+        </div>
       </article>
-      <motion.img
+      <img
         initial={{ scale: 0.2, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -55,7 +54,7 @@ const Banner = ({ width }) => {
         src={img}
         alt="illustration"
       />
-      <motion.div
+      <div
         className="banner__scroll"
         initial={{ scale: 0.2, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -65,7 +64,7 @@ const Banner = ({ width }) => {
         <div className="svg__arrow">
           <ArrowDown size={size} color="rgb(99, 255, 51)" />
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

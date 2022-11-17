@@ -1,8 +1,10 @@
 // Color Palette
 $color__primary: rgb(122, 255, 51)
+$color__secondary: rgb(0,159,107)
 $color__dark: rgb(16, 16, 16)
 $color__gray: rgb(47, 47, 47)
 $color__light: rgb(255, 255, 255)
+$color__gradient: linear-gradient(20deg, $color__secondary 0%, $color__primary 100%)
 
 // Mixins    
 @mixin flex($direction, $align, $justify)
@@ -23,16 +25,28 @@ $color__light: rgb(255, 255, 255)
 
 .ais__center
     align-self: center !important
+
 .mt__6
     margin-top: 6rem !important
+
 .mb__10vh
     margin-bottom: 5vh !important
+
 .start
     align-self: flex-start !important
+
 .end
     align-self: flex-end !important
+
 .wide
     width: 100% !important
+
+.row
+    flex-direction: row !important
+
+.rowrev
+    flex-direction: row-reverse !important
+
 @media screen and ( max-width: 1600px )
     .in
         font-size: .6rem
