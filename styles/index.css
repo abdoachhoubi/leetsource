@@ -311,7 +311,7 @@ template, [hidden] {
   flex-direction: row-reverse !important;
 }
 
-.column {
+.column__rev {
   flex-direction: column-reverse !important;
 }
 
@@ -1442,6 +1442,29 @@ ul {
     width: 100%;
   }
 }
+.pool__tip .tip__meta .tip__heading {
+  color: rgb(122, 255, 51);
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 1600px) {
+  .pool__tip .tip__meta .tip__heading {
+    font-size: 4rem;
+    margin-bottom: 1.4rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__tip .tip__meta .tip__heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pool__tip .tip__meta .tip__heading {
+    font-size: 2.4rem;
+  }
+}
 .pool__tip .tip__meta .tip__description {
   font-size: 2rem;
   margin-bottom: 4rem;
@@ -1465,11 +1488,11 @@ ul {
   }
 }
 .pool__tip .tip__meta .tip__list {
-  margin-left: 1rem;
   list-style: circle;
 }
 .pool__tip .tip__meta .tip__list .tip__list__item {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  margin-left: 1.4rem;
 }
 .pool__tip .tip__meta .tip__list .tip__list__item:not(:last-child) {
   margin-bottom: 1rem;
