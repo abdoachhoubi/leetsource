@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PoolContext } from "../../../../contexts";
 import { Tip, Skill } from "../../components";
 
 const Main = ({ benifits, links, skills, tips }) => {
+  const { width } = useContext(PoolContext);
   return (
     <main className="pool__main">
       <section className="pool__main__skills">
@@ -15,7 +17,7 @@ const Main = ({ benifits, links, skills, tips }) => {
         </div>
       </section>
       {tips.map((e, i) => (
-        <Tip key={e.id} data={e} i={i} />
+        <Tip key={e.id} data={e} i={i} width={width} />
       ))}
     </main>
   );
