@@ -798,8 +798,9 @@ ul {
   padding: 0 10%;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  box-shadow: 2px 18px 99px -41px rgba(0, 0, 0, 0.68);
   position: fixed;
   top: 0;
   left: 0;
