@@ -31,6 +31,10 @@ export default function Home({ res }) {
         <Head>
           <title>Leet Source</title>
           <meta
+            name="google-site-verification"
+            content="ovvmP3s_dWVp7bb05Bb8nGIrneErM1TaR8UDf2Yu32c"
+          />
+          <meta
             name="description"
             content="A list of resources that every programmer need in order to get better in programming"
           />

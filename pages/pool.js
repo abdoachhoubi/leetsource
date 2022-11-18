@@ -25,6 +25,10 @@ const Pool = ({ pool }) => {
       <div className="home__container">
         <Head>
           <title>Leet Source - 1337 Pool</title>
+          <meta
+            name="google-site-verification"
+            content="ovvmP3s_dWVp7bb05Bb8nGIrneErM1TaR8UDf2Yu32c"
+          />
           <meta name="description" content={source.introduction} />
           <link rel="icon" href="/favicon.ico" />
         </Head>
