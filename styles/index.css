@@ -1392,6 +1392,29 @@ ul {
     padding: 5vh 1rem;
   }
 }
+.pool__main .pool__main__heading {
+  color: rgb(122, 255, 51);
+  padding: 0;
+  margin: 0 0 2rem 0;
+  font-size: 6rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 1600px) {
+  .pool__main .pool__main__heading {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__main .pool__main__heading {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pool__main .pool__main__heading {
+    font-size: 2.6rem;
+  }
+}
 
 .pool__tip {
   width: 100%;
@@ -1418,27 +1441,26 @@ ul {
     width: 100%;
   }
 }
-.pool__tip .tip__meta .tip__title {
-  color: rgb(122, 255, 51);
-  padding: 0;
-  margin: 0 0 2rem 0;
-  font-size: 6rem;
-  font-weight: 600;
-}
-@media screen and (max-width: 900px) {
-  .pool__tip .tip__meta .tip__title {
-    font-size: 2.6rem;
-  }
-}
 .pool__tip .tip__meta .tip__description {
   font-size: 2rem;
   margin-bottom: 4rem;
 }
+@media screen and (max-width: 1600px) {
+  .pool__tip .tip__meta .tip__description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 140%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__tip .tip__meta .tip__description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (max-width: 900px) {
   .pool__tip .tip__meta .tip__description {
     font-size: 1.4rem;
-    margin-bottom: 2rem;
-    line-height: 140%;
   }
 }
 .pool__tip .tip__meta .tip__list {
@@ -1450,6 +1472,26 @@ ul {
 }
 .pool__tip .tip__meta .tip__list .tip__list__item:not(:last-child) {
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 1600px) {
+  .pool__tip .tip__meta .tip__list .tip__list__item:not(:last-child) {
+    margin-bottom: 0.6rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__tip .tip__meta .tip__list .tip__list__item:not(:last-child) {
+    margin-bottom: 0.4rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .pool__tip .tip__meta .tip__list .tip__list__item {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__tip .tip__meta .tip__list .tip__list__item {
+    font-size: 0.7rem;
+  }
 }
 @media screen and (max-width: 900px) {
   .pool__tip .tip__meta .tip__list .tip__list__item {
@@ -1470,4 +1512,51 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.pool__main__skills {
+  margin-bottom: 10vh;
+  padding: 4rem;
+  background: linear-gradient(20deg, rgb(0, 159, 107) 0%, rgb(122, 255, 51) 100%);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pool__main__skills .card__heading {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 4rem;
+}
+.pool__main__skills .skill__cards {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.pool__main__skills .skill__cards .skill__card {
+  margin: 3rem 0;
+  width: 45%;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+}
+.pool__main__skills .skill__cards .skill__card .skill__heading {
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+}
+.pool__main__skills .skill__cards .skill__card .skill__list {
+  margin-top: 2rem;
+}
+.pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
+  width: 90%;
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  list-style: circle;
+  margin: 1rem 0 1rem 1.4rem;
 }/*# sourceMappingURL=index.css.map */

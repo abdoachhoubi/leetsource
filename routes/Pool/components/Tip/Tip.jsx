@@ -7,7 +7,7 @@ const Tip = ({ data, i }) => {
   const { width } = useContext(PoolContext);
   let cname = "rowrev";
   if (width > 900) {
-    if (i % 2) cname = "row";
+    if (i % 2 == 1) cname = "row";
   } else {
     cname = "column";
   }
@@ -18,7 +18,7 @@ const Tip = ({ data, i }) => {
   return (
     <section className={`pool__tip ${cname}`}>
       <article className="tip__meta">
-        <h1 className="tip__title">{data.title}</h1>
+        <h1 className="pool__main__heading">{data.title}</h1>
         <h3 className="tip__description">{data.description}</h3>
         <ul className="tip__list">
           {data.list.split("$").map((e, i) => (

@@ -1,0 +1,29 @@
+.pool__main__skills
+    margin-bottom: 10vh
+    padding: 4rem
+    background: $color__gradient
+    border-radius: 2rem
+    @include flex(column, center, center)
+    .card__heading
+        color: $color__light
+        font-weight: 700
+        width: fit-content
+        margin-bottom: 4rem
+    .skill__cards
+        @include flex(row-reverse, flex-start, space-between)
+        .skill__card
+            margin: 3rem 0
+            width: 45%
+            height: stretch
+            .skill__heading
+                letter-spacing: 2px
+                color: $color__light
+                font-size: 4rem
+            .skill__list
+                margin-top: 2rem
+                .skill__list__item
+                    width: 90%
+                    color: $color__light
+                    font-size: 1.4rem
+                    list-style: circle
+                    margin: 1rem 0 1rem 1.4rem
