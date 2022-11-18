@@ -1,7 +1,6 @@
 import React from "react";
 
 const Skill = ({ data }) => {
-  console.log(data);
   return (
     <article className="skill__card">
       <h3 className="skill__heading">{data.title}</h3>

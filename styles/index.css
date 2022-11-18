@@ -1517,13 +1517,31 @@ ul {
 
 .pool__main__skills {
   margin-bottom: 10vh;
-  padding: 4rem;
   background: linear-gradient(20deg, rgb(0, 159, 107) 0%, rgb(122, 255, 51) 100%);
+  padding: 4rem;
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1600px) {
+  .pool__main__skills {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__main__skills {
+    margin-bottom: 20vh;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pool__main__skills {
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-bottom: 6vh;
+  }
 }
 .pool__main__skills .card__heading {
   color: rgb(255, 255, 255);
@@ -1532,12 +1550,37 @@ ul {
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 4rem;
+  text-align: center;
+}
+@media screen and (max-width: 1600px) {
+  .pool__main__skills .card__heading {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__main__skills .card__heading {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .pool__main__skills .card__heading {
+    font-size: 2rem;
+  }
 }
 .pool__main__skills .skill__cards {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-start;
+}
+@media screen and (max-width: 900px) {
+  .pool__main__skills .skill__cards {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 .pool__main__skills .skill__cards .skill__card {
   margin: 3rem 0;
@@ -1546,13 +1589,34 @@ ul {
   height: -moz-available;
   height: stretch;
 }
+@media screen and (max-width: 900px) {
+  .pool__main__skills .skill__cards .skill__card {
+    width: 100%;
+    margin: 4rem 0 0 0;
+  }
+}
 .pool__main__skills .skill__cards .skill__card .skill__heading {
   letter-spacing: 2px;
   color: rgb(255, 255, 255);
   font-size: 4rem;
 }
+@media screen and (max-width: 1600px) {
+  .pool__main__skills .skill__cards .skill__card .skill__heading {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__main__skills .skill__cards .skill__card .skill__heading {
+    font-size: 1.4rem;
+  }
+}
 .pool__main__skills .skill__cards .skill__card .skill__list {
   margin-top: 2rem;
+}
+@media screen and (max-width: 900px) {
+  .pool__main__skills .skill__cards .skill__card .skill__list {
+    margin-top: 1rem;
+  }
 }
 .pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
   width: 90%;
@@ -1560,4 +1624,20 @@ ul {
   font-size: 1.4rem;
   list-style: circle;
   margin: 1rem 0 1rem 1.4rem;
+}
+@media screen and (max-width: 1600px) {
+  .pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
+    margin: 0 0 1.4rem 1rem;
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=index.css.map */
