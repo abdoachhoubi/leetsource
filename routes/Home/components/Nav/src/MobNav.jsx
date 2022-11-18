@@ -4,7 +4,12 @@ import Drawer from "./Drawer";
 import { Menu } from "react-feather";
 
 const MobNav = () => {
+  /* ----------------- Drawer state ------------------ */
+
   const [menu, setMenu] = useState("out");
+
+  /* ------------------------------------------------- */
+
   return (
     <nav className="nav__mob">
       <div className="navbar">

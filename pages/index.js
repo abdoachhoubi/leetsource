@@ -7,14 +7,23 @@ import { Header, Main, Footer } from "../routes/Home/containers";
 export var HomeContext = createContext();
 
 export default function Home({ res }) {
+  /* ------- Destructuring home data from res -------- */
+
   const { pool, about } = res;
   const data = [pool, about];
+
+  /* ------------------------------------------------- */
+
+  /* ------------ Getting viewport width ------------- */
+
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
   useEffect(() => {
     window.addEventListener("resize", () => setSize(window.innerWidth));
     setWidth(window.innerWidth);
   }, [size]);
+
+  /* ------------------------------------------------- */
 
   return (
     <HomeContext.Provider value={{ width: width, data: data }}>
@@ -35,7 +44,11 @@ export default function Home({ res }) {
   );
 }
 
-Home.getInitialProps = async (ctx) => {
+/* ------- Fetching data on initialization -------- */
+
+Home.getInitialProps = async () => {
+  // Home Entries Data
+
   const { data } = await client.query({
     query: gql`
       query Pools {
@@ -47,6 +60,8 @@ Home.getInitialProps = async (ctx) => {
       }
     `,
   });
+
+  // Home About Data
 
   const { data: about } = await client.query({
     query: gql`
@@ -62,3 +77,5 @@ Home.getInitialProps = async (ctx) => {
 
   return { res: { pool: data, about: about } };
 };
+
+/* ------------------------------------------------- */

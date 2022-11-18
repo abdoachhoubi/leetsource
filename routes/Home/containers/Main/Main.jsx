@@ -7,9 +7,14 @@ import pic from "../../../../public/contact__illustration.svg";
 const { src } = pic;
 
 const Main = () => {
+  /* ----------------- Getting Data ------------------ */
+
   const { data } = useContext(HomeContext);
   const { pools } = data[0];
   const { abouts } = data[1];
+
+  /* ------------------------------------------------- */
+
   return (
     <main className="home__main">
       <h1 className="main__heading">Why 1337?</h1>

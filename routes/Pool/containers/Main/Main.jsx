@@ -3,7 +3,36 @@ import { PoolContext } from "../../../../contexts";
 import { Tip, Skill } from "../../components";
 
 const Main = ({ benifits, links, skills, tips }) => {
+  /* ---------------- Viewport Width ----------------- */
+
   const { width } = useContext(PoolContext);
+
+  /* ------------------------------------------------- */
+
+  /* ----- Filtering the "1337 Pool" Source Data ----- */
+
+  // 1337 Pool - Skills
+  skills = skills?.filter((e) => {
+    if (e.source.category == "1337 Pool") return e;
+  });
+
+  // 1337 Pool - Tips
+  tips = tips?.filter((e) => {
+    if (e.source.category == "1337 Pool") return e;
+  });
+
+  // 1337 Pool - Benifits
+  benifits = benifits?.filter((e) => {
+    if (e.source.category == "1337 Pool") return e;
+  });
+
+  // 1337 Pool - Links
+  links = links?.filter((e) => {
+    if (e.source.category == "1337 Pool") return e;
+  });
+
+  /* ------------------------------------------------- */
+
   return (
     <main className="pool__main">
       <section className="pool__main__skills">

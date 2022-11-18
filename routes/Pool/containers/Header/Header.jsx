@@ -4,13 +4,21 @@ import { Nav } from "../../../Home/components";
 import { ArrowDown } from "react-feather";
 
 const Header = ({ source }) => {
+  /* ---------------- Viewport Width ----------------- */
+
   const { width } = useContext(PoolContext);
   let size;
+
+  /* ------------------------------------------------- */
+
+  /* ---------------- Nav icons size ----------------- */
 
   if (width <= 900) size = 22;
   else if (width > 1000 && width <= 1200) size = 18;
   else if (width > 1200 && width <= 1600) size = 26;
   else size = 30;
+
+  /* ------------------------------------------------- */
 
   return (
     <header className="pool__header">

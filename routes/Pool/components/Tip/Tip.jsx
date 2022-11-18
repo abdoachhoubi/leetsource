@@ -2,14 +2,22 @@ import React from "react";
 import img from "../../../../public/team.svg";
 
 const Tip = ({ data, i, width }) => {
+  /* ------------ Pool Tip flex direction ------------ */
+
   let cname = "rowrev";
   if (width > 900) {
-    if (i % 2) cname = "row";
+    if (!(i % 2)) cname = "row";
   } else {
     cname = "column__rev";
   }
+
+  /* ------------------------------------------------- */
+
+  /* ------------- Pool Tip Illustration ------------- */
   let { src } = img;
   if (data?.illustration) src = data.illustration.url;
+  /* ------------------------------------------------- */
+
   return (
     <section className={`pool__tip ${cname}`}>
       <article className="tip__meta">

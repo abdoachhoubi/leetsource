@@ -4,10 +4,15 @@ import { GitHub, Linkedin, Instagram, X } from "react-feather";
 import { motion } from "framer-motion";
 
 const Drawer = ({ menu, setMenu }) => {
+  /* ---------- Drawer animations variants ----------- */
+
   const variants = {
     in: { x: 0, opacity: 1 },
     out: { x: "100%", opacity: 0 },
   };
+
+  /* ------------------------------------------------- */
+
   return (
     <motion.div
       className="nav__drawer"

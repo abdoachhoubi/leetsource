@@ -35,7 +35,11 @@ const Pool = ({ pool }) => {
   );
 };
 
-Pool.getInitialProps = async (ctx) => {
+/* ------- Fetching data on initialization -------- */
+
+Pool.getInitialProps = async () => {
+  // Pool Data
+
   const { data } = await client.query({
     query: gql`
       query Pool {
@@ -94,5 +98,7 @@ Pool.getInitialProps = async (ctx) => {
     pool: data,
   };
 };
+
+/* ------------------------------------------------- */
 
 export default Pool;

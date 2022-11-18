@@ -3,14 +3,22 @@ import Link from "next/link";
 import { GitHub, Linkedin, Instagram } from "react-feather";
 
 const DesNav = ({ width }) => {
+  /* --------- Social icons colors variants ---------- */
+
   const [col1, setCol1] = useState("#FFF");
   const [col2, setCol2] = useState("#FFF");
   const [col3, setCol3] = useState("#FFF");
-  let size;
 
+  /* ------------------------------------------------- */
+
+  /* --------------- Social icon size ---------------- */
+
+  let size;
   if (width > 900 && width <= 1200) size = 20;
   if (width > 1200 && width <= 1600) size = 24;
   else if (width > 1600) size = 30;
+
+  /* ------------------------------------------------- */
 
   return (
     <nav className="nav__dsk">

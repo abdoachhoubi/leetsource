@@ -6,10 +6,14 @@ import pic from "../../../../public/banner__illustration.svg";
 const { src: img } = pic;
 
 const Banner = ({ width }) => {
+  /* ------------- Arrow Down icon size -------------- */
+
   let size;
   if (width <= 900) size = 22;
   else if (width > 900 && width <= 1600) size = 26;
   else size = 30;
+
+  /* ------------------------------------------------- */
 
   return (
     <section className="home__banner">
