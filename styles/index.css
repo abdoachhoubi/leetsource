@@ -1585,7 +1585,7 @@ ul {
 
 .pool__main__skills {
   margin-bottom: 10vh;
-  background: linear-gradient(20deg, rgb(0, 159, 107) 0%, rgb(122, 255, 51) 100%);
+  background: linear-gradient(0deg, rgb(38, 227, 136) 0%, rgb(1, 255, 132) 20%, rgb(41, 255, 114) 45%, rgb(90, 255, 95) 70%, rgb(122, 255, 51) 100%);
   padding: 4rem;
   border-radius: 2rem;
   display: flex;
@@ -1617,7 +1617,7 @@ ul {
   }
 }
 .pool__main__skills .card__heading {
-  color: rgb(255, 255, 255);
+  color: rgb(16, 16, 16);
   font-weight: 700;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1670,7 +1670,7 @@ ul {
 }
 .pool__main__skills .skill__cards .skill__card .skill__heading {
   letter-spacing: 2px;
-  color: rgb(255, 255, 255);
+  color: rgb(16, 16, 16);
   font-size: 4rem;
 }
 @media screen and (max-width: 1600px) {
@@ -1693,7 +1693,7 @@ ul {
 }
 .pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
   width: 90%;
-  color: rgb(255, 255, 255);
+  color: rgb(16, 16, 16);
   font-size: 1.4rem;
   list-style: circle;
   margin: 1rem 0 1rem 1.4rem;
