@@ -1,8 +1,20 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { GitHub, Linkedin, Instagram } from "react-feather";
 
 const DesNav = ({ width }) => {
+  /* ---- Switching link color depending on route ---- */
+
+  const { route } = useRouter();
+  const switchColor = (r) => {
+    if (r == route) {
+      return "rgb(122, 255, 51)";
+    }
+  };
+
+  /* ------------------------------------------------- */
+
   /* --------- Social icons colors variants ---------- */
 
   const [col1, setCol1] = useState("#FFF");
@@ -29,16 +41,24 @@ const DesNav = ({ width }) => {
       </Link>
       <ul className="nav__list">
         <li className="nav__list__item">
-          <Link href="/">Home</Link>
+          <Link href="/" style={{ color: `${switchColor("/")}` }}>
+            Home
+          </Link>
         </li>
         <li className="nav__list__item">
-          <Link href="/pool">1337 Pool</Link>
+          <Link href="/pool" style={{ color: `${switchColor("/pool")}` }}>
+            1337 Pool
+          </Link>
         </li>
         <li className="nav__list__item">
-          <Link href="/cusus">42 Cursus</Link>
+          <Link href="/cusus" style={{ color: `${switchColor("/cusus")}` }}>
+            42 Cursus
+          </Link>
         </li>
         <li className="nav__list__item">
-          <Link href="/other">Other</Link>
+          <Link href="/other" style={{ color: `${switchColor("/other")}` }}>
+            Other
+          </Link>
         </li>
       </ul>
       <div className="nav__social">

@@ -32,10 +32,6 @@
                 font-size: 1rem
             @media screen and ( max-width: 1200px )
                 font-size: .8rem
-            a
-                transition-duration: 300ms
-                &:hover
-                    color: $color__primary
     .nav__social
         width: 10%
         @media screen and ( max-width: 1200px )
@@ -61,7 +57,7 @@
     .nav__drawer
         width: 100%
         height: 100vh
-        background-color: $color__primary
+        background-color: $color__dark
         @include pos(fixed, 100, 0, 0, 0, 0)
         @include flex(column, center, space-between)
         .menu__close
@@ -71,7 +67,7 @@
             @include flex(column, center, center)
             .nav__list__item
                 a
-                    color: $color__dark
+                    color: $color__light
                     text-align: center
                     font-size: 1.4rem
                 &:not(:last-child)
