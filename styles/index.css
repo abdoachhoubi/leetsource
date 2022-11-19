@@ -363,6 +363,9 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea, q {
 a, svg, button {
   cursor: pointer;
 }
+a *, svg *, button * {
+  cursor: pointer;
+}
 
 ul {
   list-style: none;
@@ -1705,4 +1708,38 @@ ul {
     margin: 0 0 1.4rem 1rem;
     font-size: 1rem;
   }
+}
+
+.fourohfour__container {
+  width: 100%;
+  height: 100vh;
+  padding: 10vh 10%;
+}
+@media screen and (max-width: 900px) {
+  .fourohfour__container {
+    padding: 100px 1rem;
+  }
+}
+@media screen and (min-height: 1000px) and (max-width: 940px) {
+  .fourohfour__container {
+    padding: 100px 3vw;
+  }
+}
+.fourohfour__container header {
+  height: 100%;
+  width: 100%;
+}
+.fourohfour__container header .banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fourohfour__container header .banner h1 {
+  font-size: 8rem;
+}
+.fourohfour__container header .banner h1 span {
+  color: rgb(122, 255, 51);
 }/*# sourceMappingURL=index.css.map */

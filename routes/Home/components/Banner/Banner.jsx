@@ -19,7 +19,7 @@ const Banner = ({ width }) => {
     <section className="home__banner">
       <article className="banner__hero">
         <h1 className="banner__title">
-          Your guide to become a <span>successful</span> developer
+          Your guide to be a <span>successful</span> developer
         </h1>
         <p className="banner__content">
           Leetsource is where 1337 students can find any resource related to

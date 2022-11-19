@@ -1,0 +1,19 @@
+.fourohfour__container
+    width: 100%
+    height: 100vh
+    padding: 10vh 10%
+    @media screen and ( max-width: 900px )
+        padding: 100px 1rem
+    @media screen and ( min-height: 1000px ) and ( max-width: 940px )
+        padding: 100px 3vw
+    header
+        height: 100%
+        width: 100%
+        .banner
+            width: 100%
+            height: 100%
+            @include flex(column, center, center)
+            h1
+                font-size: 8rem
+                span
+                    color: $color__primary
