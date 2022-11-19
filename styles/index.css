@@ -1256,7 +1256,7 @@ ul {
     height: fit-content;
   }
 }
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 1000px) and (max-width: 940px) {
   .pool__header {
     padding: 100px 3vw;
     height: -webkit-fit-content;
@@ -1420,7 +1420,7 @@ ul {
     padding: 5vh 1rem;
   }
 }
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 1000px) and (max-width: 940px) {
   .pool__main {
     padding: 100px 3vw;
   }
@@ -1466,7 +1466,7 @@ ul {
     align-items: center;
   }
 }
-@media screen and (min-height: 940px) {
+@media screen and (min-height: 1000px) and (max-width: 940px) {
   .pool__tip {
     margin-bottom: 1vh;
   }
@@ -1574,7 +1574,7 @@ ul {
   background-position: center;
   background-size: contain;
 }
-@media screen and (min-height: 940px) {
+@media screen and (min-height: 1000px) and (max-width: 940px) {
   .pool__tip .tip__illustration .illustration {
     height: 30vh;
   }
