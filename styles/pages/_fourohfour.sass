@@ -14,6 +14,14 @@
             height: 100%
             @include flex(column, center, center)
             h1
+                width: fit-content
+                text-align: center
                 font-size: 8rem
+                @media screen and ( max-width: 1600px )
+                    font-size: 6rem
+                @media screen and ( max-width: 1200px )
+                    font-size: 4rem
+                @media screen and ( max-width: 1000px )
+                    font-size: 3rem
                 span
                     color: $color__primary
