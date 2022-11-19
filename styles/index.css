@@ -979,7 +979,7 @@ ul {
   justify-content: center;
   align-items: flex-start;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .home__banner {
     display: flex;
     flex-direction: column-reverse;
@@ -993,6 +993,11 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .home__banner {
+    padding: 100px 10% 100px 10%;
   }
 }
 .home__banner .banner__title {
@@ -1030,12 +1035,17 @@ ul {
     font-size: 2.8rem;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .home__banner .banner__title {
     font-size: 1.76rem;
     margin: 0 0 1rem 0;
     width: 100%;
     text-align: center;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .home__banner .banner__title {
+    font-size: 3.4rem;
   }
 }
 .home__banner .banner__title span {
@@ -1079,13 +1089,18 @@ ul {
     width: 60%;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .home__banner .banner__content {
     line-height: 160%;
     font-size: 1rem;
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .home__banner .banner__content {
+    font-size: 1.2rem;
   }
 }
 .home__banner .banner__illustration {
@@ -1097,7 +1112,7 @@ ul {
   bottom: 0;
   z-index: 4;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .home__banner .banner__illustration {
     position: relative;
     top: unset;
@@ -1143,7 +1158,7 @@ ul {
     font-size: 0.9rem;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .home__banner .banner__cta {
     padding: 0.8rem 2rem;
     font-size: 0.8rem;
@@ -1151,12 +1166,18 @@ ul {
     z-index: 1;
   }
 }
+@media screen and (min-height: 1000px) {
+  .home__banner .banner__cta {
+    margin-top: 1rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+  }
+}
 .home__banner .banner__cta:hover {
   border: 1px solid rgb(122, 255, 51);
   background-color: transparent;
 }
 .home__banner .banner__scroll {
-  transform: scale(0.7) !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1168,14 +1189,14 @@ ul {
   bottom: 10%;
   z-index: 6;
 }
+@media screen and (max-width: 900px) {
+  .home__banner .banner__scroll {
+    transform: scale(0.7) !important;
+  }
+}
 .home__banner .banner__scroll p {
   font-size: 1.2rem;
   color: rgb(122, 255, 51);
-}
-@media screen and (max-width: 1700px) {
-  .home__banner .banner__scroll p {
-    font-size: 1.2rem;
-  }
 }
 @media screen and (max-width: 1300px) {
   .home__banner .banner__scroll p {
@@ -1185,6 +1206,11 @@ ul {
 @media screen and (max-width: 1100px) {
   .home__banner .banner__scroll p {
     font-size: 1rem;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .home__banner .banner__scroll p {
+    font-size: 1.2rem;
   }
 }
 .home__banner .banner__scroll .svg__arrow {
@@ -1239,6 +1265,14 @@ ul {
     padding: 100px 1rem;
   }
 }
+@media screen and (min-height: 1000px) {
+  .pool__header {
+    padding: 100px 3vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .pool__header .banner {
   width: 100%;
   height: 100%;
@@ -1249,6 +1283,10 @@ ul {
 }
 .pool__header .banner .banner__heading {
   font-size: 11rem;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media screen and (max-width: 2000px) {
   .pool__header .banner .banner__heading {
@@ -1273,7 +1311,6 @@ ul {
 @media screen and (max-width: 900px) {
   .pool__header .banner .banner__heading {
     width: 100%;
-    text-align: start;
     font-size: 3rem;
   }
 }
@@ -1308,7 +1345,6 @@ ul {
 @media screen and (max-width: 900px) {
   .pool__header .banner .banner__content {
     width: 100%;
-    text-align: start;
     font-size: 1.1rem;
     line-height: 160% ß;
   }
@@ -1393,6 +1429,11 @@ ul {
     padding: 5vh 1rem;
   }
 }
+@media screen and (min-height: 940px) {
+  .pool__main {
+    padding: 100px 3vw;
+  }
+}
 .pool__main .pool__main__heading {
   color: rgb(122, 255, 51);
   padding: 0;
@@ -1432,6 +1473,11 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media screen and (min-height: 940px) {
+  .pool__tip {
+    margin-bottom: 1vh;
   }
 }
 .pool__tip .tip__meta {
@@ -1537,6 +1583,11 @@ ul {
   background-position: center;
   background-size: contain;
 }
+@media screen and (min-height: 940px) {
+  .pool__tip .tip__illustration .illustration {
+    height: 30vh;
+  }
+}
 
 .pool__main__skills {
   margin-bottom: 10vh;
@@ -1564,6 +1615,11 @@ ul {
     padding: 1rem;
     border-radius: 0.8rem;
     margin-bottom: 6vh;
+  }
+}
+@media screen and (min-height: 1000px) {
+  .pool__main__skills {
+    margin-bottom: 4vh;
   }
 }
 .pool__main__skills .card__heading {
@@ -1651,11 +1707,6 @@ ul {
 @media screen and (max-width: 1600px) {
   .pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
     font-size: 0.8rem;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
-    font-size: 0.7rem;
   }
 }
 @media screen and (max-width: 1100px) {

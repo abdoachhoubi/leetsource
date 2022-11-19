@@ -5,6 +5,8 @@
     @include flex(row, center, space-between)
     @media screen and ( max-width: 900px )
         @include flex(column, center, space-between)
+    @media screen and ( min-height: 940px )
+        margin-bottom: 1vh
     .tip__meta
         width: 50%
         @media screen and ( max-width: 900px )
@@ -61,3 +63,5 @@
             background-repeat: no-repeat
             background-position: center
             background-size: contain
+            @media screen and ( min-height: 940px )
+                height: 30vh

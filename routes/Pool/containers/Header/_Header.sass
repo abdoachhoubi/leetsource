@@ -3,12 +3,17 @@
     padding: 100px 10%
     @media screen and ( max-width: 900px )
         padding: 100px 1rem
+    @media screen and ( min-height: 1000px )
+        padding: 100px 3vw
+        height: fit-content
     .banner
         width: 100%
         height: 100%
         @include flex(column, center, center)
         .banner__heading
             font-size: 11rem
+            text-align: center
+            width: fit-content
             @media screen and ( max-width: 2000px )
                 font-size: 9rem
             @media screen and ( max-width: 1600px )
@@ -19,7 +24,6 @@
                 font-size: 4rem
             @media screen and ( max-width: 900px )
                 width: 100%
-                text-align: start
                 font-size: 3rem
             [class = '1337']
                 color: $color__primary
@@ -37,7 +41,6 @@
                 font-size: 1.4rem
             @media screen and ( max-width: 900px )
                 width: 100%
-                text-align: start
                 font-size: 1.1rem
                 line-height: 160%ß
         .banner__scroll

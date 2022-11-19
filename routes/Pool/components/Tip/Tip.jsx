@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../../public/team.svg";
+import img from "../../../../public/idea.svg";
 
 const Tip = ({ data, i, width }) => {
   /* ------------ Pool Tip flex direction ------------ */
