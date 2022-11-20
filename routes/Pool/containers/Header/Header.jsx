@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { PoolContext } from "../../../../contexts";
 import { Nav } from "../../../Home/components";
+import { PRIMARY_COLOR } from "../../../../data";
 import { ArrowDown } from "react-feather";
 
 const Header = ({ source }) => {
@@ -40,7 +41,7 @@ const Header = ({ source }) => {
         <div className="banner__scroll">
           <p>Scoll Down</p>
           <div className="svg__arrow">
-            <ArrowDown size={size} color="rgb(99, 255, 51)" />
+            <ArrowDown size={size} color={PRIMARY_COLOR} />
           </div>
         </div>
       </section>

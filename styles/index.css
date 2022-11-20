@@ -336,7 +336,7 @@ body {
   background-color: rgb(16, 16, 16);
   overflow-x: hidden;
   scrollbar-width: auto;
-  scrollbar-color: rgb(122, 255, 51) rgb(16, 16, 16);
+  scrollbar-color: rgb(103, 210, 130) rgb(16, 16, 16);
 }
 body::-webkit-scrollbar {
   width: 12px;
@@ -351,7 +351,7 @@ body::-webkit-scrollbar-track {
   background: rgb(16, 16, 16);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(122, 255, 51);
+  background-color: rgb(103, 210, 130);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea, q {
@@ -400,7 +400,7 @@ ul {
 .home__main .main__heading {
   width: 80%;
   font-size: 6rem;
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
   margin-bottom: 1rem;
 }
 @media screen and (max-width: 2200px) {
@@ -466,7 +466,7 @@ ul {
 }
 .home__main .home__main__info .info__section .info__heading {
   font-size: 3rem;
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
   margin-bottom: 1rem;
 }
 @media screen and (max-width: 1600px) {
@@ -515,16 +515,16 @@ ul {
   cursor: pointer;
 }
 .home__main .home__main__info .info__section a:hover {
-  border: 1px solid rgb(122, 255, 51);
+  border: 1px solid rgb(103, 210, 130);
   background-color: transparent;
 }
 .home__main .home__main__info .info__section a span {
   margin-right: 0.6rem;
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
 }
 .home__main .main__quote {
   display: block;
-  background-color: rgb(122, 255, 51);
+  background-color: rgb(103, 210, 130);
   margin-bottom: 10vh;
   width: 80%;
   padding: 4rem;
@@ -638,7 +638,7 @@ ul {
 }
 .home__main .home__about .main__article .article__heading {
   font-size: 3rem;
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
   margin-bottom: 2rem;
 }
 @media screen and (max-width: 1600px) {
@@ -717,7 +717,7 @@ ul {
 }
 .home__main .home__contact .contact__area .contact__form input:not(:last-child):focus {
   outline: none;
-  border: 2px solid rgb(122, 255, 51);
+  border: 2px solid rgb(103, 210, 130);
 }
 .home__main .home__contact .contact__area .contact__form textarea {
   width: 100%;
@@ -732,7 +732,7 @@ ul {
 }
 .home__main .home__contact .contact__area .contact__form textarea:focus {
   outline: none;
-  border: 2px solid rgb(122, 255, 51);
+  border: 2px solid rgb(103, 210, 130);
 }
 .home__main .home__contact .contact__area .contact__form .submit {
   display: flex;
@@ -747,14 +747,14 @@ ul {
   padding: 1rem 6rem;
   border-radius: 8px;
   margin-top: 2rem;
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
   background-color: transparent;
   border: 1px solid rgb(255, 255, 255);
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 .home__main .home__contact .contact__area .contact__form .submit:hover {
-  border: 1px solid rgb(122, 255, 51);
+  border: 1px solid rgb(103, 210, 130);
 }
 
 .home__footer {
@@ -765,7 +765,7 @@ ul {
   width: 100%;
   height: 100px;
   padding: 0 10%;
-  background-color: rgb(122, 255, 51);
+  background-color: rgb(103, 210, 130);
 }
 @media screen and (max-width: 1200px) {
   .home__footer {
@@ -839,7 +839,7 @@ ul {
   }
 }
 .nav__dsk .nav__title span {
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
 }
 .nav__dsk .nav__list {
   width: 26%;
@@ -911,7 +911,7 @@ ul {
   font-size: 1.4rem;
 }
 .nav__mob .navbar .nav__title span {
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
 }
 .nav__mob .nav__drawer {
   width: 100%;
@@ -1057,7 +1057,7 @@ ul {
   }
 }
 .home__banner .banner__title span {
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
 }
 .home__banner .banner__content {
   font-size: 2rem;
@@ -1124,7 +1124,7 @@ ul {
   width: fit-content;
   font-size: 1.2rem;
   font-weight: 300;
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
   border-radius: 8px;
   line-height: 110%;
   transition: 300ms ease-in-out;
@@ -1165,7 +1165,7 @@ ul {
   }
 }
 .home__banner .banner__cta:hover {
-  border: 1px solid rgb(122, 255, 51);
+  border: 1px solid rgb(103, 210, 130);
   background-color: transparent;
 }
 .home__banner .banner__scroll {
@@ -1187,7 +1187,7 @@ ul {
 }
 .home__banner .banner__scroll p {
   font-size: 1.2rem;
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
 }
 @media screen and (max-width: 1300px) {
   .home__banner .banner__scroll p {
@@ -1309,7 +1309,7 @@ ul {
   }
 }
 .pool__header .banner .banner__heading [class="1337"] {
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
 }
 .pool__header .banner .banner__content {
   font-size: 4rem;
@@ -1352,7 +1352,7 @@ ul {
 }
 .pool__header .banner .banner__scroll p {
   font-size: 1.4rem;
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
   margin-bottom: 10px;
 }
 @media screen and (max-width: 2000px) {
@@ -1429,7 +1429,7 @@ ul {
   }
 }
 .pool__main .pool__main__heading {
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
   padding: 0;
   margin: 0 0 2rem 0;
   font-size: 6rem;
@@ -1483,7 +1483,7 @@ ul {
   }
 }
 .pool__tip .tip__meta .tip__heading {
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
   font-size: 6rem;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -1585,7 +1585,7 @@ ul {
 
 .pool__main__skills {
   margin-bottom: 10vh;
-  background: linear-gradient(0deg, rgb(38, 227, 136) 0%, rgb(1, 255, 132) 20%, rgb(41, 255, 114) 45%, rgb(90, 255, 95) 70%, rgb(122, 255, 51) 100%);
+  background: linear-gradient(0deg, rgb(0, 159, 107) 0%, rgb(103, 210, 130) 100%);
   padding: 4rem;
   border-radius: 2rem;
   display: flex;
@@ -1760,5 +1760,5 @@ ul {
   }
 }
 .fourohfour__container header .banner h1 span {
-  color: rgb(122, 255, 51);
+  color: rgb(103, 210, 130);
 }/*# sourceMappingURL=index.css.map */

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowDown } from "react-feather";
+import { PRIMARY_COLOR } from "../../../../data";
 import pic from "../../../../public/banner__illustration.svg";
 
 const { src: img } = pic;
@@ -40,7 +41,7 @@ const Banner = ({ width }) => {
       <div className="banner__scroll">
         <p>Scoll Down</p>
         <div className="svg__arrow">
-          <ArrowDown size={size} color="rgb(99, 255, 51)" />
+          <ArrowDown size={size} color={PRIMARY_COLOR} />
         </div>
       </div>
     </section>

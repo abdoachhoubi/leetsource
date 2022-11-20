@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { PRIMARY_COLOR } from "../../../../../data";
 import { GitHub, Linkedin, Instagram } from "react-feather";
 
 const DesNav = ({ width }) => {
@@ -9,7 +10,7 @@ const DesNav = ({ width }) => {
   const { route } = useRouter();
   const switchColor = (r) => {
     if (r == route) {
-      return "rgb(122, 255, 51)";
+      return PRIMARY_COLOR;
     }
   };
 
