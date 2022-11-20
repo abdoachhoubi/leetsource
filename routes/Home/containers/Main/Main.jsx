@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "react-feather";
 import { HomeContext } from "../../../../contexts";
+import { PRIMARY_COLOR } from "../../../../data";
 import pic from "../../../../public/contact__illustration.svg";
 
 const { src } = pic;
@@ -28,7 +29,7 @@ const Main = () => {
           <p className="info__content">{pools[0].content}</p>
           <Link href="/pool">
             <span>Discover Pool</span>
-            <ArrowUpRight size={18} color="rgb(99, 255, 51)" />
+            <ArrowUpRight size={18} color={PRIMARY_COLOR} />
           </Link>
         </section>
         <section className="info__section mb__10vh end">
@@ -36,7 +37,7 @@ const Main = () => {
           <p className="info__content">{pools[1]?.content}</p>
           <Link href="/cursus">
             <span>Discover Cursus</span>
-            <ArrowUpRight size={20} color="rgb(99, 255, 51)" />
+            <ArrowUpRight size={20} color={PRIMARY_COLOR} />
           </Link>
         </section>
         <section className="info__section mb__10vh start">
@@ -44,7 +45,7 @@ const Main = () => {
           <p className="info__content">{pools[2]?.content}</p>
           <Link href="/paths">
             <span>Discover Paths</span>
-            <ArrowUpRight size={18} color="rgb(99, 255, 51)" />
+            <ArrowUpRight size={18} color={PRIMARY_COLOR} />
           </Link>
         </section>
       </div>
