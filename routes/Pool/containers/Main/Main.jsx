@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { PoolContext } from "../../../../contexts";
-import { Tip, Skill } from "../../components";
+import { Tip, Skill, LinkPreview } from "../../components";
 
 const Main = ({ benifits, links, skills, tips }) => {
   /* ---------------- Viewport Width ----------------- */
@@ -32,7 +32,6 @@ const Main = ({ benifits, links, skills, tips }) => {
   });
 
   /* ------------------------------------------------- */
-
   return (
     <main className="pool__main">
       <section className="pool__main__skills">
@@ -48,6 +47,14 @@ const Main = ({ benifits, links, skills, tips }) => {
       {tips.map((e, i) => (
         <Tip key={e.id} data={e} i={i} width={width} />
       ))}
+      <section className="pool__main__links">
+        <h1 className="links__heading">List of useful resources</h1>
+        <div className="link__grid">
+          {links?.map((e, i) => (
+            <LinkPreview key={i} data={e} />
+          ))}
+        </div>
+      </section>
     </main>
   );
 };

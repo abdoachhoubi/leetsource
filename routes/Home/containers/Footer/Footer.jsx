@@ -8,16 +8,24 @@ const Footer = () => {
         <article className="footer__description">
           <h2 className="footer__heading">* Leet Source</h2>
           <p className="footer__quote">
-            Leet Source is meant to save you time searching for resources in
+            "Leet Source is meant to save you time searching for resources in
             different sources, our goal is to bring a many reources as we can
-            and put them together here to make your life easier!
+            and put them together here to make your life easier!"
           </p>
           <p className="footer__attribution">- Astroboy</p>
         </article>
         <article className="footer__links">
-          <Link href="https://web.leet.ma">Visit 1337 Web Dev club</Link>
-          <Link href="https://leet.ma">Discover other Leet clubs</Link>
-          <Link href="https://astrofolio.vercel.app">
+          <Link target="_blank" rel="noreferrer" href="https://web.leet.ma">
+            Visit 1337 Web Dev club
+          </Link>
+          <Link target="_blank" rel="noreferrer" href="https://leet.ma">
+            Discover other Leet clubs
+          </Link>
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            href="https://astrofolio.vercel.app"
+          >
             Get in touch with Astroboy
           </Link>
         </article>
