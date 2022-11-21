@@ -36,7 +36,7 @@ const Pool = ({ pool }) => {
         <Header source={source} />
       </div>
       <Main benifits={benifits} links={links} skills={skills} tips={tips} />
-      <Footer />
+      <Footer size="wide" />
     </PoolContext.Provider>
   );
 };

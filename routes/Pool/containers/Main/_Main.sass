@@ -20,7 +20,6 @@
         @media screen and ( max-width: 900px )
             font-size: 2.6rem
     .pool__main__links
-        margin-bottom: 20vh
         @media screen and ( max-width: 1600px )
             margin-bottom: 6vh
         @media screen and ( max-width: 900px )
@@ -41,15 +40,14 @@
         .link__grid
             display: grid
             grid-template-columns: repeat(3, 1fr)
-            grid-template-rows: repeat(3, 1fr)
-            grid-gap: 20%
+            grid-template-rows: repeat(auto, 1fr)
+            grid-column-gap: 10vw
+            grid-row-gap: 10vh
             @media screen and ( max-width: 1600px )
-                grid-column-gap: 5%
+                grid-column-gap: 3vw
                 grid-row-gap: 14vh
             @media screen and ( max-width: 1100px )
-                grid-column-gap: 5%
                 grid-row-gap: 14vh
             @media screen and ( max-width: 900px )
                 @include flex(column, flex-start, center)
-                grid-column-gap: 5%
                 grid-row-gap: 10vh

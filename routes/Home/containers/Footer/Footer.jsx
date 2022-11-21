@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = ({ size }) => {
   return (
     <footer className="home__footer">
-      <section className="footer__container">
+      <section className="footer__container" style={size && { width: "100%" }}>
         <article className="footer__description">
           <h2 className="footer__heading">* Leet Source</h2>
           <p className="footer__quote">
