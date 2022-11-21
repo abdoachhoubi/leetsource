@@ -3,6 +3,7 @@ import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
 import { Header, Main } from "../routes/Pool/containers";
+import { Footer } from "../routes/Home/containers";
 
 export var PoolContext = createContext();
 
@@ -35,6 +36,7 @@ const Pool = ({ pool }) => {
         <Header source={source} />
       </div>
       <Main benifits={benifits} link={links} skills={skills} tips={tips} />
+      <Footer />
     </PoolContext.Provider>
   );
 };
