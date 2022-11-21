@@ -86,7 +86,7 @@ Pool.getInitialProps = async () => {
             category
           }
         }
-        links {
+        links(last: 30) {
           id
           title
           description

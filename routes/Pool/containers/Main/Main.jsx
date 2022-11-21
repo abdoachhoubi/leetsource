@@ -27,6 +27,7 @@ const Main = ({ benifits, links, skills, tips }) => {
   });
 
   // 1337 Pool - Links
+
   links = links?.filter((e) => {
     if (e.source.category == "1337 Pool") return e;
   });
