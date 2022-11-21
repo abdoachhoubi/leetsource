@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { getLinkPreview } from "link-preview-js";
 
 const LinkPreview = ({ data }) => {
   return (
