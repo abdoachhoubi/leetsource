@@ -29,6 +29,10 @@ $color__gradient: linear-gradient(0deg, $color__secondary 0%,$color__primary  10
     bottom: $bottom
     z-index: $zi
 
+@mixin transition($dur, $tfunc)
+    transition-duration: $dur
+    transition-timing-function: $tfunc
+
 // Utilities
 
 .ais__center

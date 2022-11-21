@@ -1,21 +1,27 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUp } from "react-feather";
 
 const Footer = () => {
   return (
     <footer className="home__footer">
-      <p>
-        Designed and developed with <span className="footer__green">Love</span>{" "}
-        by{" "}
-        <Link className="footer__green" href="https://aachhoub.vercel.app">
-          Astroboy
-        </Link>
-      </p>
-      <p>Leet Source &copy; all rights belong to their respective oweners</p>
-      <Link href="/">
-        Go Up <ArrowUp color="rgb(16, 16, 16)" size={22} />
-      </Link>
+      <section className="footer__container">
+        <article className="footer__description">
+          <h2 className="footer__heading">* Leet Source</h2>
+          <p className="footer__quote">
+            Leet Source is meant to save you time searching for resources in
+            different sources, our goal is to bring a many reources as we can
+            and put them together here to make your life easier!
+          </p>
+          <p className="footer__attribution">- Astroboy</p>
+        </article>
+        <article className="footer__links">
+          <Link href="https://web.leet.ma">Visit 1337 Web Dev club</Link>
+          <Link href="https://leet.ma">Discover other Leet clubs</Link>
+          <Link href="https://astrofolio.vercel.app">
+            Get in touch with Astroboy
+          </Link>
+        </article>
+      </section>
     </footer>
   );
 };

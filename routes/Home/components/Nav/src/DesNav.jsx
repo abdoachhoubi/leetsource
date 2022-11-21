@@ -67,7 +67,7 @@ const DesNav = ({ width }) => {
           href="https://github.com/abdoachhoubi"
           target="_blank"
           rel="noreferrer"
-          onMouseOver={() => setCol1("#63ff33")}
+          onMouseOver={() => setCol1(PRIMARY_COLOR)}
           onMouseLeave={() => setCol1("#FFFFFF")}
         >
           <GitHub size={size} color={col1} />
@@ -76,7 +76,7 @@ const DesNav = ({ width }) => {
           href="https://linkedin.com/in/abdoachhoubi"
           target="_blank"
           rel="noreferrer"
-          onMouseOver={() => setCol2("#63ff33")}
+          onMouseOver={() => setCol2(PRIMARY_COLOR)}
           onMouseLeave={() => setCol2("#FFFFFF")}
         >
           <Linkedin size={size} color={col2} />
@@ -85,7 +85,7 @@ const DesNav = ({ width }) => {
           href="http://instagram.com/astroboy.dev"
           target="_blank"
           rel="noreferrer"
-          onMouseOver={() => setCol3("#63ff33")}
+          onMouseOver={() => setCol3(PRIMARY_COLOR)}
           onMouseLeave={() => setCol3("#FFFFFF")}
         >
           <Instagram size={size} color={col3} />

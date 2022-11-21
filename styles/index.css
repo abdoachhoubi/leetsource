@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import url(https://api.fontshare.com/v2/css?f[]=montserrat@500,1,900,700,200,400,100,800,300,600&display=swap); /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url(https://api.fontshare.com/v2/css?f[]=montserrat@500,1,900,700,200,400,100,800,300,600&display=swap);
+@import url(https://api.fontshare.com/v2/css?f[]=sora@400,700,200,800,500,300,100,600&display=swap);
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
  * * ========================================================================== */
 /**
@@ -327,10 +329,6 @@ template, [hidden] {
   cursor: default;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   width: 100%;
   background-color: rgb(16, 16, 16);
@@ -355,7 +353,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, select, textarea, q {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sora", sans-serif;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
@@ -524,7 +522,7 @@ ul {
 }
 .home__main .main__quote {
   display: block;
-  background-color: rgb(103, 210, 130);
+  background: linear-gradient(0deg, rgb(0, 159, 107) 0%, rgb(103, 210, 130) 100%);
   margin-bottom: 10vh;
   width: 80%;
   padding: 4rem;
@@ -547,7 +545,7 @@ ul {
 }
 .home__main .main__quote q {
   text-align: center;
-  color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
   font-size: 2.5rem;
   line-height: 150%;
 }
@@ -578,7 +576,7 @@ ul {
 }
 .home__main .main__quote p {
   text-align: center;
-  color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
   font-size: 2.5rem;
   margin-top: 4rem;
 }
@@ -758,45 +756,113 @@ ul {
 }
 
 .home__footer {
+  padding: 2rem 10%;
+  background-color: rgb(103, 210, 130);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1100px) {
+  .home__footer {
+    padding: 1rem 10%;
+  }
+}
+@media screen and (max-width: 940px) {
+  .home__footer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.home__footer .footer__container {
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100px;
-  padding: 0 10%;
-  background-color: rgb(103, 210, 130);
-}
-@media screen and (max-width: 1200px) {
-  .home__footer {
-    height: 80px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .home__footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-}
-.home__footer * {
-  color: rgb(16, 16, 16);
-  font-size: 1.1rem;
 }
 @media screen and (max-width: 1600px) {
-  .home__footer * {
-    font-size: 0.7rem;
+  .home__footer .footer__container {
+    width: 100%;
   }
 }
-@media screen and (max-width: 900px) {
-  .home__footer * {
-    font-size: 0.6rem;
+@media screen and (max-width: 940px) {
+  .home__footer .footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 }
-.home__footer .footer__green {
-  text-decoration: underline;
+.home__footer .footer__container .footer__description {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1600px) {
+  .home__footer .footer__container .footer__description {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 940px) {
+  .home__footer .footer__container .footer__description {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+.home__footer .footer__container .footer__description .footer__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.home__footer .footer__container .footer__description .footer__quote {
+  line-height: 130%;
+  margin-bottom: 1.4rem;
+}
+@media screen and (max-width: 1600px) {
+  .home__footer .footer__container .footer__description .footer__quote {
+    font-size: 0.9rem;
+  }
+}
+.home__footer .footer__container .footer__description .footer__attribution {
+  align-self: flex-end;
+}
+@media screen and (max-width: 1600px) {
+  .home__footer .footer__container .footer__description .footer__attribution {
+    font-size: 0.9rem;
+  }
+}
+.home__footer .footer__container .footer__links {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.home__footer .footer__container .footer__links a {
+  font-size: 1.1rem;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+@media screen and (max-width: 1600px) {
+  .home__footer .footer__container .footer__links a {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 940px) {
+  .home__footer .footer__container .footer__links a {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+.home__footer .footer__container .footer__links a:hover {
+  color: rgb(16, 16, 16);
 }
 
 .nav__dsk {
@@ -1617,7 +1683,7 @@ ul {
   }
 }
 .pool__main__skills .card__heading {
-  color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
   font-weight: 700;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1670,7 +1736,7 @@ ul {
 }
 .pool__main__skills .skill__cards .skill__card .skill__heading {
   letter-spacing: 2px;
-  color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
   font-size: 4rem;
 }
 @media screen and (max-width: 1600px) {
@@ -1693,7 +1759,7 @@ ul {
 }
 .pool__main__skills .skill__cards .skill__card .skill__list .skill__list__item {
   width: 90%;
-  color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255);
   font-size: 1.4rem;
   list-style: circle;
   margin: 1rem 0 1rem 1.4rem;

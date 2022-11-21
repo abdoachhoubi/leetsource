@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { PRIMARY_COLOR } from "../../../../../data";
 import { GitHub, Linkedin, Instagram, X } from "react-feather";
 import { motion } from "framer-motion";
 
@@ -10,7 +11,7 @@ const Drawer = ({ menu, setMenu }) => {
   const { route } = useRouter();
   const switchColor = (r) => {
     if (r == route) {
-      return "rgb(122, 255, 51)";
+      return PRIMARY_COLOR;
     }
   };
 
@@ -34,7 +35,7 @@ const Drawer = ({ menu, setMenu }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div className="menu__close" onClick={() => setMenu("out")}>
-        <X size={26} color="rgb(255, 255, 255)" />
+        <X size={26} color={PRIMARY_COLOR} />
       </div>
       <ul className="nav__list">
         <li className="nav__list__item" onClick={() => setMenu("out")}>
@@ -64,25 +65,25 @@ const Drawer = ({ menu, setMenu }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <GitHub size={26} color="rgb(255, 255, 255)" />
+          <GitHub size={26} color={PRIMARY_COLOR} />
         </Link>
         <Link
           href="https://linkedin.com/in/abdoachhoubi"
           target="_blank"
           rel="noreferrer"
           onMouseOver={() => setCol2("#63ff33")}
-          onMouseLeave={() => setCol2("rgb(255, 255, 255)")}
+          onMouseLeave={() => setCol2(PRIMARY_COLOR)}
         >
-          <Linkedin size={26} color="rgb(255, 255, 255)" />
+          <Linkedin size={26} color={PRIMARY_COLOR} />
         </Link>
         <Link
           href="http://instagram.com/astroboy.dev"
           target="_blank"
           rel="noreferrer"
           onMouseOver={() => setCol3("#63ff33")}
-          onMouseLeave={() => setCol3("rgb(255, 255, 255)")}
+          onMouseLeave={() => setCol3(PRIMARY_COLOR)}
         >
-          <Instagram size={26} color="rgb(255, 255, 255)" />
+          <Instagram size={26} color={PRIMARY_COLOR} />
         </Link>
       </div>
     </motion.div>
