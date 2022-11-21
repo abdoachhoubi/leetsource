@@ -35,7 +35,7 @@ const Drawer = ({ menu, setMenu }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div className="menu__close" onClick={() => setMenu("out")}>
-        <X size={26} color={PRIMARY_COLOR} />
+        <X size={26} color={"#FFFFFF"} />
       </div>
       <ul className="nav__list">
         <li className="nav__list__item" onClick={() => setMenu("out")}>
@@ -65,25 +65,25 @@ const Drawer = ({ menu, setMenu }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <GitHub size={26} color={PRIMARY_COLOR} />
+          <GitHub size={26} color={"#FFFFFF"} />
         </Link>
         <Link
           href="https://linkedin.com/in/abdoachhoubi"
           target="_blank"
           rel="noreferrer"
-          onMouseOver={() => setCol2("#63ff33")}
-          onMouseLeave={() => setCol2(PRIMARY_COLOR)}
+          onMouseOver={() => setCol2("#FFFFFF")}
+          onMouseLeave={() => setCol2("#FFFFFF")}
         >
-          <Linkedin size={26} color={PRIMARY_COLOR} />
+          <Linkedin size={26} color={"#FFFFFF"} />
         </Link>
         <Link
           href="http://instagram.com/astroboy.dev"
           target="_blank"
           rel="noreferrer"
-          onMouseOver={() => setCol3("#63ff33")}
-          onMouseLeave={() => setCol3(PRIMARY_COLOR)}
+          onMouseOver={() => setCol3("#FFFFFF")}
+          onMouseLeave={() => setCol3("#FFFFFF")}
         >
-          <Instagram size={26} color={PRIMARY_COLOR} />
+          <Instagram size={26} color={"#FFFFFF"} />
         </Link>
       </div>
     </motion.div>
