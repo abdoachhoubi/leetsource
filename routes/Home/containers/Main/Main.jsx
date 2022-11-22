@@ -10,9 +10,12 @@ const { src } = pic;
 const Main = () => {
   /* ----------------- Getting Data ------------------ */
 
+  let pools, abouts;
   const { data } = useContext(HomeContext);
-  const { pools } = data[0];
-  const { abouts } = data[1];
+  if (data && data[0] && data[1]) {
+    pools = data[0].pools;
+    abouts = data[1].abouts;
+  }
 
   /* ------------------------------------------------- */
 
@@ -25,8 +28,8 @@ const Main = () => {
       </p>
       <div className="home__main__info">
         <section className="info__section mb__10vh start">
-          <h2 className="info__heading">{pools[0].title}</h2>
-          <p className="info__content">{pools[0].content}</p>
+          <h2 className="info__heading">{pools[0]?.title}</h2>
+          <p className="info__content">{pools[0]?.content}</p>
           <Link href="/pool">
             <span>Discover Pool</span>
             <ArrowUpRight size={18} color={PRIMARY_COLOR} />

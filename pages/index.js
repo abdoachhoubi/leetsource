@@ -9,7 +9,11 @@ export var HomeContext = createContext();
 export default function Home({ res }) {
   /* ------- Destructuring home data from res -------- */
 
-  const { pool, about } = res;
+  let pool, about;
+  if (res) {
+    pool = res?.pool;
+    about = res?.about;
+  }
   const data = [pool, about];
 
   /* ------------------------------------------------- */

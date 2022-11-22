@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 const Drawer = ({ menu, setMenu }) => {
   /* ---- Switching link color depending on route ---- */
 
-  const { route } = useRouter();
+  // const { route } = useRouter();
+  let route = "/";
   const switchColor = (r) => {
     if (r == route) {
       return PRIMARY_COLOR;
