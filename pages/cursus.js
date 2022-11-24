@@ -9,6 +9,7 @@ export var CursusContext = createContext();
 const Cursus = ({ cursus }) => {
   // Destructuring all cursus data
   const { source } = cursus;
+  console.log(cursus);
 
   // Getting the page description
   const description = source.introduction.split("$").join(" ");
@@ -69,6 +70,11 @@ Cursus.getInitialProps = async () => {
           id
           category
           introduction
+        }
+        intros {
+          title
+          description
+          list
         }
       }
     `,
