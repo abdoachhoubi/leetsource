@@ -15,11 +15,11 @@ const Footer = ({ size }) => {
           <p className="footer__attribution">- Astroboy</p>
         </article>
         <article className="footer__links">
-          <Link target="_blank" rel="noreferrer" href="https://web.leet.ma">
+          <Link target="_blank" rel="noreferrer" href="https://webdev.leet.ma">
             Visit 1337 Web Dev club
           </Link>
           <Link target="_blank" rel="noreferrer" href="https://leet.ma">
-            Discover other Leet clubs
+            Discover other 1337 clubs
           </Link>
           <Link
             target="_blank"
@@ -29,6 +29,9 @@ const Footer = ({ size }) => {
             Get in touch with Astroboy
           </Link>
         </article>
+      </section>
+      <section className="copyright">
+        <p>&copy; Leet Source - 1337BG Web Dev Club</p>
       </section>
     </footer>
   );

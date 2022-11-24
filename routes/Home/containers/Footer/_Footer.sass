@@ -1,7 +1,9 @@
 .home__footer
     padding: 2rem 10%
     background: $color__gradient
-    @include flex(row, center, center)
+    @include flex(column, center, center)
+    *
+        color: $color__dark !important
     @media screen and ( max-width: 1100px )
         padding: 1rem 10%
     @media screen and ( max-width: 940px )
@@ -46,4 +48,6 @@
                 @media screen and ( max-width: 940px )
                     font-size: 1rem
                 &:hover
-                    color: $color__dark
+                    color: $color__light !important
+    .copyright
+        margin-top: 2rem

@@ -1,11 +1,23 @@
 .pool__main
     width: 100%
-    padding: 5% 10%
+    padding: 100px 10%
     @include flex(column, center, center)
     @media screen and ( max-width: 900px )
         padding: 5vh 1rem
     @media screen and ( min-height: 1000px ) and ( max-width: 940px )
         padding: 100px 3vw
+    .button__scroll
+        padding: 1rem 3rem
+        background-color: transparent
+        outline: none
+        border: 1px solid $color__primary
+        color: $color__primary
+        border-radius: .4rem
+        margin-bottom: 5rem
+        transition-duration: 400ms
+        &:hover
+            background-color: $color__primary
+            color: $color__light
     .pool__main__heading
         color: $color__primary
         padding: 0

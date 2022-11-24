@@ -329,6 +329,10 @@ template, [hidden] {
   cursor: default;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   background-color: rgb(16, 16, 16);
@@ -759,9 +763,12 @@ ul {
   padding: 2rem 10%;
   background: rgb(103, 210, 130);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.home__footer * {
+  color: rgb(16, 16, 16) !important;
 }
 @media screen and (max-width: 1100px) {
   .home__footer {
@@ -862,7 +869,10 @@ ul {
   }
 }
 .home__footer .footer__container .footer__links a:hover {
-  color: rgb(16, 16, 16);
+  color: rgb(255, 255, 255) !important;
+}
+.home__footer .copyright {
+  margin-top: 2rem;
 }
 
 .nav__dsk {
@@ -1416,6 +1426,9 @@ ul {
   justify-content: center;
   align-items: center;
 }
+.pool__header .banner .banner__scroll * {
+  cursor: pointer;
+}
 .pool__header .banner .banner__scroll p {
   font-size: 1.4rem;
   color: rgb(103, 210, 130);
@@ -1478,7 +1491,7 @@ ul {
 }
 .pool__main {
   width: 100%;
-  padding: 5% 10%;
+  padding: 100px 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1493,6 +1506,20 @@ ul {
   .pool__main {
     padding: 100px 3vw;
   }
+}
+.pool__main .button__scroll {
+  padding: 1rem 3rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgb(103, 210, 130);
+  color: rgb(103, 210, 130);
+  border-radius: 0.4rem;
+  margin-bottom: 5rem;
+  transition-duration: 400ms;
+}
+.pool__main .button__scroll:hover {
+  background-color: rgb(103, 210, 130);
+  color: rgb(255, 255, 255);
 }
 .pool__main .pool__main__heading {
   color: rgb(103, 210, 130);
@@ -1898,10 +1925,18 @@ ul {
 }
 .link__preview .link {
   padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  color: rgb(16, 16, 16);
-  background-color: rgb(103, 210, 130);
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgb(103, 210, 130);
+  color: rgb(103, 210, 130);
+  border-radius: 0.4rem;
+  margin-bottom: 5rem;
+  transition-duration: 400ms;
   margin-top: 2rem;
+}
+.link__preview .link:hover {
+  background-color: rgb(103, 210, 130);
+  color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 1600px) {
   .link__preview .link {

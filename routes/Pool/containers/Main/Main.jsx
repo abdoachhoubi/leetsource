@@ -1,8 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { PoolContext } from "../../../../contexts";
 import { Tip, Skill, LinkPreview } from "../../components";
 
-const Main = ({ benifits, links, skills, tips }) => {
+const Main = ({ benifits, links, skills, tips, main__ref }) => {
+  /* ------------ Creting resources ref -------------- */
+
+  const resources = useRef();
+
+  /* ------------------------------------------------- */
+
   /* ---------------- Viewport Width ----------------- */
 
   let width;
@@ -35,10 +41,18 @@ const Main = ({ benifits, links, skills, tips }) => {
   });
 
   /* ------------------------------------------------- */
+
+  const scrollTo = () => {
+    resources?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     tips &&
     links && (
-      <main className="pool__main">
+      <main className="pool__main" ref={main__ref}>
+        <button className="button__scroll" onClick={() => scrollTo()}>
+          Go directly to resources
+        </button>
         <section className="pool__main__skills">
           <h1 className="pool__main__heading card__heading">
             Skills developed at 1337 Pool
@@ -52,7 +66,7 @@ const Main = ({ benifits, links, skills, tips }) => {
         {tips.map((e, i) => (
           <Tip key={e.id} data={e} i={i} width={width} />
         ))}
-        <section className="pool__main__links">
+        <section className="pool__main__links" ref={resources}>
           <h1 className="links__heading">List of useful resources</h1>
           <div className="link__grid">
             {links?.map((e, i) => (

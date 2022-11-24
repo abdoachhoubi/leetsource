@@ -50,7 +50,7 @@ const Drawer = ({ menu, setMenu }) => {
           </Link>
         </li>
         <li className="nav__list__item" onClick={() => setMenu("out")}>
-          <Link style={{ color: `${switchColor("/cusus")}` }} href="/cusus">
+          <Link style={{ color: `${switchColor("/cusus")}` }} href="/cursus">
             42 Cursus
           </Link>
         </li>

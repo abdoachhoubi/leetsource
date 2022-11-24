@@ -29,10 +29,17 @@
             text-align: center
     .link
         padding: 1rem 2rem
-        border-radius: .5rem
-        color: $color__dark
-        background-color: $color__primary
+        background-color: transparent
+        outline: none
+        border: 1px solid $color__primary
+        color: $color__primary
+        border-radius: .4rem
+        margin-bottom: 5rem
+        transition-duration: 400ms
         margin-top: 2rem
+        &:hover
+            background-color: $color__primary
+            color: $color__light
         @media screen and ( max-width: 1600px )
             font-size: .8rem
             padding: .8rem 1.6rem

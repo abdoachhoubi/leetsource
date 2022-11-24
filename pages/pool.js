@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, useRef, createContext } from "react";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
@@ -8,6 +8,12 @@ import { Footer } from "../routes/Home/containers";
 export var PoolContext = createContext();
 
 const Pool = ({ pool }) => {
+  const main__ref = useRef();
+
+  const scrollToMain = () => {
+    main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   // Destructuring data from pool
   const { benifits, links, skills, source, tips } = pool;
 
@@ -23,7 +29,7 @@ const Pool = ({ pool }) => {
 
   return (
     <PoolContext.Provider value={{ width: width }}>
-      <div className="home__container">
+      <div className="pool__container">
         <Head>
           <title>Leet Source - 1337 Pool</title>
           <meta
@@ -33,9 +39,15 @@ const Pool = ({ pool }) => {
           <meta name="description" content={source.introduction} />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header source={source} />
+        <Header source={source} scrollToMain={scrollToMain} />
       </div>
-      <Main benifits={benifits} links={links} skills={skills} tips={tips} />
+      <Main
+        benifits={benifits}
+        links={links}
+        skills={skills}
+        tips={tips}
+        main__ref={main__ref}
+      />
       <Footer size="wide" />
     </PoolContext.Provider>
   );

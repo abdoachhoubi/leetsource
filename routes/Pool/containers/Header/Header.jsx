@@ -4,7 +4,7 @@ import { Nav } from "../../../Home/components";
 import { PRIMARY_COLOR } from "../../../../data";
 import { ArrowDown } from "react-feather";
 
-const Header = ({ source }) => {
+const Header = ({ source, scrollToMain }) => {
   /* ---------------- Viewport Width ----------------- */
 
   const { width } = useContext(PoolContext);
@@ -38,7 +38,7 @@ const Header = ({ source }) => {
             <span key={i}>{e}</span>
           ))}
         </p>
-        <div className="banner__scroll">
+        <div className="banner__scroll" onClick={() => scrollToMain()}>
           <p>Scoll Down</p>
           <div className="svg__arrow">
             <ArrowDown size={size} color={PRIMARY_COLOR} />
