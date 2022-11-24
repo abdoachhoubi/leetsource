@@ -46,12 +46,12 @@ const Drawer = ({ menu, setMenu }) => {
         </li>
         <li className="nav__list__item" onClick={() => setMenu("out")}>
           <Link style={{ color: `${switchColor("/pool")}` }} href="/pool">
-            1337 Pool
+            Pool
           </Link>
         </li>
         <li className="nav__list__item" onClick={() => setMenu("out")}>
-          <Link style={{ color: `${switchColor("/cusus")}` }} href="/cursus">
-            42 Cursus
+          <Link style={{ color: `${switchColor("/cursus")}` }} href="/cursus">
+            Cursus
           </Link>
         </li>
         <li className="nav__list__item" onClick={() => setMenu("out")}>

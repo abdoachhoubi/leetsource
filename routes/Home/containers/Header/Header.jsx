@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Nav, Banner } from "../../components";
 import { HomeContext } from "../../../../contexts";
 
-const Header = () => {
+const Header = ({ scrollToMain }) => {
   /* ---------------- Viewport Width ----------------- */
 
   const { width } = useContext(HomeContext);
@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="home__header">
       <Nav width={width} />
-      <Banner width={width} />
+      <Banner width={width} scrollToMain={scrollToMain} />
     </header>
   );
 };

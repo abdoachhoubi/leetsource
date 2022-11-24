@@ -1261,6 +1261,9 @@ ul {
     transform: scale(0.7) !important;
   }
 }
+.home__banner .banner__scroll * {
+  cursor: pointer !important;
+}
 .home__banner .banner__scroll p {
   font-size: 1.2rem;
   color: rgb(103, 210, 130);
@@ -1315,7 +1318,7 @@ ul {
     transform: translateY(50px);
   }
 }
-.home__container {
+.pool__container {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1466,19 +1469,7 @@ ul {
           animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes updownßßß {
-  0% {
-    transform: translateY(50px);
-  }
-  80% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(50px);
-  }
-}
-
-@keyframes updownßßß {
+@keyframes updown {
   0% {
     transform: translateY(50px);
   }
@@ -1956,6 +1947,169 @@ ul {
   }
 }
 
+.cursus__container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: rgb(16, 16, 16);
+}
+
+.cursus__header {
+  height: 100vh;
+  padding: 100px 10%;
+}
+@media screen and (max-width: 900px) {
+  .cursus__header {
+    padding: 100px 1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (min-height: 1000px) and (max-width: 940px) {
+  .cursus__header {
+    padding: 100px 3vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.cursus__header .banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cursus__header .banner .banner__heading {
+  font-size: 9rem;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (max-width: 2000px) {
+  .cursus__header .banner .banner__heading {
+    font-size: 7rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .cursus__header .banner .banner__heading {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .cursus__header .banner .banner__heading {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .cursus__header .banner .banner__heading {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cursus__header .banner .banner__heading {
+    width: 100%;
+    font-size: 3rem;
+  }
+}
+.cursus__header .banner .banner__heading [class="42"] {
+  color: rgb(103, 210, 130);
+}
+.cursus__header .banner .banner__content {
+  font-size: 3rem;
+  width: 90%;
+  line-height: 140%;
+  text-align: center;
+}
+@media screen and (max-width: 2000px) {
+  .cursus__header .banner .banner__content {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .cursus__header .banner .banner__content {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .cursus__header .banner .banner__content {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .cursus__header .banner .banner__content {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cursus__header .banner .banner__content {
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 160% ß;
+  }
+}
+.cursus__header .banner .banner__scroll {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cursus__header .banner .banner__scroll * {
+  cursor: pointer;
+}
+.cursus__header .banner .banner__scroll p {
+  font-size: 1.4rem;
+  color: rgb(103, 210, 130);
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 2000px) {
+  .cursus__header .banner .banner__scroll p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .cursus__header .banner .banner__scroll p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .cursus__header .banner .banner__scroll p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .cursus__header .banner .banner__scroll p {
+    font-size: 0.9rem;
+  }
+}
+.cursus__header .banner .banner__scroll .svg__arrow {
+  transform: translateY(50px);
+  -webkit-animation-name: updown;
+          animation-name: updown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
 .fourohfour__container {
   width: 100%;
   height: 100vh;

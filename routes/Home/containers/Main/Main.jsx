@@ -7,7 +7,7 @@ import pic from "../../../../public/contact__illustration.svg";
 
 const { src } = pic;
 
-const Main = () => {
+const Main = ({ main__ref }) => {
   /* ----------------- Getting Data ------------------ */
 
   let pools, abouts;
@@ -20,7 +20,7 @@ const Main = () => {
   /* ------------------------------------------------- */
 
   return (
-    <main className="home__main">
+    <main className="home__main" ref={main__ref}>
       <h1 className="main__heading">Why 1337?</h1>
       <p className="main__content">
         In 1337 School we have the freedom to learn the way we want and whenever

@@ -1,19 +1,20 @@
 import React, { useContext } from "react";
-import { PoolContext } from "../../../../contexts";
 import { Nav } from "../../../Home/components";
-import { PRIMARY_COLOR } from "../../../../data";
 import { ArrowDown } from "react-feather";
+import { PRIMARY_COLOR } from "../../../../data";
+import { CursusContext } from "../../../../pages/cursus";
 
-const Header = ({ source, scrollToMain }) => {
-  /* ---------------- Viewport Width ----------------- */
+const Header = ({ scrollToMain }) => {
+  /* --------------- Destructuring data -------------- */
 
-  const { width } = useContext(PoolContext);
-  let size;
+  const { data, width } = useContext(CursusContext);
+  const { source } = data;
 
   /* ------------------------------------------------- */
 
   /* ---------------- Scoll icon size ---------------- */
 
+  let size;
   if (width <= 900) size = 22;
   else if (width > 1000 && width <= 1200) size = 18;
   else if (width > 1200 && width <= 1600) size = 26;
@@ -22,20 +23,23 @@ const Header = ({ source, scrollToMain }) => {
   /* ------------------------------------------------- */
 
   return (
-    <header className="pool__header">
+    <div className="cursus__header">
       <Nav width={width} />
       <section className="banner">
         <h1 className="banner__heading">
           {source.category.split(" ").map((e, i) => (
-            <span className={e} key={i}>
+            <span key={i} className={e}>
               {e}
-              <> </>
+              {i == 0 && <> </>}
             </span>
           ))}
         </h1>
         <p className="banner__content">
-          {source.introduction.split("").map((e, i) => (
-            <span key={i}>{e}</span>
+          {source.introduction.split("$").map((e, i) => (
+            <span key={i}>
+              {e}
+              <br />
+            </span>
           ))}
         </p>
         <div className="banner__scroll" onClick={() => scrollToMain()}>
@@ -45,7 +49,7 @@ const Header = ({ source, scrollToMain }) => {
           </div>
         </div>
       </section>
-    </header>
+    </div>
   );
 };
 

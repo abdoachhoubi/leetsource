@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
+import { Header } from "../routes/Cursus/containers";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
@@ -16,13 +17,19 @@ const Cursus = ({ cursus }) => {
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
 
+  // Creating Main ref and scroll function
+  const main__ref = useRef();
+  const scrollToMain = () => {
+    main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   // Getting Window Width
   useEffect(() => {
     window.addEventListener("resize", () => setSize(window.innerWidth));
     setWidth(window.innerWidth);
   }, [size]);
   return (
-    <CursusContext.Provider value={{ width: width }}>
+    <CursusContext.Provider value={{ width: width, data: cursus }}>
       <div className="cursus__container">
         <Head>
           <title>Leet Source - Cursus</title>
@@ -44,6 +51,10 @@ const Cursus = ({ cursus }) => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
       </div>
+      <Header scrollToMain={scrollToMain} />
+      <main className="cursus__main" ref={main__ref}>
+        <h1>Main</h1>
+      </main>
     </CursusContext.Provider>
   );
 };

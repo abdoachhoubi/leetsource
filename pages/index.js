@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
@@ -7,6 +7,14 @@ import { Header, Main, Footer } from "../routes/Home/containers";
 export var HomeContext = createContext();
 
 export default function Home({ res }) {
+  /* ----- Creating Main ref and scroll function ----- */
+
+  const main__ref = useRef();
+  const scrollToMain = () => {
+    main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  /* ------------------------------------------------- */
+
   /* ------- Destructuring home data from res -------- */
 
   let pool, about;
@@ -54,8 +62,8 @@ export default function Home({ res }) {
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
-        <Main />
+        <Header scrollToMain={scrollToMain} />
+        <Main main__ref={main__ref} />
         <Footer />
       </div>
     </HomeContext.Provider>

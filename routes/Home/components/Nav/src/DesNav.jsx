@@ -48,12 +48,12 @@ const DesNav = ({ width }) => {
         </li>
         <li className="nav__list__item">
           <Link href="/pool" style={{ color: `${switchColor("/pool")}` }}>
-            1337 Pool
+            Pool
           </Link>
         </li>
         <li className="nav__list__item">
-          <Link href="/cursus" style={{ color: `${switchColor("/cusus")}` }}>
-            42 Cursus
+          <Link href="/cursus" style={{ color: `${switchColor("/cursus")}` }}>
+            Cursus
           </Link>
         </li>
         <li className="nav__list__item">

@@ -1,4 +1,4 @@
-.pool__header
+.cursus__header
     height: 100vh
     padding: 100px 10%
     @media screen and ( max-width: 900px )
@@ -12,25 +12,26 @@
         height: 100%
         @include flex(column, center, center)
         .banner__heading
-            font-size: 11rem
+            font-size: 9rem
             text-align: center
             width: fit-content
             @media screen and ( max-width: 2000px )
-                font-size: 9rem
-            @media screen and ( max-width: 1600px )
                 font-size: 7rem
-            @media screen and ( max-width: 1300px )
+            @media screen and ( max-width: 1600px )
                 font-size: 5rem
-            @media screen and ( max-width: 1100px )
+            @media screen and ( max-width: 1300px )
                 font-size: 4rem
+            @media screen and ( max-width: 1100px )
+                font-size: 3rem
             @media screen and ( max-width: 900px )
                 width: 100%
                 font-size: 3rem
-            [class = '1337']
+            [class = '42']
                 color: $color__primary
         .banner__content
-            font-size: 4rem
+            font-size: 3rem
             width: 90%
+            line-height: 140%
             text-align: center
             @media screen and ( max-width: 2000px )
                 font-size: 2.4rem
@@ -71,7 +72,7 @@
 @keyframes updown
     0%
         transform: translateY(50px)
-    80%
+    50%
         transform: translateY(10px)
     100%
         transform: translateY(50px)
