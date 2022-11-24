@@ -5,7 +5,13 @@ import client from "../lib";
 
 export var CursusContext = createContext();
 
-const Cursus = () => {
+const Cursus = ({ cursus }) => {
+  // Destructuring all cursus data
+  const { source } = cursus;
+
+  // Getting the page description
+  const description = source.introduction.split("$").join(" ");
+
   // Width States
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
@@ -17,56 +23,49 @@ const Cursus = () => {
   }, [size]);
   return (
     <CursusContext.Provider value={{ width: width }}>
-      <div className="cursus__container">Cursus</div>
-    </CursusContext.Provider>
-  );
-};
-
-export default Cursus;
-
-/*
-
-import React, { useState, useEffect, useRef, createContext } from "react";
-import Head from "next/head";
-import { gql } from "@apollo/client";
-import client from "../lib";
-import { Header, Main } from "../routes/Pool/containers";
-import { Footer } from "../routes/Home/containers";
-
-export var PoolContext = createContext();
-
-const Pool = ({ pool }) => {
-  const main__ref = useRef();
-
-  const scrollToMain = () => {
-    main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
-  // Destructuring data from pool
-  const { benifits, links, skills, source, tips } = pool;
-
-  // Width States
-  const [size, setSize] = useState(0);
-  const [width, setWidth] = useState(0);
-
-  // Getting Window Width
-  useEffect(() => {
-    window.addEventListener("resize", () => setSize(window.innerWidth));
-    setWidth(window.innerWidth);
-  }, [size]);
-
-  return (
-    <PoolContext.Provider value={{ width: width }}>
-      <div className="home__container">
+      <div className="cursus__container">
         <Head>
-          <title>Leet Source - 1337 Pool</title>
+          <title>Leet Source - Cursus</title>
           <meta
             name="google-site-verification"
             content="ovvmP3s_dWVp7bb05Bb8nGIrneErM1TaR8UDf2Yu32c"
           />
-          <meta name="description" content={source.introduction} />
+          <meta name="description" content={description} />
+          <meta
+            name="keywords"
+            content="1337 Pool, 42 Cursus, 1337 Ecole, C Programming"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="author" content="Astroboy" />
+          <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header source={source} scrollToMain={scrollToMain} />
+      </div>
+    </CursusContext.Provider>
+  );
+};
 
-*/
+Cursus.getInitialProps = async () => {
+  // Pool Data
+
+  const { data } = await client.query({
+    query: gql`
+      query Cursus {
+        source(where: { id: "clar5dqzt0ivd0ausvkco4otk" }) {
+          id
+          category
+          introduction
+        }
+      }
+    `,
+  });
+
+  return {
+    cursus: data,
+  };
+};
+
+export default Cursus;

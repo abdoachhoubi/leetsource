@@ -31,12 +31,21 @@ const Pool = ({ pool }) => {
     <PoolContext.Provider value={{ width: width }}>
       <div className="pool__container">
         <Head>
-          <title>Leet Source - 1337 Pool</title>
+          <title>Leet Source - Pool</title>
           <meta
             name="google-site-verification"
             content="ovvmP3s_dWVp7bb05Bb8nGIrneErM1TaR8UDf2Yu32c"
           />
           <meta name="description" content={source.introduction} />
+          <meta
+            name="keywords"
+            content="1337 Pool, 42 Cursus, 1337 Ecole, C Programming"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="author" content="Astroboy" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header source={source} scrollToMain={scrollToMain} />

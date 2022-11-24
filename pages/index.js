@@ -42,6 +42,16 @@ export default function Home({ res }) {
             name="description"
             content="A list of resources that every programmer need in order to get better in programming"
           />
+          <meta
+            name="keywords"
+            content="1337, Leet, C, 1337 Pool, 42 Cursus, 1337 Ecole, C Programming"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="author" content="Astroboy" />
+          <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />
