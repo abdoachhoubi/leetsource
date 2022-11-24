@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
 import { Header } from "../routes/Cursus/containers";
+import { MainIntro } from "../routes/Cursus/components";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
@@ -9,7 +10,6 @@ export var CursusContext = createContext();
 const Cursus = ({ cursus }) => {
   // Destructuring all cursus data
   const { source } = cursus;
-  console.log(cursus);
 
   // Getting the page description
   const description = source.introduction.split("$").join(" ");
@@ -54,7 +54,9 @@ const Cursus = ({ cursus }) => {
       </div>
       <Header scrollToMain={scrollToMain} />
       <main className="cursus__main" ref={main__ref}>
-        <h1>Main</h1>
+        <MainIntro n={0} />
+        <MainIntro n={1} />
+        <MainIntro n={2} />
       </main>
     </CursusContext.Provider>
   );

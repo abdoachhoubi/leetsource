@@ -1,0 +1,50 @@
+.cursus__main__intro
+    width: 100%
+    padding: 100px 0 0 0
+    @include flex(column, flex-start, center)
+    .main__heading
+        font-size: 6rem
+        color: $color__primary
+        margin-bottom: 3rem
+        @media screen and ( max-width: 2200px )
+            font-size: 5rem
+        @media screen and ( max-width: 1600px )
+            font-size: 4rem
+            width: 100%
+        @media screen and ( max-width: 900px )
+            font-size: 2.4rem
+    .intro__content
+        @include flex(row, flex-start, space-between)
+        .main__text
+            font-size: 2rem
+            line-height: 140%
+            font-weight: 300
+            margin-bottom: 4rem
+            width: 48%
+            @media screen and ( max-width: 2200px )
+                font-size: 1.6rem
+            @media screen and ( max-width: 1600px )
+                font-size: 1.2rem
+                width: 100%
+                align-self: flex-start
+            @media screen and ( max-width: 900px )
+                font-size: 1rem
+        .main__list
+            width: 48%
+            list-style: circle
+            .main__list__item
+                margin-left: 1.4rem
+                font-size: 1.4rem
+                line-height: 140%
+                font-weight: 300
+                margin-bottom: 1rem
+                @media screen and ( max-width: 2200px )
+                    font-size: 1.2rem
+                    margin-left: 1.2rem
+                @media screen and ( max-width: 1600px )
+                    font-size: 1rem
+                    margin-left: 1rem
+                    width: 100%
+                    align-self: flex-start
+                @media screen and ( max-width: 900px )
+                    font-size: 1rem

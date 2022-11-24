@@ -3,5 +3,12 @@
     width: 100%
     background-color: $color__dark
 
+.cursus__main
+    width: 100%
+    padding: 0 10%
+    @include flex(column, center, flex-start)
+    @media screen and ( max-width: 900px )
+        padding: 0 1rem
+
 @import "../../routes/Cursus/containers/_index"
 @import "../../routes/Cursus/components/_index"

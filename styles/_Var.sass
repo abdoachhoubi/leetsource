@@ -56,11 +56,28 @@ $color__gradient: rgb(103, 210, 130)
 .row
     flex-direction: row !important
 
+.col
+    @include flex(column, flex-start, flex-start)
+    flex-direction: column !important
+
 .rowrev
     flex-direction: row-reverse !important
 
 .column__rev
     flex-direction: column-reverse !important
+
+.grid__3
+    display: grid !important
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: auto
+    gap: 4rem
+    .main__list__item
+        list-style: none !important
+        height: stretch
+        padding: 1rem
+        background-color: $color__secondary
+        border-radius: 10px
+        margin: 0 !important
 
 @media screen and ( max-width: 1600px )
     .in
