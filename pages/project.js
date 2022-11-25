@@ -1,11 +1,14 @@
 import React from "react";
+import { useRouter } from "next/router";
 import axios from "axios";
 
 const Project = ({ data }) => {
+  console.log(data);
+  const { project } = useRouter().query;
   return (
     data && (
       <div>
-        <h1>Okeh {data[0]?.title}</h1>
+        <h1>{data[0].projects[0].title}</h1>
       </div>
     )
   );
