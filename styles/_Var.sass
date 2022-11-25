@@ -72,12 +72,20 @@ $color__gradient: rgb(103, 210, 130)
     grid-template-rows: auto
     gap: 4rem
     .main__list__item
+        @include flex(column, center, center)
+        text-align: center
         list-style: none !important
         height: stretch
-        padding: 1rem
-        background-color: $color__secondary
+        padding: 2rem
+        background-color: transparent
+        border: 1px solid $color__primary
         border-radius: 10px
         margin: 0 !important
+        transition-duration: 300ms
+        cursor: pointer
+        &:hover
+            background-color: $color__primary
+            color: $color__dark
 
 @media screen and ( max-width: 1600px )
     .in

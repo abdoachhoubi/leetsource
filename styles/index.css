@@ -76,8 +76,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -332,14 +331,24 @@ template, [hidden] {
   gap: 4rem;
 }
 .grid__3 .main__list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   list-style: none !important;
-  height: -webkit-fill-available;
-  height: -moz-available;
   height: stretch;
-  padding: 1rem;
-  background-color: rgb(0, 159, 107);
+  padding: 2rem;
+  background-color: transparent;
+  border: 1px solid rgb(103, 210, 130);
   border-radius: 10px;
   margin: 0 !important;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+.grid__3 .main__list__item:hover {
+  background-color: rgb(103, 210, 130);
+  color: rgb(16, 16, 16);
 }
 
 @media screen and (max-width: 1600px) {
@@ -399,8 +408,6 @@ ul {
 }
 
 .home__container {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   background-color: rgb(16, 16, 16);
@@ -526,8 +533,6 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -767,8 +772,6 @@ ul {
   align-items: center;
   align-self: center;
   cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 1rem 6rem;
   border-radius: 8px;
@@ -868,8 +871,6 @@ ul {
   }
 }
 .home__footer .footer__container .footer__links {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -904,8 +905,7 @@ ul {
   padding: 0 10%;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   box-shadow: 2px 18px 99px -41px rgba(0, 0, 0, 0.68);
   position: fixed;
   top: 0;
@@ -996,8 +996,7 @@ ul {
 }
 .nav__mob .navbar {
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   padding: 0 1rem;
   width: 100%;
   height: 100%;
@@ -1213,14 +1212,11 @@ ul {
   .home__banner .banner__illustration {
     height: 40%;
     width: 40%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 .home__banner .banner__cta {
   display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   font-size: 1.2rem;
   font-weight: 300;
@@ -1309,26 +1305,10 @@ ul {
 }
 .home__banner .banner__scroll .svg__arrow {
   transform: translateY(50px);
-  -webkit-animation-name: updown;
-          animation-name: updown;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes updown {
-  0% {
-    transform: translateY(50px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(50px);
-  }
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes updown {
@@ -1343,8 +1323,6 @@ ul {
   }
 }
 .pool__container {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   background-color: rgb(16, 16, 16);
@@ -1357,16 +1335,12 @@ ul {
 @media screen and (max-width: 900px) {
   .pool__header {
     padding: 100px 1rem;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
 }
 @media screen and (min-height: 1000px) and (max-width: 940px) {
   .pool__header {
     padding: 100px 3vw;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
 }
@@ -1381,8 +1355,6 @@ ul {
 .pool__header .banner .banner__heading {
   font-size: 11rem;
   text-align: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 @media screen and (max-width: 2000px) {
@@ -1483,14 +1455,10 @@ ul {
 }
 .pool__header .banner .banner__scroll .svg__arrow {
   transform: translateY(50px);
-  -webkit-animation-name: updown;
-          animation-name: updown;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes updown {
@@ -1787,8 +1755,6 @@ ul {
 .pool__main__skills .card__heading {
   color: rgb(255, 255, 255);
   font-weight: 700;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 4rem;
   text-align: center;
@@ -1826,8 +1792,6 @@ ul {
 .pool__main__skills .skill__cards .skill__card {
   margin: 3rem 0;
   width: 45%;
-  height: -webkit-fill-available;
-  height: -moz-available;
   height: stretch;
 }
 @media screen and (max-width: 900px) {
@@ -1879,8 +1843,6 @@ ul {
 }
 
 .link__preview {
-  height: -webkit-fill-available;
-  height: -moz-available;
   height: stretch;
   width: 100%;
   display: flex;
@@ -1972,8 +1934,6 @@ ul {
 }
 
 .cursus__container {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   background-color: rgb(16, 16, 16);
@@ -2000,16 +1960,12 @@ ul {
 @media screen and (max-width: 900px) {
   .cursus__header {
     padding: 100px 1rem;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
 }
 @media screen and (min-height: 1000px) and (max-width: 940px) {
   .cursus__header {
     padding: 100px 3vw;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
 }
@@ -2024,8 +1980,6 @@ ul {
 .cursus__header .banner .banner__heading {
   font-size: 9rem;
   text-align: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 @media screen and (max-width: 2000px) {
@@ -2127,14 +2081,10 @@ ul {
 }
 .cursus__header .banner .banner__scroll .svg__arrow {
   transform: translateY(50px);
-  -webkit-animation-name: updown;
-          animation-name: updown;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes updown {
@@ -2266,8 +2216,6 @@ ul {
   align-items: center;
 }
 .fourohfour__container header .banner h1 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
   font-size: 8rem;
@@ -2289,4 +2237,6 @@ ul {
 }
 .fourohfour__container header .banner h1 span {
   color: rgb(103, 210, 130);
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
