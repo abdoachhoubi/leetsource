@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
 import { Header } from "../routes/Cursus/containers";
-import { MainIntro } from "../routes/Cursus/components";
+import { MainIntro, Skills } from "../routes/Cursus/components";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
@@ -56,7 +56,7 @@ const Cursus = ({ cursus }) => {
       <main className="cursus__main" ref={main__ref}>
         <MainIntro n={0} />
         <MainIntro n={1} />
-        <MainIntro n={2} />
+        <Skills />
       </main>
     </CursusContext.Provider>
   );
@@ -77,6 +77,11 @@ Cursus.getInitialProps = async () => {
           title
           description
           list
+        }
+        projects {
+          title
+          pro
+          description
         }
       }
     `,

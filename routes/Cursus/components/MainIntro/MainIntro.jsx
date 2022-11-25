@@ -6,8 +6,8 @@ const MainIntro = ({ n }) => {
   const { title, description, list } = data.intros[n];
   return (
     <section className="cursus__main__intro">
-      <h1 className="main__heading">{title}</h1>
-      <article className={`intro__content ${n == 2 && "col wide"}`}>
+      <h1 className="cursus__main__heading">{title}</h1>
+      <article className={`cursus__intro__content ${n == 2 && "col wide"}`}>
         <p className={`main__text ${n == 1 && "wide"}`}>
           {description.split("$").map((e, i) => {
             return (
@@ -19,7 +19,7 @@ const MainIntro = ({ n }) => {
           })}
         </p>
         {list && list != "null" && (
-          <ul className={`main__list ${n == 2 && "grid__3 wide"}`}>
+          <ul className={`cursus__main__list ${n == 2 && "grid__3 wide"}`}>
             {n == 0 && (
               <p className="main__text wide">
                 Now, as a new student there are few things that you should know:

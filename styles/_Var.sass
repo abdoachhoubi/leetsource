@@ -65,6 +65,13 @@ $color__gradient: rgb(103, 210, 130)
 
 .column__rev
     flex-direction: column-reverse !important
+.mt4
+    margin-top: 4rem
+
+.lh130
+    line-height: 160%
+    font-size: 3rem
+    font-weight: 400
 
 .grid__3
     display: grid !important
@@ -83,9 +90,14 @@ $color__gradient: rgb(103, 210, 130)
         margin: 0 !important
         transition-duration: 300ms
         cursor: pointer
+        *
+            cursor: pointer
+        .list__title
+            margin-bottom: 1rem
         &:hover
             background-color: $color__primary
-            color: $color__dark
+            *
+                color: $color__dark
 
 @media screen and ( max-width: 1600px )
     .in
