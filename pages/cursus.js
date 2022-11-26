@@ -78,7 +78,7 @@ Cursus.getInitialProps = async () => {
           description
           list
         }
-        projects {
+        projects(last: 20) {
           title
           pro
           description

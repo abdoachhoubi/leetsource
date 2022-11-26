@@ -1,15 +1,16 @@
 import React, { createContext, useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import axios from "axios";
-import { Header } from "../routes/Project/containers";
+import { Header, Main } from "../routes/Project/containers";
 
 export const ProjectContext = createContext();
 
 const Project = ({ data }) => {
   console.log(data);
-  // const scrollToMain = () => {
-  //   main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  // };
+  const main__ref = useRef();
+  const scrollToMain = () => {
+    main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   // Width States
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
@@ -23,6 +24,7 @@ const Project = ({ data }) => {
     data && (
       <ProjectContext.Provider
         value={{
+          data: data,
           width: width,
           title: data[0].projects[0].title,
           description: data[0].projects[0].description,
@@ -54,7 +56,7 @@ const Project = ({ data }) => {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <Header />
-          {/* <Header source={source} scrollToMain={scrollToMain} /> */}
+          <Main ref={main__ref} />
           {/* <div>
         <h1>{data[0].projects[0].title}</h1>
       </div> */}
