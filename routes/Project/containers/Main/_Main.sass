@@ -1,0 +1,21 @@
+.project__main
+    width: 100%
+    padding: 0 10%
+    .main__heading
+        margin: 0 0 .4rem 0
+        font-size: 3rem
+    .cards__container
+        margin-top: 10rem
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(auto, 1fr)
+        grid-column-gap: 10vw
+        grid-row-gap: 10vh
+        @media screen and ( max-width: 1600px )
+            grid-column-gap: 3vw
+            grid-row-gap: 14vh
+        @media screen and ( max-width: 1100px )
+            grid-row-gap: 14vh
+        @media screen and ( max-width: 900px )
+            @include flex(column, flex-start, center)
+            grid-row-gap: 10vh

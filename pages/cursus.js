@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
 import { Header } from "../routes/Cursus/containers";
 import { MainIntro, Skills } from "../routes/Cursus/components";
+import { Footer } from "../routes/Home/containers";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
@@ -58,6 +59,7 @@ const Cursus = ({ cursus }) => {
         <MainIntro n={1} />
         <Skills />
       </main>
+      <Footer size="wide" />
     </CursusContext.Provider>
   );
 };
