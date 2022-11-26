@@ -23,17 +23,20 @@ const getData = async () => {
   return data;
 };
 
-const handler = async (req, res) => {
-  const { query } = req;
-  const project = query?.project;
-  const { proLinks } = await getData();
-  let links = proLinks.filter((e) => {
+const filterLinks = (proLinks, project) => {
+  const links = proLinks.filter((e) => {
     for (let i = 0; i < e.projects.length; i++) {
       if (project == e.projects[i].pro) {
         return e;
       }
     }
   });
+  return links;
+};
+
+const handler = async (req, res) => {
+  const { proLinks } = await getData();
+  const links = filterLinks(proLinks, req?.query?.project);
   res.send(links);
 };
 
