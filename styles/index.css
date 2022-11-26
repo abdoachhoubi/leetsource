@@ -384,10 +384,6 @@ template, [hidden] {
   cursor: default;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   width: 100%;
   background-color: rgb(16, 16, 16);
@@ -2269,6 +2265,25 @@ ul {
   .cursus__main__list .main__list__item {
     font-size: 1rem;
   }
+}
+
+.project__container {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__header {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 100px 10%;
 }
 
 .fourohfour__container {
