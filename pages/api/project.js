@@ -5,12 +5,12 @@ const getData = async () => {
   const { data } = await client.query({
     query: gql`
       query Projects {
-        proLinks {
+        proLinks(last: 100) {
           id
           title
           description
           link
-          projects {
+          projects(last: 30) {
             title
             pro
             description
