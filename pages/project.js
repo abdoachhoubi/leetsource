@@ -74,7 +74,7 @@ const Project = ({ data, projects }) => {
 
 Project.getInitialProps = async (ctx) => {
   const data = await fetch(
-    `http://${API__ENDPOINT}/api/project/?project=${ctx.query.project}`
+    `https://${API__ENDPOINT}/api/project/?project=${ctx.query.project}`
   )
     .then((data) => data.json())
     .catch((e) => console.log(e));
