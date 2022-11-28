@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import Head from "next/head";
+import { API__ENDPOINT } from "../data";
 import { useRouter } from "next/router";
 import { Header, Main } from "../routes/Project/containers";
 import { Footer } from "../routes/Home/containers";
@@ -73,7 +74,7 @@ const Project = ({ data, projects }) => {
 
 Project.getInitialProps = async (ctx) => {
   const data = await fetch(
-    `http://localhost:3000/api/project/?project=${ctx.query.project}`
+    `http://${API__ENDPOINT}/api/project/?project=${ctx.query.project}`
   )
     .then((data) => data.json())
     .catch((e) => console.log(e));
