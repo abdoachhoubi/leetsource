@@ -22,7 +22,7 @@ const Skills = () => {
                   query: { project: e.pro },
                 }}
                 key={i}
-                className="main__list__item"
+                className="main__list__item skills__it"
               >
                 <h3 className="list__title">{e.title}</h3>
                 <p className="list__content">{e.description}</p>

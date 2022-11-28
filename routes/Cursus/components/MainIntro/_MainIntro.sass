@@ -7,14 +7,16 @@
     color: $color__primary
     margin-bottom: 3rem
     @media screen and ( max-width: 2200px )
-        font-size: 5rem
+        font-size: 4.4rem
     @media screen and ( max-width: 1600px )
-        font-size: 4rem
+        font-size: 3rem
         width: 100%
     @media screen and ( max-width: 900px )
         font-size: 2.4rem
 .cursus__intro__content
     @include flex(row, flex-start, space-between)
+    @media screen and ( max-width: 900px )
+        @include flex(column, flex-start, flex-start)
     .main__text
         font-size: 2rem
         line-height: 140%
@@ -24,14 +26,16 @@
         @media screen and ( max-width: 2200px )
             font-size: 1.6rem
         @media screen and ( max-width: 1600px )
-            font-size: 1.2rem
-            width: 100%
+            font-size: 1rem
             align-self: flex-start
         @media screen and ( max-width: 900px )
             font-size: 1rem
+            width: 100%
 .cursus__main__list
     width: 48%
     list-style: circle
+    @media screen and ( max-width: 900px )
+        width: calc( 100% - 1rem )
     .main__list__item
         margin-left: 1.4rem
         font-size: 1.4rem
@@ -48,3 +52,4 @@
             align-self: flex-start
         @media screen and ( max-width: 900px )
             font-size: 1rem
+            width: 100%
