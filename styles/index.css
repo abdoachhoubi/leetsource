@@ -1441,7 +1441,7 @@ ul {
   color: rgb(103, 210, 130);
 }
 .pool__header .banner .banner__content {
-  font-size: 4rem;
+  font-size: 3rem;
   width: 90%;
   text-align: center;
 }
@@ -1584,6 +1584,9 @@ ul {
   .pool__main .pool__main__heading {
     font-size: 2.6rem;
   }
+}
+.pool__main .pool__main__links {
+  padding-top: 100px;
 }
 @media screen and (max-width: 1600px) {
   .pool__main .pool__main__links {

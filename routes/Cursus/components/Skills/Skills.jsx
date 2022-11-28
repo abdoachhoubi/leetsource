@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { CursusContext } from "../../../../contexts";
 
 const Skills = () => {
-  const { data } = useContext(CursusContext);
+  const { projects } = useContext(CursusContext);
   return (
     <section className="cursus__main__intro">
       <h1 className="cursus__main__heading">Projects</h1>
@@ -13,8 +13,8 @@ const Skills = () => {
         Click on a project to get a list of the resources related to it.
       </h2>
       <ul className="cursus__main__list grid__3 wide mt4">
-        {data?.projects &&
-          data.projects.map((e, i) => {
+        {projects &&
+          projects.map((e, i) => {
             return (
               <Link
                 href={{

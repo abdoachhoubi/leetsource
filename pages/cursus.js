@@ -9,6 +9,11 @@ import client from "../lib";
 export var CursusContext = createContext();
 
 const Cursus = ({ cursus }) => {
+  let projects = [];
+  for (let i = 0; i < cursus.projects.length; i++) {
+    projects[cursus.projects[i].index] = cursus.projects[i];
+  }
+
   // Destructuring all cursus data
   const { source } = cursus;
 
@@ -31,7 +36,9 @@ const Cursus = ({ cursus }) => {
     setWidth(window.innerWidth);
   }, [size]);
   return (
-    <CursusContext.Provider value={{ width: width, data: cursus }}>
+    <CursusContext.Provider
+      value={{ width: width, data: cursus, projects: projects }}
+    >
       <div className="cursus__container">
         <Head>
           <title>Leet Source - Cursus</title>
@@ -80,7 +87,8 @@ Cursus.getInitialProps = async () => {
           description
           list
         }
-        projects(last: 20) {
+        projects(last: 30) {
+          index
           title
           pro
           description
