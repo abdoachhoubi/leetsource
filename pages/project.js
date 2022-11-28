@@ -6,34 +6,30 @@ import { Footer } from "../routes/Home/containers";
 
 export const ProjectContext = createContext();
 
-const getTitle = (s, arr) => {
-  let i;
-
-  i = 0;
-  while (i < arr.length) if (s === arr[i].pro) return arr[i].title;
-  return "404";
-};
-
-const getDescription = (s, arr) => {
-  let i;
-
-  i = 0;
-  while (i < arr.length) if (s === arr[i].pro) return arr[i].description;
-  return "404";
-};
-
 const Project = ({ data, projects }) => {
-  // console.log(data);
+  const router = useRouter();
+
+  const getMeta = (meta, s, arr) => {
+    let i;
+
+    i = -1;
+    if (meta == "title") {
+      while (++i < arr.length) if (s === arr[i].pro) return arr[i].title;
+    } else {
+      while (++i < arr.length) if (s === arr[i].pro) return arr[i].description;
+    }
+    return "404";
+  };
+
   // Width States
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
+  const title = getMeta("title", router.query.project, projects);
+  const description = getMeta("description", router.query.project, projects);
 
-  const router = useRouter();
-  const title = getTitle(router.query.project, projects);
-  const description = getDescription(router.query.project, projects);
-  // console.log(starrcmp(router.query.project, projects));
   // Getting Window Width
   useEffect(() => {
+    if (title == "404") router.push("/404");
     window.addEventListener("resize", () => setSize(window.innerWidth));
     setWidth(window.innerWidth);
   }, [size]);
@@ -76,7 +72,9 @@ const Project = ({ data, projects }) => {
 Project.getInitialProps = async (ctx) => {
   const data = await fetch(
     `http://localhost:3000/api/project/?project=${ctx.query.project}`
-  ).then((data) => data.json());
+  )
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
   return { data: data.links, projects: data.projects };
 };
 
