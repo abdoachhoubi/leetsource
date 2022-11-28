@@ -61,8 +61,10 @@ const Project = ({ data, projects }) => {
           <meta name="author" content="Astroboy" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
-        <Main />
+        <div className="conatinerX">
+          <Header />
+          <Main />
+        </div>
         <Footer size="wide" />
       </div>
     </ProjectContext.Provider>

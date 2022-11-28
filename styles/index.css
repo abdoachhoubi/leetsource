@@ -2269,9 +2269,15 @@ ul {
 
 .project__container {
   width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.project__container .conatinerX {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2305,6 +2311,9 @@ ul {
 
 .project__main {
   width: 100%;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
   padding: 0 10%;
 }
 .project__main .main__heading {
