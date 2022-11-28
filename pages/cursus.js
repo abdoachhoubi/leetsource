@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
 import { Header } from "../routes/Cursus/containers";
 import { MainIntro, Skills } from "../routes/Cursus/components";
+import { Footer } from "../routes/Home/containers";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
@@ -8,6 +9,11 @@ import client from "../lib";
 export var CursusContext = createContext();
 
 const Cursus = ({ cursus }) => {
+  let projects = [];
+  for (let i = 0; i < cursus.projects.length; i++) {
+    projects[cursus.projects[i].index] = cursus.projects[i];
+  }
+
   // Destructuring all cursus data
   const { source } = cursus;
 
@@ -30,7 +36,9 @@ const Cursus = ({ cursus }) => {
     setWidth(window.innerWidth);
   }, [size]);
   return (
-    <CursusContext.Provider value={{ width: width, data: cursus }}>
+    <CursusContext.Provider
+      value={{ width: width, data: cursus, projects: projects }}
+    >
       <div className="cursus__container">
         <Head>
           <title>Leet Source - Cursus</title>
@@ -58,6 +66,7 @@ const Cursus = ({ cursus }) => {
         <MainIntro n={1} />
         <Skills />
       </main>
+      <Footer size="wide" />
     </CursusContext.Provider>
   );
 };
@@ -78,7 +87,8 @@ Cursus.getInitialProps = async () => {
           description
           list
         }
-        projects {
+        projects(last: 30) {
+          index
           title
           pro
           description

@@ -5,12 +5,17 @@ const getData = async () => {
   const { data } = await client.query({
     query: gql`
       query Projects {
-        proLinks {
+        projects(last: 30) {
+          title
+          pro
+          description
+        }
+        proLinks(last: 100) {
           id
           title
           description
           link
-          projects {
+          projects(last: 30) {
             title
             pro
             description
@@ -23,18 +28,21 @@ const getData = async () => {
   return data;
 };
 
-const handler = async (req, res) => {
-  const { query } = req;
-  const project = query?.project;
-  const { proLinks } = await getData();
-  let links = proLinks.filter((e) => {
+const filterLinks = (proLinks, project) => {
+  const links = proLinks.filter((e) => {
     for (let i = 0; i < e.projects.length; i++) {
       if (project == e.projects[i].pro) {
         return e;
       }
     }
   });
-  res.send(links);
+  return links;
+};
+
+const handler = async (req, res) => {
+  const { proLinks, projects } = await getData();
+  const links = filterLinks(proLinks, req?.query?.project);
+  res.send({ links, projects });
 };
 
 export default handler;

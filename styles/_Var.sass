@@ -16,22 +16,22 @@ $color__gradient: rgb(103, 210, 130)
 
 // Mixins    
 @mixin flex($direction, $align, $justify)
-    display: flex
-    flex-direction: $direction
-    justify-content: $justify
-    align-items: $align
+    display: flex !important
+    flex-direction: $direction !important
+    justify-content: $justify !important
+    align-items: $align !important
 
 @mixin pos($position, $zi, $top, $right, $bottom, $left)
-    position: $position
-    top: $top
-    left: $left
-    right: $right
-    bottom: $bottom
-    z-index: $zi
+    position: $position !important
+    top: $top !important
+    left: $left !important
+    right: $right !important
+    bottom: $bottom !important
+    z-index: $zi !important
 
 @mixin transition($dur, $tfunc)
-    transition-duration: $dur
-    transition-timing-function: $tfunc
+    transition-duration: $dur !important
+    transition-timing-function: $tfunc !important
 
 // Utilities
 
@@ -72,12 +72,23 @@ $color__gradient: rgb(103, 210, 130)
     line-height: 160%
     font-size: 3rem
     font-weight: 400
+    @media screen and ( max-width: 1400px )
+        line-height: 120%
+        font-size: 2rem
+    @media screen and ( max-width: 900px )
+        line-height: 150%
+        font-size: 1.2rem
 
 .grid__3
     display: grid !important
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: auto
     gap: 4rem
+    @media screen and ( max-width: 1600px )
+        gap: 2rem
+    @media screen and ( max-width: 900px )
+        @include flex(column, center, center)
+        margin-bottom: 60px
     .main__list__item
         @include flex(column, center, center)
         text-align: center
@@ -98,6 +109,13 @@ $color__gradient: rgb(103, 210, 130)
             background-color: $color__primary
             *
                 color: $color__dark
+.smallx
+    width: 100%
+    @media screen and ( max-width: 1400px )
+        width: 80% !important
+    @media screen and ( max-width: 900px )
+        width: 100% !important
+    
 
 @media screen and ( max-width: 1600px )
     .in

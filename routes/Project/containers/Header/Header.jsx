@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <header className="project__header">
       <Nav width={width} />
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <h1 className="header__heading">{title}</h1>
+      <p className="header__desc">{description}</p>
     </header>
   );
 };

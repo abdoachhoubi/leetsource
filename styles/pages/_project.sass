@@ -1,7 +1,13 @@
 .project__container
-    width: 100%
-    height: fit-content
-    @include flex(column, center, center)
+    width: 100vw
+    min-height: 100vh
+    @include flex(column, center, space-between)
+    .conatinerX
+        width: 100%
+        height: 100%
+        @include flex(column, center, center)
+    footer
+        width: 100%
 
 @import ../../routes/Project/containers/_index
 @import ../../routes/Project/components/_index

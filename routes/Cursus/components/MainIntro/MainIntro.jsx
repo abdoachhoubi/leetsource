@@ -8,7 +8,7 @@ const MainIntro = ({ n }) => {
     <section className="cursus__main__intro">
       <h1 className="cursus__main__heading">{title}</h1>
       <article className={`cursus__intro__content ${n == 2 && "col wide"}`}>
-        <p className={`main__text ${n == 1 && "wide"}`}>
+        <p className={`main__text ${n == 1 && "wide smallx"}`}>
           {description.split("$").map((e, i) => {
             return (
               <span key={i}>
