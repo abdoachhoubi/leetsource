@@ -9,7 +9,7 @@ const Main = () => {
       <h1 className="main__heading">A list of useful resources</h1>
       <section className="cards__container">
         {data.map((e, i) => (
-          <LinkPreview key={i} data={e} />
+          <LinkPreview key={i} data={e} author={e?.author} />
         ))}
       </section>
     </main>

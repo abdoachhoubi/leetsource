@@ -4,3 +4,6 @@ const data = {
   PRIMARY_COLOR: PRIMARY_COLOR,
 };
 export default data;
+
+// for dev http://localhost:3000
+// for production https://source.leet.ma
