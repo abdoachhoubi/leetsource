@@ -9,7 +9,7 @@ const Footer = ({ size }) => {
           <h2 className="footer__heading">* Leet Source</h2>
           <p className="footer__quote">
             "Leet Source is meant to save you time searching for resources in
-            different sources, our goal is to bring a many reources as we can
+            different sources, our goal is to bring as many reources as we can
             and put them together here to make your life easier!"
           </p>
           <p className="footer__attribution">- Astroboy</p>
