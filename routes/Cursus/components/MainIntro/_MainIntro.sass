@@ -2,6 +2,8 @@
     width: 100%
     padding: 100px 0 0 0
     @include flex(column, flex-start, center)
+    @media screen and ( max-width: 900px )
+        padding: 50px 0 0 0
 .cursus__main__heading
     font-size: 6rem
     color: $color__primary
@@ -13,6 +15,7 @@
         width: 100%
     @media screen and ( max-width: 900px )
         font-size: 2.4rem
+        margin-bottom: 2rem
 .cursus__intro__content
     @include flex(row, flex-start, space-between)
     @media screen and ( max-width: 900px )
@@ -30,6 +33,7 @@
             align-self: flex-start
         @media screen and ( max-width: 900px )
             font-size: 1rem
+            margin-bottom: 2rem
             width: 100%
 .cursus__main__list
     width: 48%
