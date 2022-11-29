@@ -340,10 +340,17 @@ template, [hidden] {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 1100px) {
+  .lh130 {
+    line-height: 120%;
+    font-size: 1.6rem;
+  }
+}
 @media screen and (max-width: 900px) {
   .lh130 {
     line-height: 150%;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
   }
 }
 
@@ -1989,7 +1996,7 @@ ul {
 }
 @media screen and (max-width: 900px) {
   .link__preview .meta .title {
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 }
@@ -2024,11 +2031,24 @@ ul {
   justify-content: center !important;
   align-items: flex-start !important;
 }
+@media screen and (max-width: 900px) {
+  .link__preview .cta {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
 .link__preview .cta .attribution {
   list-style-type: circle;
   display: block;
   margin-left: 1rem;
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 1600px) {
+  .link__preview .cta .attribution {
+    margin-bottom: 2rem;
+  }
 }
 .link__preview .cta .attribution a {
   color: rgb(103, 210, 130);
@@ -2252,6 +2272,11 @@ ul {
   justify-content: center !important;
   align-items: flex-start !important;
 }
+@media screen and (max-width: 900px) {
+  .cursus__main__intro {
+    padding: 50px 0 0 0;
+  }
+}
 
 .cursus__main__heading {
   font-size: 6rem;
@@ -2272,6 +2297,7 @@ ul {
 @media screen and (max-width: 900px) {
   .cursus__main__heading {
     font-size: 2.4rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2310,6 +2336,7 @@ ul {
 @media screen and (max-width: 900px) {
   .cursus__intro__content .main__text {
     font-size: 1rem;
+    margin-bottom: 2rem;
     width: 100%;
   }
 }
@@ -2394,10 +2421,21 @@ ul {
   font-size: 6rem;
   color: rgb(103, 210, 130);
 }
+@media screen and (max-width: 900px) {
+  .project__header .header__heading {
+    font-size: 2.4rem;
+  }
+}
 .project__header .header__desc {
   font-size: 2rem;
   width: 60%;
   text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .project__header .header__desc {
+    font-size: 1.2rem;
+    width: 100%;
+  }
 }
 
 .project__main {
@@ -2407,9 +2445,20 @@ ul {
   height: stretch;
   padding: 0 10%;
 }
+@media screen and (max-width: 900px) {
+  .project__main {
+    padding: 0 1rem;
+  }
+}
 .project__main .main__heading {
   margin: 0 0 0.4rem 0;
   font-size: 3rem;
+}
+@media screen and (max-width: 900px) {
+  .project__main .main__heading {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 .project__main .cards__container {
   margin-top: 10rem;
@@ -2418,6 +2467,11 @@ ul {
   grid-template-rows: repeat(auto, 1fr);
   grid-column-gap: 10vw;
   grid-row-gap: 10vh;
+}
+@media screen and (max-width: 1600px) {
+  .project__main .cards__container {
+    margin-top: 5vh;
+  }
 }
 @media screen and (max-width: 1600px) {
   .project__main .cards__container {
