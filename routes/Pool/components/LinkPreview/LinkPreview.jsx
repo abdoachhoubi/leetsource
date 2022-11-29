@@ -5,18 +5,20 @@ const LinkPreview = ({ data, author }) => {
   return (
     data && (
       <article className="link__preview">
-        <div className="link__meta">
+        <div className="meta">
           <h2 className="title">{data.title}</h2>
           <p className="description">{data.description}</p>
         </div>
         <div className="cta">
           {author && (
-            <p className="attribution">
-              Suggested by{" "}
-              <Link href={`https://profile.intra.42.fr/users/${author}`}>
-                {author}
-              </Link>
-            </p>
+            <ul className="attribution">
+              <li>
+                Suggested by{" "}
+                <Link href={`https://profile.intra.42.fr/users/${author}`}>
+                  {author}
+                </Link>
+              </li>
+            </ul>
           )}
 
           <Link
