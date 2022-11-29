@@ -15,6 +15,7 @@ const getData = async () => {
           title
           description
           link
+          author
           projects(last: 30) {
             title
             pro
