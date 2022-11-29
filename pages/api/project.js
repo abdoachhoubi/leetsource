@@ -36,8 +36,6 @@ const filterLinks = (proLinks, project) => {
       }
     }
   });
-  console.log("################################");
-  console.log(links);
   return links;
 };
 

@@ -77,6 +77,10 @@ const Project = ({ data, projects }) => {
       </ProjectContext.Provider>
     );
   } else {
+    const router = useRouter();
+    useEffect(() => {
+      router.push("/404");
+    }, []);
     return <></>;
   }
 };
