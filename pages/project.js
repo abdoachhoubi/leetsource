@@ -78,9 +78,7 @@ const Project = ({ data, projects }) => {
     );
   } else {
     const router = useRouter();
-    useEffect(() => {
-      router.push("/404");
-    }, []);
+    router.push("/404");
     return <></>;
   }
 };
