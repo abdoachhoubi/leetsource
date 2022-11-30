@@ -9,6 +9,7 @@ import client from "../lib";
 export var CursusContext = createContext();
 
 const Cursus = ({ cursus }) => {
+  // Sorting projects
   let projects = [];
   for (let i = 0; i < cursus.projects.length; i++) {
     projects[cursus.projects[i].index] = cursus.projects[i];
@@ -61,6 +62,7 @@ const Cursus = ({ cursus }) => {
         </Head>
       </div>
       <Header scrollToMain={scrollToMain} />
+      <button onClick={() => signOut()}>Logout</button>
       <main className="cursus__main" ref={main__ref}>
         <MainIntro n={0} />
         <MainIntro n={1} />
