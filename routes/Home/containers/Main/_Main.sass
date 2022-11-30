@@ -1,6 +1,8 @@
 .home__main
     width: 100%
     @include flex(column, center, flex-start)
+    @media screen and ( max-width: 1600px )
+        width: 80%
     @media screen and ( max-width: 900px )
         padding: 0 1rem
     .main__heading
