@@ -419,6 +419,21 @@ template, [hidden] {
   }
 }
 
+.visible {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.notif {
+  color: rgb(103, 210, 130);
+  align-self: center;
+  margin: 1rem 0 0 0;
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 1600px) {
   .in {
     font-size: 0.6rem;
@@ -506,6 +521,7 @@ ul {
 }
 @media screen and (max-width: 900px) {
   .home__main {
+    width: 100%;
     padding: 0 1rem;
   }
 }
@@ -870,6 +886,7 @@ ul {
 }
 
 .home__footer {
+  width: 100%;
   padding: 2rem 10%;
   background: rgb(103, 210, 130);
   display: flex !important;
@@ -895,7 +912,7 @@ ul {
   }
 }
 .home__footer .footer__container {
-  width: 80%;
+  width: 100%;
   display: flex !important;
   flex-direction: row !important;
   justify-content: space-between !important;
