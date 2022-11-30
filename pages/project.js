@@ -25,7 +25,8 @@ const Project = ({ data, projects }) => {
   // Width States
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
-  const title = getMeta("title", router.query.project, projects);
+  const title =
+    "Leet Source - " + getMeta("title", router.query.project, projects);
   const description = getMeta("description", router.query.project, projects);
 
   // Getting Window Width
@@ -45,7 +46,7 @@ const Project = ({ data, projects }) => {
     >
       <div className="project__container">
         <Head>
-          <title>Leet Source - {title}</title>
+          <title>{title}</title>
           <meta
             name="google-site-verification"
             content="ovvmP3s_dWVp7bb05Bb8nGIrneErM1TaR8UDf2Yu32c"
@@ -56,7 +57,7 @@ const Project = ({ data, projects }) => {
             content="1337 Pool, 42 Cursus, 1337 Ecole, C Programming"
           />
           <meta name="robots" content="index, follow" />
-          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="language" content="English" />
           <meta name="revisit-after" content="7 days" />
           <meta name="author" content="Astroboy" />
