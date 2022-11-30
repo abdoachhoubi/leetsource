@@ -4,6 +4,7 @@
     @media screen and ( max-width: 1600px )
         width: 80%
     @media screen and ( max-width: 900px )
+        width: 100%
         padding: 0 1rem
     .main__heading
         width: 80%
@@ -163,9 +164,9 @@
                     max-width: 100%
             .contact__form
                 width: 40%
+                @include flex(column, flex-start, center)
                 @media screen and ( max-width: 900px )
                     width: 100%
-                @include flex(column, flex-start, center)
                 input:not(:last-child)
                     width: 100%
                     background-color: transparent

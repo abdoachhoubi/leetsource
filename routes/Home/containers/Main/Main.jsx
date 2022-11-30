@@ -1,11 +1,20 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
 import { ArrowUpRight } from "react-feather";
 import { HomeContext } from "../../../../contexts";
 import { PRIMARY_COLOR } from "../../../../data";
 import pic from "../../../../public/contact__illustration.svg";
 
+// Getting the contact illustration pic src
 const { src } = pic;
+
+// Getting contact form emailjs keys
+const contact = {
+  KEY: process.env.NEXT_PUBLIC_CONTACT__PUB__KEY,
+  SERV: process.env.NEXT_PUBLIC_CONTACT__SERV__ID,
+  TEMP: process.env.NEXT_PUBLIC_CONTACT__TEMP__ID,
+};
 
 const Main = ({ main__ref }) => {
   /* ----------------- Getting Data ------------------ */
@@ -16,6 +25,30 @@ const Main = ({ main__ref }) => {
     pools = data[0].pools;
     abouts = data[1].abouts;
   }
+
+  /* ------------------------------------------------- */
+
+  /* ---------------- handle Contact ----------------- */
+  const [mail, setMail] = useState("");
+  const [sub, setSub] = useState("");
+  const [text, setText] = useState("");
+  const [visible, setVisible] = useState("false");
+  const [message, setMessage] = useState("");
+  const form = useRef();
+  const sendMail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(contact.SERV, contact.TEMP, form.current, contact.KEY)
+      .then(() => {
+        setMail("");
+        setSub("");
+        setText("");
+        setMessage("Email has been sent successfully!");
+        window.setTimeout(() => setVisible("hidden"), 2000);
+      })
+      .catch((e) => setMessage(`{e.message}, try again later!`));
+    setVisible("visible");
+  };
 
   /* ------------------------------------------------- */
 
@@ -86,32 +119,45 @@ const Main = ({ main__ref }) => {
         </p>
         <div className="contact__area">
           <form
-            action="mailto:leetsource@gmail.com"
-            method="POST"
+            ref={form}
+            onSubmit={(e) => sendMail(e)}
             encType="text/plain"
             name="contact__form"
             className="contact__form"
           >
             <input
+              value={mail}
+              onChange={(e) => setMail(e.target.value)}
+              onClick={() => setVisible("hidden")}
               className="in"
               type="email"
-              name="email"
+              name="mail"
               id="form__mail"
               placeholder="Email"
+              required
             />
             <input
+              value={sub}
+              onChange={(e) => setSub(e.target.value)}
+              onClick={() => setVisible("hidden")}
               className="in"
-              name="subject"
+              name="sub"
               id="form__subject"
-              placeholder="Subject"
+              placeholder="Name"
+              required
             />
             <textarea
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              onClick={() => setVisible("hidden")}
               className="in"
               type="text"
-              name="subject"
+              name="text"
               id="form__content"
               placeholder="Message"
+              required
             />
+            <p className={`notif ${visible}`}>{message}</p>
             <input className="submit" type="submit" value="Send" />
           </form>
           <img className="contact__illustration" src={src} alt="" />
