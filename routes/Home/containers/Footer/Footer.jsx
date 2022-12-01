@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
-const Footer = ({ size }) => {
+const Footer = ({ size, signout }) => {
   return (
     <footer className="home__footer">
       <section className="footer__container" style={size && { width: "100%" }}>
@@ -15,6 +16,9 @@ const Footer = ({ size }) => {
           <p className="footer__attribution">- Astroboy</p>
         </article>
         <article className="footer__links">
+          {signout && (
+            <p onClick={() => signOut({ callbackUrl: "/" })}>Sign out</p>
+          )}
           <Link target="_blank" rel="noreferrer" href="https://webdev.leet.ma">
             Visit 1337 Web Dev club
           </Link>

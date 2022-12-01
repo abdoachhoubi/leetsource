@@ -4,7 +4,7 @@ import { ArrowDown } from "react-feather";
 import { PRIMARY_COLOR } from "../../../../data";
 import { CursusContext } from "../../../../pages/cursus";
 
-const Header = ({ scrollToMain }) => {
+const Header = ({ scrollToMain, title }) => {
   /* --------------- Destructuring data -------------- */
 
   const { data, width } = useContext(CursusContext);

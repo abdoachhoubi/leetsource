@@ -3,20 +3,22 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { Header, Main } from "../routes/Project/containers";
 import { Footer } from "../routes/Home/containers";
+import { useSession } from "next-auth/react";
 
 export const ProjectContext = createContext();
 
 const Project = ({ data, projects }) => {
   const router = useRouter();
+  const { status } = useSession();
 
   const getMeta = (meta, s, arr) => {
     let i;
 
     i = -1;
     if (meta == "title") {
-      while (++i < arr.length) if (s === arr[i].pro) return arr[i].title;
+      while (++i < arr?.length) if (s === arr[i].pro) return arr[i].title;
     } else {
-      while (++i < arr.length) if (s === arr[i].pro) return arr[i].description;
+      while (++i < arr?.length) if (s === arr[i].pro) return arr[i].description;
     }
     return "404";
   };
@@ -31,10 +33,11 @@ const Project = ({ data, projects }) => {
   // Getting Window Width
   useEffect(() => {
     if (title == "404") router.push("/404");
+    if (!data || !projects) router.push("/404");
     window.addEventListener("resize", () => setSize(window.innerWidth));
     setWidth(window.innerWidth);
   }, [size]);
-  return (
+  return status === "authenticated" ? (
     <ProjectContext.Provider
       value={{
         width: width,
@@ -66,9 +69,11 @@ const Project = ({ data, projects }) => {
           <Header />
           <Main />
         </div>
-        <Footer size="wide" />
+        <Footer size="wide" signout={true} />
       </div>
     </ProjectContext.Provider>
+  ) : (
+    <></>
   );
 };
 
