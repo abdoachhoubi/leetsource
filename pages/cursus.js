@@ -5,7 +5,7 @@ import { Footer } from "../routes/Home/containers";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
-import { useSession, signOut, signIn } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 
 export var CursusContext = createContext();
 
