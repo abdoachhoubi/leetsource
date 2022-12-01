@@ -3,6 +3,7 @@ import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
 import { Header, Main, Footer } from "../routes/Home/containers";
+import Link from "next/link";
 
 export var HomeContext = createContext();
 

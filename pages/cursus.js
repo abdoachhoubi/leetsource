@@ -5,10 +5,12 @@ import { Footer } from "../routes/Home/containers";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
+import { useSession, signOut, signIn } from "next-auth/react";
 
 export var CursusContext = createContext();
 
 const Cursus = ({ cursus }) => {
+  const { status } = useSession();
   // Sorting projects
   let projects = [];
   for (let i = 0; i < cursus.projects.length; i++) {
@@ -31,12 +33,16 @@ const Cursus = ({ cursus }) => {
     main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  useEffect(() => {
+    if (status === "unauthenticated") signIn();
+  }, [status]);
+
   // Getting Window Width
   useEffect(() => {
     window.addEventListener("resize", () => setSize(window.innerWidth));
     setWidth(window.innerWidth);
   }, [size]);
-  return (
+  return status === "authenticated" ? (
     <CursusContext.Provider
       value={{ width: width, data: cursus, projects: projects }}
     >
@@ -62,14 +68,15 @@ const Cursus = ({ cursus }) => {
         </Head>
       </div>
       <Header scrollToMain={scrollToMain} />
-      <button onClick={() => signOut()}>Logout</button>
       <main className="cursus__main" ref={main__ref}>
         <MainIntro n={0} />
         <MainIntro n={1} />
         <Skills />
       </main>
-      <Footer size="wide" />
+      <Footer size="wide" signout="true" />
     </CursusContext.Provider>
+  ) : (
+    <></>
   );
 };
 

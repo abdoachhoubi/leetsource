@@ -66,7 +66,7 @@ const Project = ({ data, projects }) => {
           <Header />
           <Main />
         </div>
-        <Footer size="wide" />
+        <Footer size="wide" signout={true} />
       </div>
     </ProjectContext.Provider>
   );
