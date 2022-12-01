@@ -16,10 +16,10 @@ $color__gradient: rgb(103, 210, 130)
 
 // Mixins    
 @mixin flex($direction, $align, $justify)
-    display: flex !important
-    flex-direction: $direction !important
-    justify-content: $justify !important
-    align-items: $align !important
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
 
 @mixin pos($position, $zi, $top, $right, $bottom, $left)
     position: $position !important
@@ -131,6 +131,14 @@ $color__gradient: rgb(103, 210, 130)
     align-self: center
     margin: 1rem 0 0 0
     font-size: 1rem
+
+.auth__button
+    color: $color__dark
+    background-color: $color__primary
+    padding: 1rem 2rem
+    border: none
+    outline: none
+    border-radius: .4rem
 
 @media screen and ( max-width: 1600px )
     .in
