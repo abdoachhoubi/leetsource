@@ -6,7 +6,7 @@ const Tip = ({ data, i, width }) => {
 
   let cname = "rowrev";
   if (width > 900) {
-    if (!(i % 2)) cname = "row";
+    if (i % 2 === 0) cname = "row";
   } else {
     cname = "column__rev";
   }

@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { PRIMARY_COLOR } from "../../../../../data";
 import { GitHub, Linkedin, Instagram, X } from "react-feather";
+import { useSession, signIn, signOut } from "next-auth/react";
 import { motion } from "framer-motion";
 
-const Drawer = ({ menu, setMenu }) => {
+const Drawer = ({ menu, setMenu, auth }) => {
+  const { status } = useSession();
+  const [cta, setCta] = useState("");
+  useEffect(() => {
+    status === "authenticated" ? setCta("Sign out") : setCta("Sign in");
+  }, [status]);
+
   /* ---- Switching link color depending on route ---- */
 
   const { route } = useRouter();
@@ -60,31 +67,43 @@ const Drawer = ({ menu, setMenu }) => {
         </li>
       </ul>
       <div className="nav__social">
-        <Link
-          href="https://github.com/abdoachhoubi"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GitHub size={26} color={"#FFFFFF"} />
-        </Link>
-        <Link
-          href="https://linkedin.com/in/abdoachhoubi"
-          target="_blank"
-          rel="noreferrer"
-          onMouseOver={() => setCol2("#FFFFFF")}
-          onMouseLeave={() => setCol2("#FFFFFF")}
-        >
-          <Linkedin size={26} color={"#FFFFFF"} />
-        </Link>
-        <Link
-          href="http://instagram.com/astroboy.dev"
-          target="_blank"
-          rel="noreferrer"
-          onMouseOver={() => setCol3("#FFFFFF")}
-          onMouseLeave={() => setCol3("#FFFFFF")}
-        >
-          <Instagram size={26} color={"#FFFFFF"} />
-        </Link>
+        {!auth && (
+          <button
+            className="auth__button"
+            onClick={() => (cta === "Sign in" ? signIn() : signOut())}
+          >
+            {cta}
+          </button>
+        )}
+        {auth && (
+          <>
+            <Link
+              href="https://github.com/abdoachhoubi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHub size={26} color={"#FFFFFF"} />
+            </Link>
+            <Link
+              href="https://linkedin.com/in/abdoachhoubi"
+              target="_blank"
+              rel="noreferrer"
+              onMouseOver={() => setCol2("#FFFFFF")}
+              onMouseLeave={() => setCol2("#FFFFFF")}
+            >
+              <Linkedin size={26} color={"#FFFFFF"} />
+            </Link>
+            <Link
+              href="http://instagram.com/astroboy.dev"
+              target="_blank"
+              rel="noreferrer"
+              onMouseOver={() => setCol3("#FFFFFF")}
+              onMouseLeave={() => setCol3("#FFFFFF")}
+            >
+              <Instagram size={26} color={"#FFFFFF"} />
+            </Link>
+          </>
+        )}
       </div>
     </motion.div>
   );
