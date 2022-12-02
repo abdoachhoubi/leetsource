@@ -15,11 +15,11 @@ $color__light: rgb(255, 255, 255)
 $color__gradient: rgb(103, 210, 130)
 
 // Mixins    
-@mixin flex($direction, $align, $justify)
-    display: flex
-    flex-direction: $direction
-    justify-content: $justify
-    align-items: $align
+@mixin flexi($direction, $align, $justify)
+    display: flex !important
+    flex-direction: $direction !important
+    justify-content: $justify !important
+    align-items: $align !important
 
 @mixin pos($position, $zi, $top, $right, $bottom, $left)
     position: $position !important
@@ -28,6 +28,12 @@ $color__gradient: rgb(103, 210, 130)
     right: $right !important
     bottom: $bottom !important
     z-index: $zi !important
+
+@mixin flex($direction, $align, $justify)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
 
 @mixin transition($dur, $tfunc)
     transition-duration: $dur !important
@@ -65,6 +71,7 @@ $color__gradient: rgb(103, 210, 130)
 
 .column__rev
     flex-direction: column-reverse !important
+
 .mt4
     margin-top: 4rem
 

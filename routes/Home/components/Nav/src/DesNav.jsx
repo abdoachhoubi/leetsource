@@ -5,7 +5,7 @@ import { PRIMARY_COLOR } from "../../../../../data";
 import { GitHub, Linkedin, Instagram } from "react-feather";
 import { useSession, signIn, signOut } from "next-auth/react";
 
-const DesNav = ({ width }) => {
+const DesNav = ({ width, auth }) => {
   const { status } = useSession();
   const [cta, setCta] = useState("");
   useEffect(() => {
@@ -70,13 +70,15 @@ const DesNav = ({ width }) => {
         </li>
       </ul>
       <div className="nav__social">
-        <button
-          className="auth__button"
-          onClick={() => (cta === "Sign in" ? signIn() : signOut())}
-        >
-          {cta}
-        </button>
-        {!status && (
+        {!auth && (
+          <button
+            className="auth__button"
+            onClick={() => (cta === "Sign in" ? signIn() : signOut())}
+          >
+            {cta}
+          </button>
+        )}
+        {auth && (
           <>
             <Link
               href="https://github.com/abdoachhoubi"

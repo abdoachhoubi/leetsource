@@ -36,6 +36,10 @@
         @media screen and ( max-width: 1200px )
             width: 12%
         @include flex(row, center, space-between)
+        a
+            display: block
+            &:not(:last-child)
+                margin-right: 1rem
 
 .nav__mob
     width: 100%
@@ -72,6 +76,9 @@
                 &:not(:last-child)
                     margin-bottom: 2rem
         .nav__social
-            width: 40%
             @include flex(row, center, space-between)
             @include pos(absolute, 1, unset, unset, 10vh, unset)
+            a
+                display: block
+                &:not(:last-child)
+                    margin-right: 1rem

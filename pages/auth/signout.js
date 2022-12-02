@@ -4,12 +4,12 @@ import { Footer } from "../../routes/Home/containers";
 import { Nav } from "../../routes/Home/components";
 import {
   getProviders,
-  signIn,
+  signOut,
   getSession,
   getCsrfToken,
 } from "next-auth/react";
 
-const Signin = ({ providers }) => {
+const Signout = ({ providers }) => {
   const provider = providers["42-school"];
 
   const [size, setSize] = useState(0);
@@ -21,14 +21,14 @@ const Signin = ({ providers }) => {
   return (
     <div className="auth__container">
       <Head>
-        <title>Leet Source - Sign In</title>
+        <title>Leet Source - Sign Out</title>
         <meta
           name="google-site-verification"
           content="ovvmP3s_dWVp7bb05Bb8nGIrneErM1TaR8UDf2Yu32c"
         />
         <meta
           name="description"
-          content="sign in to Leetsource with 42 school intranet"
+          content="sign out from Leetsource with 42 school intranet"
         />
         <meta
           name="keywords"
@@ -43,8 +43,9 @@ const Signin = ({ providers }) => {
       </Head>
       <header className="auth__header">
         <Nav width={width} auth={true} />
-        <button className="auth__button" onClick={() => signIn(provider.id)}>
-          Sign in with {provider.name}
+        <p>Are you sure you want to sign out?</p>
+        <button className="auth__button" onClick={() => signOut(provider.id)}>
+          Sign out
         </button>
       </header>
       <Footer size="wide" />
@@ -72,4 +73,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Signin;
+export default Signout;

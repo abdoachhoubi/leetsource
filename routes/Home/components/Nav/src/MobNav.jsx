@@ -3,7 +3,7 @@ import Link from "next/link";
 import Drawer from "./Drawer";
 import { Menu } from "react-feather";
 
-const MobNav = () => {
+const MobNav = ({ auth }) => {
   /* ----------------- Drawer state ------------------ */
 
   const [menu, setMenu] = useState("out");
@@ -22,7 +22,7 @@ const MobNav = () => {
           <Menu size={26} color="#FFFFFF" />
         </div>
       </div>
-      <Drawer menu={menu} setMenu={setMenu} />
+      <Drawer menu={menu} setMenu={setMenu} auth={auth} />
     </nav>
   );
 };
