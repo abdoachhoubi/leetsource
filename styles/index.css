@@ -989,6 +989,7 @@ ul {
   align-items: flex-start;
 }
 .home__footer .footer__container .footer__links a, .home__footer .footer__container .footer__links p {
+  cursor: pointer;
   font-size: 1.1rem;
   margin-bottom: 1rem;
   transition-duration: 200ms !important;
@@ -2142,11 +2143,24 @@ ul {
 
 .cursus__main {
   width: 100%;
-  padding: 0 10% 10rem 10%;
+  padding: 10% 10% 10rem 10%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+.cursus__main .button__scroll {
+  padding: 1rem 3rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgb(103, 210, 130);
+  color: rgb(103, 210, 130);
+  border-radius: 0.4rem;
+  transition-duration: 400ms;
+}
+.cursus__main .button__scroll:hover {
+  background-color: rgb(103, 210, 130);
+  color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 900px) {
   .cursus__main {

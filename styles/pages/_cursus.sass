@@ -5,8 +5,19 @@
 
 .cursus__main
     width: 100%
-    padding: 0 10% 10rem 10%
+    padding: 10% 10% 10rem 10%
     @include flex(column, center, flex-start)
+    .button__scroll
+        padding: 1rem 3rem
+        background-color: transparent
+        outline: none
+        border: 1px solid $color__primary
+        color: $color__primary
+        border-radius: .4rem
+        transition-duration: 400ms
+        &:hover
+            background-color: $color__primary
+            color: $color__light
     @media screen and ( max-width: 900px )
         padding: 0 1rem
         .cursus__main__list

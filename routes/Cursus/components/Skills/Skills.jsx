@@ -1,11 +1,12 @@
 import Link from "next/link";
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { CursusContext } from "../../../../contexts";
 
-const Skills = () => {
+const Skills = ({ res__ref }) => {
+  if (!res__ref) res__ref = useRef();
   const { projects } = useContext(CursusContext);
   return (
-    <section className="cursus__main__intro">
+    <section className="cursus__main__intro" ref={res__ref}>
       <h1 className="cursus__main__heading">Projects</h1>
       <h2 className="lh130">
         After finishing each project, you'll gain new skills!

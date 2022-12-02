@@ -29,8 +29,12 @@ const Cursus = ({ cursus }) => {
 
   // Creating Main ref and scroll function
   const main__ref = useRef();
+  const res__ref = useRef();
   const scrollToMain = () => {
     main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const scrollToRes = () => {
+    res__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   useEffect(() => {
@@ -69,9 +73,12 @@ const Cursus = ({ cursus }) => {
       </div>
       <Header scrollToMain={scrollToMain} />
       <main className="cursus__main" ref={main__ref}>
+        <button className="button__scroll" onClick={() => scrollToRes()}>
+          Go directly to resources
+        </button>
         <MainIntro n={0} />
         <MainIntro n={1} />
-        <Skills />
+        <Skills res__ref={res__ref} />
       </main>
       <Footer size="wide" signout="true" />
     </CursusContext.Provider>
