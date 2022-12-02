@@ -3,25 +3,27 @@
 <h4>Where 1337 students can find any resource related to 1337 pool, 42 cursus, and programming generally.</h4>
 </div>
 <div>
-<h2>Table of content:</h2>
-<ul style="list-style: circle">
-<li><a style="color: rgb(103, 210, 130); font-weight: 300; font-size: 1.1rem" href="#overview">Project Overview</a></li>
-<li><a style="color: rgb(103, 210, 130); font-weight: 300; font-size: 1.1rem" href="#featurea">Features</a></li>
-<li><a style="color: rgb(103, 210, 130); font-weight: 300; font-size: 1.1rem" href="#contribute">How to contribute?</a></li>
-<li><a style="color: rgb(103, 210, 130); font-weight: 300; font-size: 1.1rem" href="/okeh">Contributors</a></li>
-<li><a style="color: rgb(103, 210, 130); font-weight: 300; font-size: 1.1rem" href="/okeh">Author note</a></li>
-</ul>
+<h2>Table of content:<h2/>
+
+1. [Overview](#overview)
+2. [Features](#features)
+3. [How to contribute?](#how-to-contribute)
+4. [Contributors](#contributors)
+5. [Author Note](#author-note)
+
 </div>
 
 <div id="#overview">
-<h2 style="color: rgb(103, 210, 130)">Project Overview</h2>
+
+## Project Overview
 <p>This is where you will find resources related to 1337 pool, cursus, and programming generally, which are gonna save you time and effort.<br />You can contribute by sharing resources through filling this <a href="https://docs.google.com/forms/d/e/1FAIpQLScYmjB0-J9PVDfjYXN8T7Jx65IMQDm-zImYK6sNWfDfGV55_A/viewform?usp=sf_link" tarrget="_blank">form</a>, or you can also add new features to the website, which you think would be amazing for other peers to see.<br />
 All the resources listed in this website are provided by different 1337 students, and that complies with the school's peer-learning methodology.
 </p>
 </div>
 
-<div id="#featurea">
-<h2 style="color: rgb(103, 210, 130)">Features</h2>
+<div id="#features">
+
+## Features
 <p>The website contains four useful pages (pool, cursus, paths, other):<br /><br />
 <span style="color: rgb(103, 210, 130)">Pool: </span> Contains tips, advices, and resources for the people who are about to pass the pool.<br />
 <span style="color: rgb(103, 210, 130)">Cursus: </span> Contains tips, advices, and resources for 1337 students.<br />
@@ -31,7 +33,8 @@ All the resources listed in this website are provided by different 1337 students
 </div>
 
 <div id="#contribute">
-<h2 style="color: rgb(103, 210, 130)">How to contribute?</h2>
+
+## How to contribute?
 
 <p>To contribute follow these steps:</p>
 
@@ -112,3 +115,20 @@ Soon I'll be merging all your changes into the main branch of this project. You 
 </p>
 </div>
 
+
+
+<div id="#contributors">
+
+## Contributors
+
+<ul style="list-style: circle">
+<li><a style="color: rgb(103, 210, 130)" href="https://github.com/abdoachhubi">Abdelmouttalib Achhoubi (author)</a</li>
+</ul>
+</div>
+
+<div id="#author">
+
+## Author Note
+
+Leet Source is meant to save you time searching for resources in different sources, our goal is to bring as many reources as we can and put them together here to make your lives easier!
+</div>
