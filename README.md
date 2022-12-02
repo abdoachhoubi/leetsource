@@ -1,4 +1,6 @@
 <div align="center">
+<img width="30%" src="https://github.com/abdoachhoubi/leetsource/blob/main/public/android-chrome-512x512.png" />
+
 <h1 style="color: rgb(103, 210, 130)">Leet Source</h1>
 <h4>Where 1337 students can find any resource related to 1337 pool, 42 cursus, and programming generally.</h4>
 </div>
