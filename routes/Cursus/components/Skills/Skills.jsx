@@ -4,7 +4,6 @@ import { CursusContext } from "../../../../contexts";
 
 const Skills = ({ res__ref }) => {
   if (!res__ref) res__ref = useRef();
-  console.log(res__ref);
   const { projects } = useContext(CursusContext);
   return (
     <section className="cursus__main__intro" ref={res__ref}>
