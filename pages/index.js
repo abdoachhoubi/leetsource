@@ -55,6 +55,32 @@ export default function Home({ res }) {
             name="keywords"
             content="1337, Leet, C, 1337 Pool, 42 Cursus, 1337 Ecole, C Programming"
           />
+
+          <meta property="og:url" content="https://source.leet.ma" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Leet Source" />
+          <meta
+            property="og:description"
+            content="A list of resources that every programmer need in order to get better in programming"
+          />
+          <meta
+            property="og:image"
+            content="https://media.graphassets.com/2xSYD9U1S2GEOFX1MKtN"
+          />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content="source.leet.ma" />
+          <meta property="twitter:url" content="https://source.leet.ma" />
+          <meta name="twitter:title" content="Leet Source" />
+          <meta
+            name="twitter:description"
+            content="A list of resources that every programmer need in order to get better in programming"
+          />
+          <meta
+            name="twitter:image"
+            content="https://media.graphassets.com/2xSYD9U1S2GEOFX1MKtN"
+          />
+
           <meta name="robots" content="index, follow" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="language" content="English" />
