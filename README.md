@@ -7,7 +7,7 @@
 <div>
 <h2>Table of content:<h2/>
 
-1. [Overview](#overview)
+1. [Overview](#project-overview)
 2. [Features](#features)
 3. [How to contribute?](#how-to-contribute)
 4. [Contributors](#contributors)

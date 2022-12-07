@@ -14,7 +14,11 @@ const LinkPreview = ({ data, author }) => {
             <ul className="attribution">
               <li>
                 Suggested by{" "}
-                <Link href={`https://profile.intra.42.fr/users/${author}`}>
+                <Link
+                  href={`https://profile.intra.42.fr/users/${author}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {author}
                 </Link>
               </li>

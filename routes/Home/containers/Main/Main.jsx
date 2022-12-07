@@ -56,7 +56,7 @@ const Main = ({ main__ref }) => {
     <main className="home__main" ref={main__ref}>
       <h1 className="main__heading">Why 1337?</h1>
       <p className="main__content">
-        In 1337 School we have the freedom to learn the way we want and whenever
+        At 1337 School we have the freedom to learn the way we want and whenever
         we want!
       </p>
       <div className="home__main__info">
