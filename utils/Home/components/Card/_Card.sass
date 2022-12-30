@@ -2,6 +2,9 @@
     padding: 2rem
     background-color: $color__primary
     border-radius: 1rem
+    @include flex(column, flex-start, space-between)
+    @media screen and ( max-width: 900px )
+        margin-bottom: 2rem
     .home__card--title
         font-size: 2rem
         margin-bottom: 2rem
@@ -9,8 +12,10 @@
         font-size: 1rem
         margin-bottom: 4rem
     .home__card--cta
+        width: fit-content
         font-size: 1rem
         padding: 1rem 2rem
         color: $color__primary
         background-color: $color__light
         border-radius: 8px
+        display: block
