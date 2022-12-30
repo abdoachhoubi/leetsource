@@ -59,23 +59,26 @@ const Cursus = ({ cursus }) => {
             content="1337 Pool, 42 Cursus, 1337 Ecole, C Programming"
           />
 
-          <meta property="og:url" content="https://source.leet.ma" />
+          <meta property="og:url" content="https://source.leet.ma/cursus" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Leet Source" />
           <meta property="og:description" content={description} />
           <meta
             property="og:image"
-            content="https://media.graphassets.com/2xSYD9U1S2GEOFX1MKtN"
+            content="https://media.graphassets.com/tsQKXWcbR1CorfMQlInl"
           />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta property="twitter:domain" content="source.leet.ma" />
-          <meta property="twitter:url" content="https://source.leet.ma" />
+          <meta
+            property="twitter:url"
+            content="https://source.leet.ma/cursus"
+          />
           <meta name="twitter:title" content="Leet Source" />
           <meta name="twitter:description" content={description} />
           <meta
             name="twitter:image"
-            content="https://media.graphassets.com/2xSYD9U1S2GEOFX1MKtN"
+            content="https://media.graphassets.com/tsQKXWcbR1CorfMQlInl"
           />
 
           <meta name="robots" content="index, follow" />

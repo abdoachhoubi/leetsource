@@ -65,7 +65,7 @@ export default function Home({ res }) {
           />
           <meta
             property="og:image"
-            content="https://media.graphassets.com/2xSYD9U1S2GEOFX1MKtN"
+            content="https://media.graphassets.com/1pYBffWYTLyhBxfRWtWw"
           />
 
           <meta name="twitter:card" content="summary_large_image" />
@@ -78,7 +78,7 @@ export default function Home({ res }) {
           />
           <meta
             name="twitter:image"
-            content="https://media.graphassets.com/2xSYD9U1S2GEOFX1MKtN"
+            content="https://media.graphassets.com/1pYBffWYTLyhBxfRWtWw"
           />
 
           <meta name="robots" content="index, follow" />
