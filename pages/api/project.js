@@ -41,8 +41,9 @@ const filterLinks = (proLinks, project) => {
 };
 
 const handler = async (req, res) => {
+  const project = req.query.project;
   const { proLinks, projects } = await getData();
-  const links = filterLinks(proLinks, req?.query?.project);
+  const links = filterLinks(proLinks, project);
   res.send({ links, projects });
 };
 
