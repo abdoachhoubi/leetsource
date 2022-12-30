@@ -1301,6 +1301,7 @@ ul {
   padding: 1rem 2rem;
   background-color: rgb(103, 210, 130);
   transition-timing-function: ease-in-out;
+  border: 1px solid transparent;
 }
 @media screen and (max-width: 2200px) {
   .home__banner .banner__cta {
@@ -1333,8 +1334,9 @@ ul {
   }
 }
 .home__banner .banner__cta:hover {
-  border: 1px solid rgb(103, 210, 130);
   background-color: transparent;
+  border: 1px solid rgb(103, 210, 130);
+  color: rgb(103, 210, 130);
 }
 .home__banner .banner__scroll {
   display: flex;
@@ -1453,6 +1455,14 @@ ul {
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
   display: block;
+  border: 1px solid transparent;
+  transition: 300ms ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.home__card .home__card--cta:hover {
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 1600px) {
   .home__card .home__card--cta {

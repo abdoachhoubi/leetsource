@@ -57,6 +57,7 @@ const Project = () => {
         "Leet Source - " + getMeta("title", router.query.project, projects)
       );
       setDescription(getMeta("description", router.query.project, projects));
+      if (title === "404") router.push({ pathname: "/404" });
     }
   }, [projects]);
 
