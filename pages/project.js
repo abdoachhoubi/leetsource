@@ -11,7 +11,7 @@ export const ProjectContext = createContext();
 const Project = () => {
   const { status } = useSession();
   useEffect(() => {
-    if (status !== "unauthenticated") signIn();
+    if (status === "unauthenticated") signIn();
   }, [status]);
 
   const router = useRouter();
