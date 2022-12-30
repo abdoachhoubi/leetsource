@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import { Footer } from "../../routes/Home/containers";
-import { Nav } from "../../routes/Home/components";
+import { Footer } from "../../utils/Home/containers";
+import { Nav } from "../../utils/Home/components";
 import {
   getProviders,
   signOut,

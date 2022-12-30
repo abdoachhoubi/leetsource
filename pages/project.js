@@ -1,8 +1,8 @@
 import React, { createContext, useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Header, Main } from "../routes/Project/containers";
-import { Footer } from "../routes/Home/containers";
+import { Header, Main } from "../utils/Project/containers";
+import { Footer } from "../utils/Home/containers";
 import { useSession } from "next-auth/react";
 
 export const ProjectContext = createContext();

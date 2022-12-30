@@ -2,8 +2,8 @@ import React, { createContext, useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
-import { Header, Main, Footer } from "../routes/Home/containers";
-import Link from "next/link";
+import { Header, Main, Footer } from "../utils/Home/containers";
+import { BgAnimation } from "../utils/Shared/Components";
 
 export var HomeContext = createContext();
 
@@ -89,9 +89,12 @@ export default function Home({ res }) {
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header scrollToMain={scrollToMain} />
-        <Main main__ref={main__ref} />
-        <Footer />
+        <BgAnimation />
+        <div className="home__wrapper">
+          <Header scrollToMain={scrollToMain} />
+          <Main main__ref={main__ref} />
+          <Footer />
+        </div>
       </div>
     </HomeContext.Provider>
   );
