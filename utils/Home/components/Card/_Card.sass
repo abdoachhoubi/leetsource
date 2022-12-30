@@ -27,6 +27,13 @@
         background-color: $color__light
         border-radius: 8px
         display: block
+        border: 1px solid transparent
+        transition: 300ms ease-in-out
+        transition-timing-function: ease-in-out
+        &:hover
+            background-color: transparent
+            border: 1px solid $color__light
+            color: $color__light
         @media screen and ( max-width: 1600px )
             font-size: .8rem
             padding: .8rem 2rem
