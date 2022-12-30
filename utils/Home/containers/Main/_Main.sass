@@ -1,4 +1,5 @@
 .home__main
+    padding-top: 100px
     width: 100%
     @include flex(column, center, flex-start)
     @media screen and ( max-width: 1600px )
@@ -34,49 +35,10 @@
     .home__main__info
         margin-bottom: 10vh
         width: 80%
-        @include flex(column, center, space-between)
-        @media screen and ( max-width: 1600px )
-            width: 100%
-        .info__section
-            width: 50%
-            @media screen and ( max-width: 900px )
-                width: 100%
-                margin-bottom: 10vh !important
-            .info__heading
-                font-size: 3rem
-                color: $color__primary
-                margin-bottom: 1rem
-                @media screen and ( max-width: 1600px )
-                    font-size: 2.4rem
-                @media screen and ( max-width: 900px )
-                    font-size: 1.6rem
-            .info__content
-                font-size: 1.3rem
-                margin-bottom: 1rem
-                line-height: 150%
-                font-weight: 300
-                @media screen and ( max-width: 1600px )
-                    font-size: 1rem
-                @media screen and ( max-width: 900px )
-                    font-size: .9rem
-            a
-                @include flex(row, center, space-between)
-                width: fit-content
-                padding: 1rem 2rem
-                border-radius: 8px
-                margin-top: 2rem
-                background-color: transparent
-                border: 1px solid $color__light
-                transition-duration: .3s
-                transition-timing-function: ease-in-out
-                *
-                    cursor: pointer
-                &:hover
-                    border: 1px solid $color__primary
-                    background-color: transparent
-                span
-                    margin-right: .6rem
-                    color: $color__primary
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 1
+        grid-column-gap: 2vw
     .main__quote
         display: block
         background: $color__gradient

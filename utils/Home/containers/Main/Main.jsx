@@ -5,6 +5,7 @@ import { ArrowUpRight } from "react-feather";
 import { HomeContext } from "../../../../contexts";
 import { PRIMARY_COLOR } from "../../../../data";
 import pic from "../../../../public/contact__illustration.svg";
+import { Card } from "../../components";
 
 // Getting the contact illustration pic src
 const { src } = pic;
@@ -54,13 +55,23 @@ const Main = ({ main__ref }) => {
 
   return (
     <main className="home__main" ref={main__ref}>
-      <h1 className="main__heading">Why 1337?</h1>
-      <p className="main__content">
-        At 1337 School we have the freedom to learn the way we want and whenever
-        we want!
-      </p>
       <div className="home__main__info">
-        <section className="info__section mb__10vh start">
+        <Card
+          title={pools[0]?.title}
+          content={pools[0]?.content}
+          link="/pool"
+        />
+        <Card
+          title={pools[1]?.title}
+          content={pools[1]?.content}
+          link="/cursus"
+        />
+        <Card
+          title={pools[2]?.title}
+          content={pools[2]?.content}
+          link="/paths"
+        />
+        {/* <section className="info__section mb__10vh start">
           <h2 className="info__heading">{pools[0]?.title}</h2>
           <p className="info__content">{pools[0]?.content}</p>
           <Link href="/pool">
@@ -83,7 +94,7 @@ const Main = ({ main__ref }) => {
             <span>Discover Paths</span>
             <ArrowUpRight size={18} color={PRIMARY_COLOR} />
           </Link>
-        </section>
+        </section> */}
       </div>
       <section className="main__quote">
         <q>
