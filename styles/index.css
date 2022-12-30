@@ -293,6 +293,10 @@ template, [hidden] {
   margin-bottom: 5vh !important;
 }
 
+.mb__0 {
+  margin-bottom: 0 !important;
+}
+
 .start {
   align-self: flex-start !important;
 }
@@ -499,7 +503,13 @@ ul {
   list-style: none;
 }
 
-.home__container {
+.home__container .home__wrapper {
+  position: absolute !important;
+  top: 0 !important;
+  left: unset !important;
+  right: 0 !important;
+  bottom: unset !important;
+  z-index: 100 !important;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -510,7 +520,7 @@ ul {
   justify-content: center;
   align-items: center;
 }
-.home__container .BgAnimation__svg {
+.home__container .home__wrapper .BgAnimation__svg {
   position: fixed !important;
   top: 0 !important;
   left: unset !important;
@@ -521,17 +531,9 @@ ul {
   height: 100vh;
 }
 @media screen and (max-width: 900px) {
-  .home__container .BgAnimation__svg {
+  .home__container .home__wrapper .BgAnimation__svg {
     display: none;
   }
-}
-.home__container .home__wrapper {
-  position: absolute !important;
-  top: 0 !important;
-  left: unset !important;
-  right: 0 !important;
-  bottom: unset !important;
-  z-index: 100 !important;
 }
 
 .home__header {
@@ -559,7 +561,8 @@ ul {
   }
 }
 .home__main .main__heading {
-  width: 80%;
+  width: 100%;
+  text-align: center;
   font-size: 6rem;
   color: rgb(103, 210, 130);
   margin-bottom: 1rem;
@@ -581,6 +584,8 @@ ul {
   }
 }
 .home__main .main__content {
+  width: 100%;
+  text-align: center;
   margin-bottom: 10vh;
   font-size: 4rem;
   width: 80%;
@@ -610,6 +615,21 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1;
   grid-column-gap: 2vw;
+  grid-row-gap: 0;
+}
+@media screen and (max-width: 1600px) {
+  .home__main .home__main__info {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home__main .home__main__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .home__main .main__quote {
   display: block;
@@ -704,9 +724,10 @@ ul {
 .home__main .home__about {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 80%;
+  min-height: 100vh;
   margin-bottom: 10vh;
 }
 @media screen and (max-width: 1600px) {
@@ -714,36 +735,19 @@ ul {
     width: 100%;
   }
 }
-.home__main .home__about .main__article {
-  width: 60%;
-}
-.home__main .home__about .main__article:not(:last-child) {
-  margin-bottom: 10vh;
+.home__main .home__about .home__main__about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1;
+  grid-column-gap: 2vw;
+  grid-row-gap: 0;
 }
 @media screen and (max-width: 900px) {
-  .home__main .home__about .main__article {
-    width: 100%;
-  }
-}
-.home__main .home__about .main__article .article__heading {
-  font-size: 3rem;
-  color: rgb(103, 210, 130);
-  margin-bottom: 2rem;
-}
-@media screen and (max-width: 1600px) {
-  .home__main .home__about .main__article .article__heading {
-    font-size: 2.4rem;
-  }
-}
-.home__main .home__about .main__article .article__content {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  line-height: 160%;
-  font-weight: 300;
-}
-@media screen and (max-width: 1600px) {
-  .home__main .home__about .main__article .article__content {
-    font-size: 1rem;
+  .home__main .home__about .home__main__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .home__main .home__contact {
@@ -1385,6 +1389,15 @@ ul {
   padding: 2rem;
   background-color: rgb(103, 210, 130);
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 900px) {
+  .home__card {
+    margin-bottom: 2rem;
+  }
 }
 .home__card .home__card--title {
   font-size: 2rem;
@@ -1395,11 +1408,15 @@ ul {
   margin-bottom: 4rem;
 }
 .home__card .home__card--cta {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1rem;
   padding: 1rem 2rem;
   color: rgb(103, 210, 130);
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
+  display: block;
 }
 
 .pool__container {

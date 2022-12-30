@@ -29,6 +29,13 @@ $color__gradient: rgb(103, 210, 130)
     bottom: $bottom !important
     z-index: $zi !important
 
+@mixin grid($col, $row, $col_gap, $row_gap)
+    display: grid
+    grid-template-columns: $col
+    grid-template-rows: $row
+    grid-column-gap: $col_gap
+    grid-row-gap: $row_gap
+
 @mixin flex($direction, $align, $justify)
     display: flex
     flex-direction: $direction
@@ -49,6 +56,9 @@ $color__gradient: rgb(103, 210, 130)
 
 .mb__10vh
     margin-bottom: 5vh !important
+
+.mb__0
+    margin-bottom: 0 !important
 
 .start
     align-self: flex-start !important
