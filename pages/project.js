@@ -34,7 +34,8 @@ const Project = () => {
   };
 
   useEffect(() => {
-    if (router.asPath === "/project") {
+    console.log(router);
+    if (router?.asPath === "/project") {
       Router.push({
         pathname: "/",
       });
@@ -45,7 +46,7 @@ const Project = () => {
         .then((data) => setCont(data))
         .catch((e) => console.log(e));
     }
-  }, [router]);
+  }, [router?.query?.project]);
 
   const projects = cont?.projects;
   const data = cont?.links;
