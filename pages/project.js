@@ -34,7 +34,6 @@ const Project = () => {
   };
 
   useEffect(() => {
-    console.log(router);
     if (router?.asPath === "/project") {
       Router.push({
         pathname: "/",
