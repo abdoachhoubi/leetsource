@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef, createContext } from "react";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
-import { Header, Main } from "../routes/Pool/containers";
-import { Footer } from "../routes/Home/containers";
+import { Header, Main } from "../utils/Pool/containers";
+import { Footer } from "../utils/Home/containers";
 
 export var PoolContext = createContext();
 

@@ -1,10 +1,8 @@
 import React, { useState, useContext, useRef } from "react";
-import Link from "next/link";
 import emailjs from "@emailjs/browser";
-import { ArrowUpRight } from "react-feather";
 import { HomeContext } from "../../../../contexts";
-import { PRIMARY_COLOR } from "../../../../data";
 import pic from "../../../../public/contact__illustration.svg";
+import { Card } from "../../components";
 
 // Getting the contact illustration pic src
 const { src } = pic;
@@ -54,62 +52,46 @@ const Main = ({ main__ref }) => {
 
   return (
     <main className="home__main" ref={main__ref}>
-      <h1 className="main__heading">Why 1337?</h1>
-      <p className="main__content">
-        At 1337 School we have the freedom to learn the way we want and whenever
-        we want!
-      </p>
       <div className="home__main__info">
-        <section className="info__section mb__10vh start">
-          <h2 className="info__heading">{pools[0]?.title}</h2>
-          <p className="info__content">{pools[0]?.content}</p>
-          <Link href="/pool">
-            <span>Discover Pool</span>
-            <ArrowUpRight size={18} color={PRIMARY_COLOR} />
-          </Link>
-        </section>
-        <section className="info__section mb__10vh end">
-          <h2 className="info__heading">{pools[1]?.title}</h2>
-          <p className="info__content">{pools[1]?.content}</p>
-          <Link href="/cursus">
-            <span>Discover Cursus</span>
-            <ArrowUpRight size={20} color={PRIMARY_COLOR} />
-          </Link>
-        </section>
-        <section className="info__section mb__10vh start">
-          <h2 className="info__heading">{pools[2]?.title}</h2>
-          <p className="info__content">{pools[2]?.content}</p>
-          <Link href="/paths">
-            <span>Discover Paths</span>
-            <ArrowUpRight size={18} color={PRIMARY_COLOR} />
-          </Link>
-        </section>
+        <Card
+          title={pools[0]?.title}
+          content={pools[0]?.content}
+          link="/pool"
+        />
+        <Card
+          title={pools[1]?.title}
+          content={pools[1]?.content}
+          link="/cursus"
+        />
+        <Card
+          title={pools[2]?.title}
+          content={pools[2]?.content}
+          link="/paths"
+        />
       </div>
-      <section className="main__quote">
-        <q>
-          Most good programmers do programming not because they expect to get
-          paid or get adulation by the public, but because it is fun to program.
-        </q>
-        <p>- Linus Torvalds</p>
-      </section>
       <section className="home__about">
         <h1 className="main__heading">About *Leet Source</h1>
         <p className="main__content wide">
           It's the best place where developers - especially 1337 students - can
           find tools and resources.
         </p>
-        <article className="main__article start">
-          <h2 className="article__heading">{abouts[0]?.title}</h2>
-          <p className="article__content">{abouts[0]?.content}</p>
-        </article>
-        <article className="main__article end">
-          <h2 className="article__heading">{abouts[1]?.title}</h2>
-          <p className="article__content">{abouts[1]?.content}</p>
-        </article>
-        <article className="main__article start">
-          <h2 className="article__heading">{abouts[2]?.title}</h2>
-          <p className="article__content">{abouts[2]?.content}</p>
-        </article>
+        <div className="home__main__about">
+          {abouts?.map(({ title, content }, i) => (
+            <Card
+              title={title}
+              content={content}
+              bottom__margin="mb__0"
+              key={i}
+            />
+          ))}
+        </div>
+      </section>
+      <section className="main__quote">
+        <q>
+          Most good programmers do programming not because they expect to get
+          paid or get adulation by the public, but because it is fun to program.
+        </q>
+        <p>- Linus Torvalds</p>
       </section>
       <section className="home__contact">
         <h1 className="main__heading">Contact Us</h1>

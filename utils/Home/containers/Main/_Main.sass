@@ -1,4 +1,5 @@
 .home__main
+    padding-top: 100px
     width: 100%
     @include flex(column, center, flex-start)
     @media screen and ( max-width: 1600px )
@@ -7,7 +8,8 @@
         width: 100%
         padding: 0 1rem
     .main__heading
-        width: 80%
+        width: 100%
+        text-align: center
         font-size: 6rem
         color: $color__primary
         margin-bottom: 1rem
@@ -19,6 +21,8 @@
         @media screen and ( max-width: 900px )
             font-size: 2.4rem
     .main__content
+        width: 100%
+        text-align: center
         margin-bottom: 10vh
         font-size: 4rem
         width: 80%
@@ -34,49 +38,12 @@
     .home__main__info
         margin-bottom: 10vh
         width: 80%
-        @include flex(column, center, space-between)
+        @include grid(repeat(3, 1fr), 1, 2vw, 0)
         @media screen and ( max-width: 1600px )
             width: 100%
-        .info__section
-            width: 50%
-            @media screen and ( max-width: 900px )
-                width: 100%
-                margin-bottom: 10vh !important
-            .info__heading
-                font-size: 3rem
-                color: $color__primary
-                margin-bottom: 1rem
-                @media screen and ( max-width: 1600px )
-                    font-size: 2.4rem
-                @media screen and ( max-width: 900px )
-                    font-size: 1.6rem
-            .info__content
-                font-size: 1.3rem
-                margin-bottom: 1rem
-                line-height: 150%
-                font-weight: 300
-                @media screen and ( max-width: 1600px )
-                    font-size: 1rem
-                @media screen and ( max-width: 900px )
-                    font-size: .9rem
-            a
-                @include flex(row, center, space-between)
-                width: fit-content
-                padding: 1rem 2rem
-                border-radius: 8px
-                margin-top: 2rem
-                background-color: transparent
-                border: 1px solid $color__light
-                transition-duration: .3s
-                transition-timing-function: ease-in-out
-                *
-                    cursor: pointer
-                &:hover
-                    border: 1px solid $color__primary
-                    background-color: transparent
-                span
-                    margin-right: .6rem
-                    color: $color__primary
+        @media screen and ( max-width: 900px )
+            width: 100%
+            @include flex(column, center, center)
     .main__quote
         display: block
         background: $color__gradient
@@ -123,30 +90,16 @@
             @media screen and ( max-width: 900px )
                 margin-top: 2rem
     .home__about
-        @include flex(column, flex-start, flex-start)
+        @include flex(column, center, center)
         width: 80%
+        min-height: 100vh
         margin-bottom: 10vh
         @media screen and ( max-width: 1600px )
             width: 100%
-        .main__article
-            width: 60%
-            &:not(:last-child)
-                margin-bottom: 10vh
+        .home__main__about
+            @include grid(repeat(3, 1fr), 1, 2vw, 0)
             @media screen and ( max-width: 900px )
-                width: 100%
-            .article__heading
-                font-size: 3rem
-                color: $color__primary
-                margin-bottom: 2rem
-                @media screen and ( max-width: 1600px )
-                    font-size: 2.4rem
-            .article__content
-                font-size: 1.3rem
-                margin-bottom: 1rem
-                line-height: 160%
-                font-weight: 300
-                @media screen and ( max-width: 1600px )
-                    font-size: 1rem
+                @include flex(column, center, center)
     .home__contact
         @include flex(column, flex-start, flex-start)
         width: 80%

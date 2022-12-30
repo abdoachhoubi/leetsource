@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, createContext } from "react";
-import { Header } from "../routes/Cursus/containers";
-import { MainIntro, Skills } from "../routes/Cursus/components";
-import { Footer } from "../routes/Home/containers";
+import { Header } from "../utils/Cursus/containers";
+import { MainIntro, Skills } from "../utils/Cursus/components";
+import { Footer } from "../utils/Home/containers";
 import Head from "next/head";
 import { gql } from "@apollo/client";
 import client from "../lib";
@@ -29,12 +29,8 @@ const Cursus = ({ cursus }) => {
 
   // Creating Main ref and scroll function
   const main__ref = useRef();
-  const res__ref = useRef();
   const scrollToMain = () => {
     main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-  const scrollToRes = () => {
-    res__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   useEffect(() => {
@@ -93,12 +89,9 @@ const Cursus = ({ cursus }) => {
       </div>
       <Header scrollToMain={scrollToMain} />
       <main className="cursus__main" ref={main__ref}>
-        <button className="button__scroll" onClick={() => scrollToRes()}>
-          Go directly to resources
-        </button>
+        <Skills />
         <MainIntro n={0} />
         <MainIntro n={1} />
-        <Skills res__ref={res__ref} />
       </main>
       <Footer size="wide" signout="true" />
     </CursusContext.Provider>

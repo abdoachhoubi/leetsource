@@ -1,57 +1,54 @@
 .home__banner
-    height: 100%
-    padding: 100px 10% 100px 10%
+    min-height: 100vh
+    min-width: 100vw
+    padding: 100px 10% 0 10%
     position: relative
-    @include flex(row, center, space-between)
+    @include flex(column, center, center)
     @media screen and ( max-width: 940px )
-        @include flex(column-reverse, center, center)
-        padding: 30px 1rem 100px 1rem
+        padding: 30px 1rem 0 1rem
         height: 100vh
     @media screen and ( max-width: 940px ) and ( min-height: 1100px )
         padding: 100px 10% 100px 10%
-    .banner__hero
-        width: 60%
-        @include flex(column, flex-start, center)
-        @media screen and ( max-width: 940px )
-            @include flex(column, center, center)
-            width: 100%
     .banner__title
-        font-size: 7.4rem
+        width: 80%
+        font-size: 8rem
+        text-align: center
         font-weight: 800
         padding: 0
         margin: 0 0 4rem 0
-        letter-spacing: .7px
         @media screen and ( max-width: 2400px )
-            font-size: 6rem
+            font-size: 7rem
         @media screen and ( max-width: 2200px )
-            font-size: 5rem
+            font-size: 6rem
         @media screen and ( max-width: 1700px )
-            font-size: 4rem
+            font-size: 5rem
             margin: 0 0 3rem 0
         @media screen and ( max-width: 1300px )
-            font-size: 3rem
+            font-size: 4rem
             margin: 0 0 2rem 0
         @media screen and ( max-width: 1100px )
-            font-size: 2.2rem
+            font-size: 3rem
         @media screen and ( max-width: 940px )
+            width: 100%
             font-size: 1.76rem
-            margin: 0 0 1rem 0
+            margin: 0 0 2rem 0
             text-align: center
         @media screen and ( max-width: 940px ) and ( min-height: 1100px )
             font-size: 3.4rem
-        span
-            color: $color__primary
     .banner__content
+        width: 50%
+        text-align: center
         font-size: 2rem
         font-weight: 300
         line-height: 150%
-        margin-bottom: 3.1rem
+        margin-bottom: 4rem
         letter-spacing: .7px
         @media screen and ( max-width: 2400px )
             font-size: 1.4rem
         @media screen and ( max-width: 2200px )
             font-size: 1.3rem
         @media screen and ( max-width: 1700px )
+            width: 70%
             font-size: 1.2rem
             margin-bottom: 2rem
         @media screen and ( max-width: 1300px )
@@ -59,32 +56,25 @@
         @media screen and ( max-width: 1100px )
             font-size: 1rem
         @media screen and ( max-width: 940px )
+            width: 100%
             line-height: 160%
             font-size: 1rem
             text-align: center
             margin-bottom: 2rem
         @media screen and ( max-width: 940px ) and ( min-height: 1200px )
             font-size: 1.2rem
-    .banner__illustration
-        height: 80%
-        width: 40%
-        @media screen and ( max-width: 940px )
-            height: 40%
-            width: 40%
-            object-fit: cover
     .banner__cta
+        margin-bottom: 8rem
         display: block
         width: fit-content
         font-size: 1.2rem
-        font-weight: 300
-        color: $color__primary
+        font-weight: 400
+        color: $color__dark
         border-radius: 8px
         line-height: 110%
         transition: 300ms ease-in-out
         padding: 1rem 2rem
-        background-color: transparent
-        border: 1px solid $color__light
-        transition-duration: .3s
+        background-color: $color__primary
         transition-timing-function: ease-in-out
         @media screen and ( max-width: 2200px )
             font-size: 1.1rem
@@ -92,10 +82,10 @@
             font-size: 1rem
         @media screen and ( max-width: 1300px )
             font-size: .9rem
+            margin-bottom: 2rem
         @media screen and ( max-width: 940px )
-            padding: .8rem 2rem
-            font-size: .8rem
-            margin-top: 0
+            padding: 1.2rem 4rem
+            font-size: 1rem
             z-index: 1
         @media screen and ( min-height: 1200px  )
             margin-top: 1rem
@@ -106,7 +96,6 @@
             background-color: transparent
     .banner__scroll
         @include flex(column, center, center)
-        @include pos(absolute, 6, unset, 0, 10%, 0)
         @media screen and ( max-width: 900px )
             transform: scale(.7) !important
         *
@@ -120,7 +109,6 @@
                 font-size: 1rem
             @media screen and ( max-width: 940px ) and ( min-height: 1200px )
                 font-size: 1.2rem
-                
         .svg__arrow
             transform: translateY(50px)
             animation-name: updown

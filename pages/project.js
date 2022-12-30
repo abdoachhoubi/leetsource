@@ -1,15 +1,25 @@
 import React, { createContext, useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Header, Main } from "../routes/Project/containers";
-import { Footer } from "../routes/Home/containers";
-import { useSession } from "next-auth/react";
+import Router from "next/router";
+import { Header, Main } from "../utils/Project/containers";
+import { Footer } from "../utils/Home/containers";
+import { useSession, signIn } from "next-auth/react";
 
 export const ProjectContext = createContext();
 
-const Project = ({ data, projects }) => {
-  const router = useRouter();
+const Project = () => {
   const { status } = useSession();
+  useEffect(() => {
+    if (status !== "unauthenticated") signIn();
+  }, [status]);
+
+  const router = useRouter();
+  const [cont, setCont] = useState({});
+  const [size, setSize] = useState(0);
+  const [width, setWidth] = useState(0);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   const getMeta = (meta, s, arr) => {
     let i;
@@ -23,21 +33,39 @@ const Project = ({ data, projects }) => {
     return "404";
   };
 
-  // Width States
-  const [size, setSize] = useState(0);
-  const [width, setWidth] = useState(0);
-  const title =
-    "Leet Source - " + getMeta("title", router.query.project, projects);
-  const description = getMeta("description", router.query.project, projects);
+  useEffect(() => {
+    if (router.asPath === "/project") {
+      Router.push({
+        pathname: "/",
+      });
+    }
+    if (router?.query?.project) {
+      fetch(`/api/project/?project=${router?.query?.project}`)
+        .then((data) => data.json())
+        .then((data) => setCont(data))
+        .catch((e) => console.log(e));
+    }
+  }, [router]);
+
+  const projects = cont?.projects;
+  const data = cont?.links;
+
+  useEffect(() => {
+    if (projects) {
+      setTitle(
+        "Leet Source - " + getMeta("title", router.query.project, projects)
+      );
+      setDescription(getMeta("description", router.query.project, projects));
+    }
+  }, [projects]);
 
   // Getting Window Width
   useEffect(() => {
-    if (title == "404") router.push("/404");
-    if (!data || !projects) router.push("/404");
     window.addEventListener("resize", () => setSize(window.innerWidth));
     setWidth(window.innerWidth);
   }, [size]);
-  return status === "authenticated" ? (
+
+  return status === "authenticated" && data && projects ? (
     <ProjectContext.Provider
       value={{
         width: width,
@@ -75,13 +103,6 @@ const Project = ({ data, projects }) => {
   ) : (
     <></>
   );
-};
-
-Project.getInitialProps = async (ctx) => {
-  const data = await fetch(`/api/project/?project=${ctx.query.project}`)
-    .then((data) => data.json())
-    .catch((e) => console.log(e));
-  return { data: data?.links, projects: data?.projects };
 };
 
 export default Project;

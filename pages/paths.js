@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import { Nav } from "../routes/Home/components";
+import { Nav } from "../utils/Home/components";
 
 const Paths = () => {
   /* ------------ Getting viewport width ------------- */
