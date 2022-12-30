@@ -149,13 +149,21 @@ $color__gradient: rgb(103, 210, 130)
     margin: 1rem 0 0 0
     font-size: 1rem
 
+.w__fit
+    width: fit-content !important
+
 .auth__button
+    font-size: 1rem
     color: $color__dark
     background-color: $color__primary
     padding: 1rem 2rem
     border: none
     outline: none
     border-radius: .4rem
+    @media screen and ( max-width: 1600px )
+        padding: .9rem 2rem
+        font-size: .8rem
+        width: fit-content
 
 @media screen and ( max-width: 1600px )
     .in
