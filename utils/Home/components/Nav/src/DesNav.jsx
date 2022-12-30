@@ -69,7 +69,7 @@ const DesNav = ({ width, auth }) => {
           </Link>
         </li>
       </ul>
-      <div className="nav__social">
+      <div className={`nav__social ${!auth && "w__fit"}`}>
         {!auth && (
           <button
             className="auth__button"
