@@ -32,7 +32,7 @@ const Signin = ({ providers }) => {
         />
         <meta
           name="keywords"
-          content="1337 Pool, 42 Cursus, 1337 Ecole, C Programming"
+          content="source leet, leet source, source, leet, source 1337, 1337.ma,  1337, resource, cursus, pool, libft"
         />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />

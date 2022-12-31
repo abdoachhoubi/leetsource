@@ -85,7 +85,7 @@ const Project = () => {
           <meta name="description" content={description} />
           <meta
             name="keywords"
-            content="1337 Pool, 42 Cursus, 1337 Ecole, C Programming"
+            content="source leet, leet source, source, leet, source 1337, 1337.ma,  1337, resource, cursus, pool, libft"
           />
 
           <meta property="og:url" content="https://source.leet.ma" />
