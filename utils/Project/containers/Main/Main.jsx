@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ProjectContext } from "../../../../contexts";
 import { LinkPreview } from "../../../Pool/components";
+import Form from "../../components/Form/Form";
 
 const Main = () => {
   const { data } = useContext(ProjectContext);
@@ -11,6 +12,9 @@ const Main = () => {
         {data.map((e, i) => (
           <LinkPreview key={i} data={e} author={e?.author} />
         ))}
+      </section>
+      <section className="form__container">
+        <Form />
       </section>
     </main>
   );
