@@ -1,0 +1,44 @@
+.form__container
+    padding: 2rem 0
+    form
+        padding: 2rem 0
+        @include flex(column, flex-start, center)
+        width: 30%
+        @media screen and ( max-width:1600px  )
+            width: 40%
+        @media screen and ( max-width:1100px  )
+            width: 50%
+        @media screen and ( max-width:900px  )
+            width: 100%
+    input
+        width: 100%
+        background-color: transparent
+        border: 1px solid $color__light
+        border-radius: 8px
+        padding: 1rem
+        margin-bottom: 1rem
+        transition-duration: .3s
+        transition-timing-function: ease-in-out
+        &:focus
+            outline: none
+            border: 2px solid $color__primary
+    #submit
+        cursor: pointer
+        width: fit-content
+        padding: 1rem 2rem
+        border-radius: 8px
+        color: $color__light
+        background-color: $color__primary
+        border: 1px solid transparent
+        transition-duration: .3s
+        transition-timing-function: ease-in-out
+        &:hover
+            border: 1px solid $color__primary
+            color: $color__primary
+            background-color: transparent
+    .form__message
+        color: $color__light
+        margin-bottom: 1rem
+        font-size: 1.1rem
+        @media screen and ( max-width:900px  )
+            font-size: 1rem
