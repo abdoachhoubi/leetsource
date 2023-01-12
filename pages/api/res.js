@@ -1,14 +1,14 @@
 import axios from "axios";
 
 const handler = async (req, res) => {
-  const { login, project, title, url, list } = req.body;
+  const { user, project, title, url, list } = req.body;
   const search = list.filter((e) => e.url == url);
   if (search.length > 0) res.status(200).json("EXITS");
   const server = process.env.NEXT_PUBLIC_SERVER__URL;
   try {
     axios
       .post(`${server}/resources`, {
-        login,
+        user,
         project,
         title,
         url,
