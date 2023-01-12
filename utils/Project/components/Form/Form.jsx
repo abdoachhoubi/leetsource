@@ -32,7 +32,7 @@ const Form = () => {
     try {
       axios
         .post("/api/res", {
-          login,
+          user: login,
           project,
           list,
           title,
