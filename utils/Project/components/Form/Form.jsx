@@ -30,6 +30,10 @@ const Form = () => {
       return;
     }
     try {
+      setColor("rgb(255, 255, 255)");
+      setMessage("Posting...");
+      setVisible("visible");
+      setTimeout(() => setVisible("hidden"), 3000);
       axios
         .post("/api/res", {
           user: login,
@@ -41,19 +45,19 @@ const Form = () => {
         .then(() => {
           clearForm();
           setColor("rgb(103, 210, 130)");
-          setMessage("Posted successfully ^_^!");
+          setMessage("Posted! Thank you for your contribution :)");
           setVisible("visible");
           setTimeout(() => setVisible("hidden"), 3000);
         })
         .catch((e) => {
           setColor("rgb(255, 82, 14)");
-          setMessage(e.message);
+          setMessage("Something went wrong, try again later :/");
           setVisible("visible");
           setTimeout(() => setVisible("hidden"), 3000);
         });
     } catch (error) {
       setColor("rgb(255, 82, 14)");
-      setMessage(error.message);
+      setMessage("Something went wrong, try again later :/");
       setVisible("visible");
       setTimeout(() => setVisible("hidden"), 3000);
     }
