@@ -1,0 +1,118 @@
+// Mobile Section
+.s-home__header
+    min-height: 100vh
+    width: 100%
+    padding-top: 4rem
+    @include flex(column, center, flex-start)
+    .s-mob__nav
+        height: 10%
+        width: 100vw
+        padding: 1rem 2rem
+        background-color: rgba(10, 10, 10, .6)
+        backdrop-filter: blur(6px)
+        @include flex(row, center, space-between)
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 2
+    .s-mob__drawer
+        width: 100vw
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 100
+        background-color: $color__dark
+    .drawer__nav
+        height: 10%
+        width: 100%
+        padding: 1rem 2rem
+        background-color: $color__dark
+        @include flex(row, center, space-between)
+    .s-mob__drawer-list
+        width: 100%
+        height: 100%
+        @include flex(column, center, center)
+        .nav__item
+            &:not(:last-child)
+                margin-bottom: 3rem
+    .s-heading__wrapper
+        width: 100%
+        padding: 5vh 1rem
+    .s-header__section
+        width: 100%
+        padding: 5vh 1rem
+        background-color: $color__primary
+    .s-header__banner
+        width: 94vw
+        height: auto
+        position: relative
+        top: -3rem
+        border-radius: 8px
+        background-color: $color__primary
+
+.s-home__main
+    .s-main__section1
+        width: 100%
+        .s-tips__section
+            width: 100%
+            @include flex(column, center, center)
+        .s-ic__item
+            width: fit-content
+            @include flex(column, center, center)
+        .s-ic__item-wrapper
+            width: 80px
+            height: 80px
+            border-radius: 40px
+            background-color: $color__primary
+            @include flex(column, center, center)
+    .s-main__section2
+        background-color: $color__primary
+        padding: 5vh 1rem
+    .s-card__item
+        &:not(:last-child)
+            margin-bottom: 6rem
+    .s-main__section3
+        width: 100%
+        padding: 3rem 1rem
+        .s-text
+            line-height: 140%
+    .s-main__section4
+        background-color: $color__primary
+        padding-bottom: 2rem
+        .s-contact__illustration
+            width: 100%
+            height: auto
+        .s-section__form
+            padding: 0 1rem
+        .s-form__input
+            display: block
+            width: 100%
+            margin-bottom: 2rem
+            padding: 1rem
+            border-radius: 0.5rem
+            border: 1px solid $color__dark
+            background-color: transparent
+            transition: all 0.15s ease-in-out
+            &::placeholder
+                color: $color__dark
+            &:focus
+                outline: none
+                border: 2px solid $color__dark
+        .s-form__area
+            height: 12rem
+        .s-error
+            @include flex(row, center, flex-start)
+        svg
+            margin-right: .5rem
+        .button__dark
+            padding: 1rem 0
+            width: 100%
+
+.s-home__footer
+    padding: 2rem 1rem
+    .nav
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: auto
+        grid-gap: 2rem

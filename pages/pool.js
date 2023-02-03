@@ -1,42 +1,54 @@
-import React, { useState, useEffect, useRef, createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import Head from "next/head";
-import { gql } from "@apollo/client";
-import client from "../lib";
-import { Header, Main } from "../utils/Pool/containers";
-import { Footer } from "../utils/Home/containers";
+import SPool from "../views/mobile/SPool/SPool";
+import DPool from "../views/desktop/DPool/DPool";
+import axios from "axios";
 
-export var PoolContext = createContext();
+export const PoolContext = createContext();
+let info = {
+  description:
+    "The 'Pool' bootcamp is a comprehensive, four-week program that aims to provide a comprehensive introduction to the fundamental concepts of programming. The program is designed to cater to individuals with no prior experience in the field.",
+};
 
-const Pool = ({ pool }) => {
-  const main__ref = useRef();
-
-  const scrollToMain = () => {
-    main__ref?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
-  // Destructuring data from pool
-  const { benifits, links, skills, source, tips } = pool;
-
-  // Width States
+const Pool = () => {
+  // Getting the size of the viewport
+  const [height, setHeight] = useState(0);
   const [size, setSize] = useState(0);
   const [width, setWidth] = useState(0);
+  const resize = (w, h) => {
+    setWidth(w);
+    setHeight(h);
+  };
 
-  // Getting Window Width
+  // Getting the data from the server
+  const [data, setData] = useState("");
   useEffect(() => {
     window.addEventListener("resize", () => setSize(window.innerWidth));
-    setWidth(window.innerWidth);
+    resize(window.innerWidth, window.innerHeight);
   }, [size]);
 
+  useEffect(() => {
+    axios
+      .get(`${process.env.NEXT_PUBLIC_SERVER__URL}/pool`)
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data);
+      })
+      .then((error) => {
+        setData(error);
+      });
+  }, []);
+
   return (
-    <PoolContext.Provider value={{ width: width }}>
-      <div className="pool__container">
+    <PoolContext.Provider value={{ data }}>
+      <div className="pool__wrapper">
         <Head>
           <title>Leet Source - Pool</title>
           <meta
             name="google-site-verification"
             content="ovvmP3s_dWVp7bb05Bb8nGIrneErM1TaR8UDf2Yu32c"
           />
-          <meta name="description" content={source.introduction} />
+          <meta name="description" content={info.description} />
           <meta
             name="keywords"
             content="source leet, leet source, source, leet, source 1337, 1337.ma,  1337, resource, cursus, pool, libft"
@@ -45,7 +57,7 @@ const Pool = ({ pool }) => {
           <meta property="og:url" content="https://source.leet.ma/pool" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Leet Source" />
-          <meta property="og:description" content={source.introduction} />
+          <meta property="og:description" content={info.description} />
           <meta
             property="og:image"
             content="https://media.graphassets.com/YPq8cdnARUac586rauOS"
@@ -55,7 +67,7 @@ const Pool = ({ pool }) => {
           <meta property="twitter:domain" content="source.leet.ma" />
           <meta property="twitter:url" content="https://source.leet.ma/pool" />
           <meta name="twitter:title" content="Leet Source" />
-          <meta name="twitter:description" content={source.introduction} />
+          <meta name="twitter:description" content={info.description} />
           <meta
             name="twitter:image"
             content="https://media.graphassets.com/YPq8cdnARUac586rauOS"
@@ -67,84 +79,10 @@ const Pool = ({ pool }) => {
           <meta name="author" content="Astroboy" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header source={source} scrollToMain={scrollToMain} />
+        {width == 0 ? <></> : width > 900 ? <DPool /> : <SPool />}
       </div>
-      <Main
-        benifits={benifits}
-        links={links}
-        skills={skills}
-        tips={tips}
-        main__ref={main__ref}
-      />
-      <Footer size="wide" />
     </PoolContext.Provider>
   );
 };
-
-/* ------- Fetching data on initialization -------- */
-
-Pool.getInitialProps = async () => {
-  // Pool Data
-
-  const { data } = await client.query({
-    query: gql`
-      query Pool {
-        source(where: { id: "clajp731326ot0autusb38vbs" }) {
-          id
-          category
-          introduction
-        }
-        tips {
-          id
-          title
-          list
-          description
-          illustration {
-            id
-            url
-          }
-          source {
-            id
-            category
-          }
-        }
-        skills {
-          id
-          title
-          description
-          source {
-            id
-            category
-          }
-        }
-        benifits {
-          id
-          title
-          list
-          source {
-            id
-            category
-          }
-        }
-        links(last: 30) {
-          id
-          title
-          description
-          link
-          source {
-            id
-            category
-          }
-        }
-      }
-    `,
-  });
-
-  return {
-    pool: data,
-  };
-};
-
-/* ------------------------------------------------- */
 
 export default Pool;
