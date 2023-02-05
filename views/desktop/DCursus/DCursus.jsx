@@ -193,7 +193,9 @@ const DCursus = () => {
       <div className="cursus__section">
         <section className="landing mb-6">
           <h1 className="subheading title">
-            <span className="primary">*</span>LeetSource
+            <Link href="/">
+              <span className="primary">*</span>LeetSource
+            </Link>
           </h1>
           <h2 className="heading mb-2">Cursus?</h2>
           <p className="subheading fw-300">

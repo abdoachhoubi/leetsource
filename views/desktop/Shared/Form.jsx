@@ -2,30 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import axios from "axios";
-
-const projects = [
-  { title: "Libft", query: "libft" },
-  { title: "Get Next Line", query: "get_next_line" },
-  { title: "ft_printf", query: "ft_printf" },
-  { title: "Born2beRoot", query: "born2beroot" },
-  { title: "Minitalk", query: "minitalk" },
-  { title: "Pipex", query: "pipex" },
-  { title: "Push Swap", query: "push_swap" },
-  { title: "Fract-ol", query: "fract-ol" },
-  { title: "So Long", query: "so_long" },
-  { title: "FdF", query: "fdf" },
-  { title: "Philosophers", query: "philosophers" },
-  { title: "Minishell", query: "minishell" },
-  { title: "NetPractice", query: "netpractice" },
-  { title: "miniRT", query: "minirt" },
-  { title: "cub3D", query: "cub3d" },
-  { title: "CPP Modules", query: "cpp_modules" },
-  { title: "ft_containers", query: "ft_containers" },
-  { title: "Inception", query: "inception" },
-  { title: "Webserv", query: "webserv" },
-  { title: "ft_irc", query: "ft_irc" },
-  { title: "ft_transcendence", query: "ft_transcendence" },
-];
+import projects from "../../../content/Cursus";
 
 const Form = ({ user, category, tags, pattern }) => {
   const router = useRouter();
@@ -60,6 +37,12 @@ const Form = ({ user, category, tags, pattern }) => {
       window.setTimeout(() => setError_visibility("invisible"), 3000);
       return false;
     }
+    if (project === "" || !project || project === "Select a project") {
+      setErrorMessage("Please select a project.");
+      setError_visibility("visible");
+      window.setTimeout(() => setError_visibility("invisible"), 3000);
+      return false;
+    }
     return true;
   };
 
@@ -67,6 +50,7 @@ const Form = ({ user, category, tags, pattern }) => {
   const submitForm = async (e) => {
     e.preventDefault();
     if (validate_form()) {
+      if (!project) setProject("libft");
       const data = {
         type,
         name,
@@ -151,6 +135,7 @@ const Form = ({ user, category, tags, pattern }) => {
               onChange={(e) => setProject(e.target.value)}
               className="form__input text"
             >
+              <option value="none">Select a project</option>
               {projects.map(({ title, query }, index) => (
                 <option className="text" key={index} value={query}>
                   {title}
