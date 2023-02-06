@@ -1,6 +1,13 @@
 import React from "react";
 
-const Card = ({ title, description, query, setProject, setQuery }) => {
+const Card = ({
+  title,
+  description,
+  query,
+  setProject,
+  setQuery,
+  scrollTop,
+}) => {
   return (
     <div className="card">
       <h2 className="subheading mb-2">{title}</h2>
@@ -10,6 +17,7 @@ const Card = ({ title, description, query, setProject, setQuery }) => {
         onClick={() => {
           setProject(title);
           setQuery(query);
+          scrollTop();
         }}
       >
         Check resources

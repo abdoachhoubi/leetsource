@@ -291,3 +291,22 @@
     .nav__item
         &:not(:last-child)
             margin-bottom: 3rem
+        
+.loader__animation
+    display: block !important
+    animation-name: loader__animation
+    animation-duration: 600ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+
+@keyframes loader__animation
+    0%
+        transform: translateX(0px)
+    25%
+        transform: translateX(60px) rotate(90deg)
+    50%
+        transform: translateX(0px) translateY(60px)
+    75%
+        transform: translateX(-60px) rotate(-90deg)
+    100%
+        transform: translateX(0px)

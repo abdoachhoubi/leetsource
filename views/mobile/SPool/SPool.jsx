@@ -5,8 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Nav from "../Slanding/Components/Nav";
 import { Search, X } from "react-feather";
+import Loader from "../Shared/Loader";
 
 const SPool = () => {
+  const [loader, setLoader] = useState("visible");
   const [searchBar, setSearchBar] = useState("");
   const [query, setQuery] = useState("");
   const [searchResult, setSearchResult] = useState(null);
@@ -70,6 +72,7 @@ const SPool = () => {
     axios
       .get(`${process.env.NEXT_PUBLIC_SERVER__URL}${router.pathname}`)
       .then((res) => {
+        setLoader("invisible");
         setData(res.data);
         setList(res.data.slice(0, 6));
       })
@@ -78,6 +81,7 @@ const SPool = () => {
 
   return (
     <>
+      <Loader visibility={loader} />
       <main className="s-pool__wrapper">
         <Nav />
         <h1 className="heading mt-10vh mb-2">Pool?</h1>
@@ -96,9 +100,14 @@ const SPool = () => {
           Pool Tips
         </Link>
         <h2 className="heading t-center mb-2">List of valuable resources</h2>
-        <div className="search__bar">
+        <div className="search__bar mb-2">
           <input
             onChange={handleChange}
+            onFocus={() => {
+              setSearchBar("search__bar-active");
+              setSearchResult(null);
+              setAction("search");
+            }}
             onBlur={() => setSearchBar("")}
             value={query}
             type="search"
@@ -114,6 +123,7 @@ const SPool = () => {
             )}
           </div>
         </div>
+        <p className="text mb-2">{searchResult}</p>
         <div className="resources__wrapper">
           {list &&
             list?.map(({ name, description, link, user }, index) => (

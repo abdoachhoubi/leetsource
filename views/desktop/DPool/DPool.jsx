@@ -6,10 +6,12 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import Card from "./Card";
 import Form from "../Shared/Form";
+import Loader from "../../mobile/Shared/Loader";
 
 const { src: pattern } = pattern__vector;
 
 const DPool = () => {
+  const [loader, setLoader] = useState("visible");
   const [searchBar, setSearchBar] = useState("");
   const [query, setQuery] = useState("");
   const [searchResult, setSearchResult] = useState(null);
@@ -73,6 +75,7 @@ const DPool = () => {
     axios
       .get(`${process.env.NEXT_PUBLIC_SERVER__URL}${router.pathname}`)
       .then((res) => {
+        setLoader("invisible");
         setData(res.data);
         setList(res.data.slice(0, 6));
       })
@@ -80,77 +83,80 @@ const DPool = () => {
   }, []);
 
   return (
-    <div className="pool__container">
-      <div className="pool__section">
-        <section className="landing mb-6">
-          <h1 className="subheading title">
-            <span className="primary">*</span>LeetSource
-          </h1>
-          <h2 className="heading mb-2">Pool?</h2>
-          <p className="subheading fw-300">
-            The 'Pool' bootcamp is a comprehensive, four-week program that aims
-            to provide a comprehensive introduction to the fundamental concepts
-            of programming.
-            <br />
-            The program is designed to cater to individuals with no prior
-            experience in the field.
-          </p>
-          <Link className="button__primary mt-6 eclipse" href="/tips/pool">
-            Pool Tips
-          </Link>
-        </section>
+    <>
+      <Loader visibility={loader} />
+      <main className="pool__container">
+        <div className="pool__section">
+          <section className="landing mb-6">
+            <h1 className="subheading title">
+              <span className="primary">*</span>LeetSource
+            </h1>
+            <h2 className="heading mb-2">Pool?</h2>
+            <p className="subheading fw-300">
+              The 'Pool' bootcamp is a comprehensive, four-week program that
+              aims to provide a comprehensive introduction to the fundamental
+              concepts of programming.
+              <br />
+              The program is designed to cater to individuals with no prior
+              experience in the field.
+            </p>
+            <Link className="button__primary mt-6 eclipse" href="/tips/pool">
+              Pool Tips
+            </Link>
+          </section>
 
-        <section className="section__resources">
-          <h1 className="heading mb-6">List of valuable resources</h1>
-          <div className={`search__bar mb-2 ${searchBar}`}>
-            <input
-              onFocus={() => {
-                setSearchBar("search__bar-active");
-                setSearchResult(null);
-                setAction("search");
-              }}
-              onBlur={() => setSearchBar("")}
-              value={query}
-              onChange={handleChange}
-              type="text"
-              name="search"
-              className="search__input"
-              placeholder="Search"
-            />
-            <div className="search__button" onClick={handleSearch}>
-              {action === "search" ? (
-                <Search size={24} color="#FFFFFF" />
-              ) : (
-                <X size={24} color="#FFFFFF" />
+          <section className="section__resources">
+            <h1 className="heading mb-6">List of valuable resources</h1>
+            <div className={`search__bar mb-2 ${searchBar}`}>
+              <input
+                onFocus={() => {
+                  setSearchBar("search__bar-active");
+                  setSearchResult(null);
+                  setAction("search");
+                }}
+                onBlur={() => setSearchBar("")}
+                value={query}
+                onChange={handleChange}
+                type="text"
+                name="search"
+                className="search__input"
+                placeholder="Search"
+              />
+              <div className="search__button" onClick={handleSearch}>
+                {action === "search" ? (
+                  <Search size={24} color="#FFFFFF" />
+                ) : (
+                  <X size={24} color="#FFFFFF" />
+                )}
+              </div>
+            </div>
+            <p className="text mb-6">{searchResult}</p>
+            <div className="resources__wrapper">
+              {list &&
+                list?.map(({ name, description, link, user }, index) => (
+                  <Card
+                    key={index}
+                    name={name}
+                    description={description}
+                    link={link}
+                    user={user}
+                  />
+                ))}
+              <button
+                className={`button__light self-center ${show_more}`}
+                onClick={handleMore}
+              >
+                Show more
+              </button>
+              {show_more == "invisible" && list.length != 0 && (
+                <p className="text">End of resources ^_^</p>
               )}
             </div>
-          </div>
-          <p className="text mb-6">{searchResult}</p>
-          <div className="resources__wrapper">
-            {list &&
-              list?.map(({ name, description, link, user }, index) => (
-                <Card
-                  key={index}
-                  name={name}
-                  description={description}
-                  link={link}
-                  user={user}
-                />
-              ))}
-            <button
-              className={`button__light self-center ${show_more}`}
-              onClick={handleMore}
-            >
-              Show more
-            </button>
-            {show_more == "invisible" && list.length != 0 && (
-              <p className="text">End of resources ^_^</p>
-            )}
-          </div>
-        </section>
-      </div>
-      <Form type="pool" pattern={pattern} />
-    </div>
+          </section>
+        </div>
+        <Form type="pool" pattern={pattern} />
+      </main>
+    </>
   );
 };
 

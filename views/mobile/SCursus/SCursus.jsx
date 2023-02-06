@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from "react";
-import pattern__vector from "../../../public/pattern.svg";
-import Link from "next/link";
-import { Search, X, ArrowLeft } from "react-feather";
-import { useRouter } from "next/router";
-import axios from "axios";
 import Card from "./Card";
-import Form from "../Shared/Form";
+import axios from "axios";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Nav from "../Slanding/Components/Nav";
+import { Search, X } from "react-feather";
+import Loader from "../Shared/Loader";
 import projects from "../../../content/Cursus";
-import ResCard from "../DPool/ResCard";
-import Loader from "../../mobile/Shared/Loader";
+import { ArrowLeft } from "react-feather";
+import ResCard from "../../desktop/DPool/ResCard";
 
-const { src: pattern } = pattern__vector;
-
-const Resources = ({ data, project, path, setProject }) => {
+const Resources = ({ data, project, path, setProject, scrollTop }) => {
   const [list, setList] = useState([]);
   const [query, setQuery] = useState("");
   const [result, setResult] = useState("");
   const [visibility, setVisibility] = useState("invisible");
   const [action, setAction] = useState("search");
 
-  console.log(data, path);
   const handleChange = (e) => {
     setQuery(e.target.value);
   };
@@ -43,7 +40,13 @@ const Resources = ({ data, project, path, setProject }) => {
   return (
     <>
       <div className="title__container mb-4">
-        <div className="back__arrow" onClick={() => setProject("")}>
+        <div
+          className="back__arrow"
+          onClick={() => {
+            setProject("");
+            scrollTop();
+          }}
+        >
           <ArrowLeft size={24} color="#FFFFFF" />
         </div>
         <h1 className="subheading w-100">{project}</h1>
@@ -85,7 +88,7 @@ const Resources = ({ data, project, path, setProject }) => {
   );
 };
 
-const ProjectsList = ({ setProject, setPath }) => {
+const ProjectsList = ({ setProject, setPath, scrollTop }) => {
   const [list, setList] = useState([]);
   const [query, setQuery] = useState("");
   const [action, setAction] = useState("search");
@@ -132,7 +135,7 @@ const ProjectsList = ({ setProject, setPath }) => {
 
   return (
     <>
-      <h1 className="heading mb-6">List of the cursus projects</h1>
+      <h1 className="heading mb-4 t-center">List of the cursus projects</h1>
       <div className="search__bar mb-4">
         <input
           onFocus={() => {
@@ -154,7 +157,7 @@ const ProjectsList = ({ setProject, setPath }) => {
           )}
         </div>
       </div>
-      <p className={`text mb-6 ${visibility}`}>{result}</p>
+      <p className={`text mb-4 ${visibility}`}>{result}</p>
       <div className="resources__wrapper">
         {list.map(({ title, description, query }, index) => (
           <Card
@@ -163,6 +166,7 @@ const ProjectsList = ({ setProject, setPath }) => {
             description={description}
             query={query}
             setProject={setProject}
+            scrollTop={scrollTop}
             setQuery={setPath}
           />
         ))}
@@ -171,8 +175,12 @@ const ProjectsList = ({ setProject, setPath }) => {
   );
 };
 
-const DCursus = () => {
+const SCursus = () => {
   const [loader, setLoader] = useState("visible");
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  };
   const router = useRouter();
 
   const [data, setData] = useState([]);
@@ -194,43 +202,71 @@ const DCursus = () => {
   return (
     <>
       <Loader visibility={loader} />
-      <main className="cursus__container">
-        <div className="cursus__section">
-          <section className="landing mb-6">
-            <h1 className="subheading title">
-              <Link href="/">
-                <span className="primary">*</span>LeetSource
-              </Link>
-            </h1>
-            <h2 className="heading mb-2">Cursus?</h2>
-            <p className="subheading fw-300">
-              A career in this field requires a commitment of 3-5 years of
-              dedicated effort, during which you will spend a significant
-              portion of your time immersed in diverse projects utilizing a
-              variety of tools and programming languages.
-            </p>
-            <Link className="button__primary mt-6 eclipse" href="/tips/cursus">
-              Cursus Tips
-            </Link>
-          </section>
-
-          <section className="section__resources">
-            {project === "" ? (
-              <ProjectsList setProject={setProject} setPath={setQuery} />
-            ) : (
-              <Resources
-                data={data}
-                project={project}
-                setProject={setProject}
-                path={query}
-              />
-            )}
-          </section>
-        </div>
-        <Form type="cursus" pattern={pattern} />
+      <main className="s-cursus__wrapper">
+        <Nav />
+        <h1 className="heading mt-10vh mb-2">Cursus?</h1>
+        <p className="subheading t-center fw-500 mb-3">
+          The 'Cursus' bootcamp is a comprehensive, four-week program that aims
+          to provide a comprehensive introduction to the fundamental concepts of
+          programming.
+          <br />
+          The program is designed to cater to individuals with no prior
+          experience in the field.
+        </p>
+        <Link
+          href="/tips/cursus"
+          className="button__primary eclipse t-center mb-4"
+        >
+          Cursus Tips
+        </Link>
+        <section className="section__resources">
+          {project === "" ? (
+            <ProjectsList
+              setProject={setProject}
+              setPath={setQuery}
+              scrollTop={scrollTop}
+            />
+          ) : (
+            <Resources
+              data={data}
+              project={project}
+              setProject={setProject}
+              path={query}
+              scrollTop={scrollTop}
+            />
+          )}
+        </section>
       </main>
+      <footer className="s-home__footer">
+        <p className="s-subheading mb-1">
+          <span className="primary">*</span>LeetSource
+        </p>
+        <section className="nav mt-4 mb-4">
+          <Link className="s-text light" href="/">
+            Home
+          </Link>
+          <Link className="s-text light" href="/terms">
+            Terms and Conditions
+          </Link>
+          <Link className="s-text light" href="/about">
+            About
+          </Link>
+          <Link className="s-text light" href="/privacy">
+            Privacy Policy
+          </Link>
+          <Link className="s-text light" href="/blog">
+            Blog
+          </Link>
+          <Link className="s-text light" href="/cookie">
+            Cookie Policy
+          </Link>
+        </section>
+        <p className="s-text t-center">
+          &copy; 2023 LeetSource, All rights reserved.
+        </p>
+      </footer>
     </>
   );
 };
 
-export default DCursus;
+export default SCursus;

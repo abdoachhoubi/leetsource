@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import Head from "next/head";
-import SPool from "../views/mobile/SPool/SPool";
+import SCursus from "../views/mobile/SCursus/SCursus";
 // import DPool from "@/views/desktop/DPool/DPool";
 import axios from "axios";
 import DCursus from "../views/desktop/DCursus/DCursus";
@@ -83,7 +83,7 @@ const Cursus = () => {
           <meta name="author" content="Astroboy" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        {width == 0 ? <></> : width > 900 ? <DCursus /> : <SPool />}
+        {width == 0 ? <></> : width > 900 ? <DCursus /> : <SCursus />}
       </div>
     </CursusContext.Provider>
   );
