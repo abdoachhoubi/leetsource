@@ -32,7 +32,9 @@ const Drawer = ({ isOpen, setIsOpen }) => {
     >
       <div className="drawer__nav">
         <h1 className="s-subheading">
-          <span className="primary">*</span>LeetSource
+          <Link href="/">
+            <span className="primary">*</span>LeetSource
+          </Link>
         </h1>
         <span
           className="s-menu__close__button"
@@ -77,7 +79,9 @@ const Nav = () => {
   return (
     <nav className="s-mob__nav">
       <h1 className="s-subheading">
-        <span className="primary">*</span>LeetSource
+        <Link href="/">
+          <span className="primary">*</span>LeetSource
+        </Link>
       </h1>
       <span className="s-menu__open__button" onClick={() => setIsOpen(true)}>
         <Menu color="#FFFFFF" size={24} />

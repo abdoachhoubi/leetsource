@@ -4,38 +4,6 @@
     width: 100%
     padding-top: 4rem
     @include flex(column, center, flex-start)
-    .s-mob__nav
-        height: 10%
-        width: 100vw
-        padding: 1rem 2rem
-        background-color: rgba(10, 10, 10, .6)
-        backdrop-filter: blur(6px)
-        @include flex(row, center, space-between)
-        position: fixed
-        top: 0
-        right: 0
-        z-index: 2
-    .s-mob__drawer
-        width: 100vw
-        height: 100vh
-        position: fixed
-        top: 0
-        left: 0
-        z-index: 100
-        background-color: $color__dark
-    .drawer__nav
-        height: 10%
-        width: 100%
-        padding: 1rem 2rem
-        background-color: $color__dark
-        @include flex(row, center, space-between)
-    .s-mob__drawer-list
-        width: 100%
-        height: 100%
-        @include flex(column, center, center)
-        .nav__item
-            &:not(:last-child)
-                margin-bottom: 3rem
     .s-heading__wrapper
         width: 100%
         padding: 5vh 1rem
