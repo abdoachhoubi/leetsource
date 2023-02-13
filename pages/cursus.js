@@ -32,7 +32,6 @@ const Cursus = () => {
     axios
       .get(`${process.env.NEXT_PUBLIC_SERVER__URL}/pool`)
       .then((res) => {
-        console.log(res.data);
         setData(res.data);
       })
       .then((error) => {
