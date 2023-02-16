@@ -265,8 +265,9 @@ const Cursus = () => {
           </p>
         </section>
       </main>
-      {console.log(win)}
-      {win > 900 ? <FooterDesktop /> : <FooterMobile />}
+      <div className="tips__footer">
+        {win > 900 ? <FooterDesktop /> : <FooterMobile />}
+      </div>
     </>
   );
 };

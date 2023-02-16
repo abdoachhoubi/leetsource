@@ -141,7 +141,9 @@ const Pool = () => {
           </ul>
         </section>
       </main>
-      {win > 900 ? <FooterDesktop /> : <FooterMobile />}
+      <div className="tips__footer">
+        {win > 900 ? <FooterDesktop /> : <FooterMobile />}
+      </div>
     </>
   );
 };
