@@ -2010,13 +2010,12 @@ input {
   margin-bottom: 1rem;
 }
 
-.home__footer {
+.tips__footer .home__footer {
   border-top: 1px solid #FFFFFF;
   padding: 2vh 20vw 2vh 20vw;
   margin-top: 10vh;
 }
-
-.s-home__footer {
+.tips__footer .s-home__footer {
   border-top: 1px solid #FFFFFF;
   margin-top: 10vh;
 }/*# sourceMappingURL=index.css.map */
