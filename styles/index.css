@@ -1917,9 +1917,9 @@ input {
   .tips__header .header__banner .banner__pattern {
     padding: 10vh 1rem 16vh 1rem;
   }
-}
-.tips__header .header__banner .banner__pattern .heading {
-  font-size: 1.8rem;
+  .tips__header .header__banner .banner__pattern .heading {
+    font-size: 1.8rem;
+  }
 }
 .tips__header .header__banner .banner__pattern * {
   font-family: "syne", sans-serif;
