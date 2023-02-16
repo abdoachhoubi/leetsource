@@ -1905,6 +1905,58 @@ input {
     padding-top: 10vh;
   }
 }
+.tips__header .header__banner {
+  background-color: #B7A3FF;
+  width: 100%;
+}
+.tips__header .header__banner .banner__pattern {
+  width: 100vw;
+  padding: 10vh 20vw 16vh 20vw;
+}
+@media screen and (max-width: 1200px) {
+  .tips__header .header__banner .banner__pattern {
+    padding: 10vh 1rem 16vh 1rem;
+  }
+}
+.tips__header .header__banner .banner__pattern .heading {
+  font-size: 1.8rem;
+}
+.tips__header .header__banner .banner__pattern * {
+  font-family: "syne", sans-serif;
+}
+.tips__header .image__container {
+  position: relative;
+}
+.tips__header .ct_banner {
+  width: 60vw;
+  height: auto;
+  position: absolute;
+  right: 20vw;
+  top: -8vh;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .tips__header .ct_banner {
+    width: calc(100vw - 2rem);
+    right: 1rem;
+    top: -10vh;
+  }
+}
+.tips__header .pt_banner {
+  width: 60vw;
+  height: auto;
+  position: absolute;
+  right: 20vw;
+  top: -8vh;
+  border-radius: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .tips__header .pt_banner {
+    width: calc(100vw - 2rem);
+    right: 1rem;
+    top: -10vh;
+  }
+}
 
 .navigation {
   display: flex;
@@ -1926,58 +1978,6 @@ input {
 @media screen and (max-width: 1700px) {
   .navigation .nav__list :not(:last-child) {
     margin-right: 2rem;
-  }
-}
-.navigation .header__banner {
-  background-color: #B7A3FF;
-  width: 100%;
-}
-.navigation .header__banner .banner__pattern {
-  width: 100vw;
-  padding: 10vh 20vw 16vh 20vw;
-}
-@media screen and (max-width: 1200px) {
-  .navigation .header__banner .banner__pattern {
-    padding: 10vh 1rem 16vh 1rem;
-  }
-}
-.navigation .header__banner .banner__pattern .heading {
-  font-size: 1.8rem;
-}
-.navigation .header__banner .banner__pattern * {
-  font-family: "syne", sans-serif;
-}
-.navigation .image__container {
-  position: relative;
-}
-.navigation .ct_banner {
-  width: 60vw;
-  height: auto;
-  position: absolute;
-  right: 20vw;
-  top: -8vh;
-  border-radius: 12px;
-}
-@media screen and (max-width: 1200px) {
-  .navigation .ct_banner {
-    width: calc(100vw - 2rem);
-    right: 1rem;
-    top: -10vh;
-  }
-}
-.navigation .pt_banner {
-  width: 60vw;
-  height: auto;
-  position: absolute;
-  right: 20vw;
-  top: -8vh;
-  border-radius: 12px;
-}
-@media screen and (max-width: 1200px) {
-  .navigation .pt_banner {
-    width: calc(100vw - 2rem);
-    right: 1rem;
-    top: -10vh;
   }
 }
 

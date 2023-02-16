@@ -3,17 +3,6 @@
     height: fit-content
     @media screen and ( max-width: $min_screen )
         padding-top: 10vh
-.navigation
-    @include flex(row, center, space-between)
-    width: 100%
-    padding: 3rem 20vw
-    .nav__list
-        @include flex(row, center, space-between)
-        :not(:last-child)
-            margin-right: 4rem
-            @media screen and ( max-width: $med_screen )
-                margin-right: 2rem
-                    
     .header__banner
         background-color: $color__primary
         width: 100%
@@ -50,6 +39,17 @@
             width: calc( 100vw - 2rem )
             right: 1rem
             top: -10vh
+
+.navigation
+    @include flex(row, center, space-between)
+    width: 100%
+    padding: 3rem 20vw
+    .nav__list
+        @include flex(row, center, space-between)
+        :not(:last-child)
+            margin-right: 4rem
+            @media screen and ( max-width: $med_screen )
+                margin-right: 2rem
 
 .tips__main
     width: 100%
