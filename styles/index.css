@@ -185,35 +185,12 @@ td, th {
   padding: 0;
 }
 
-@-webkit-keyframes anime-right {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(30px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes anime-right {
   0% {
     transform: translateX(0);
   }
   50% {
     transform: translateX(30px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-webkit-keyframes anime-left {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-30px);
   }
   100% {
     transform: translateX(0);
@@ -490,7 +467,6 @@ td, th {
 
 .button__dark {
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1.2rem 4rem;
@@ -518,7 +494,6 @@ td, th {
 
 .button__light {
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1.2rem 4rem;
@@ -546,7 +521,6 @@ td, th {
 
 .button__primary {
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1.2rem 4rem;
@@ -644,32 +618,10 @@ td, th {
 
 .loader__animation {
   display: block !important;
-  -webkit-animation-name: loader__animation;
-          animation-name: loader__animation;
-  -webkit-animation-duration: 600ms;
-          animation-duration: 600ms;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-
-@-webkit-keyframes loader__animation {
-  0% {
-    transform: translateX(0px);
-  }
-  25% {
-    transform: translateX(60px) rotate(90deg);
-  }
-  50% {
-    transform: translateX(0px) translateY(60px);
-  }
-  75% {
-    transform: translateX(-60px) rotate(-90deg);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+  animation-name: loader__animation;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 @keyframes loader__animation {
@@ -698,8 +650,7 @@ td, th {
 body {
   overflow-x: hidden;
   background-color: #101010;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: contain;
+  overscroll-behavior: contain;
   scrollbar-width: auto;
   scrollbar-color: #FFFFFF #101010;
 }
@@ -755,7 +706,6 @@ input {
 .home__header {
   position: relative;
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1002,7 +952,6 @@ input {
 }
 .home__main .main__section4 .section__form form {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1016,9 +965,6 @@ input {
   transition: all 0.15s ease-in-out;
 }
 .home__main .main__section4 .section__form .form__input::-moz-placeholder {
-  color: #101010;
-}
-.home__main .main__section4 .section__form .form__input:-ms-input-placeholder {
   color: #101010;
 }
 .home__main .main__section4 .section__form .form__input::placeholder {
@@ -1166,7 +1112,6 @@ input {
 }
 .pool__container form {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1180,9 +1125,6 @@ input {
   transition: all 0.15s ease-in-out;
 }
 .pool__container .form__input::-moz-placeholder {
-  color: #101010;
-}
-.pool__container .form__input:-ms-input-placeholder {
   color: #101010;
 }
 .pool__container .form__input::placeholder {
@@ -1424,7 +1366,6 @@ input {
 }
 .cursus__container form {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1438,9 +1379,6 @@ input {
   transition: all 0.15s ease-in-out;
 }
 .cursus__container .form__input::-moz-placeholder {
-  color: #101010;
-}
-.cursus__container .form__input:-ms-input-placeholder {
   color: #101010;
 }
 .cursus__container .form__input::placeholder {
@@ -1628,7 +1566,6 @@ input {
 }
 .cursus__container .title__container .back__arrow {
   margin-right: 2rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.6rem 1.4rem;
@@ -1685,7 +1622,6 @@ input {
   justify-content: center;
 }
 .s-home__main .s-main__section1 .s-ic__item {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -1739,9 +1675,6 @@ input {
   transition: all 0.15s ease-in-out;
 }
 .s-home__main .s-main__section4 .s-form__input::-moz-placeholder {
-  color: #101010;
-}
-.s-home__main .s-main__section4 .s-form__input:-ms-input-placeholder {
   color: #101010;
 }
 .s-home__main .s-main__section4 .s-form__input::placeholder {
@@ -1944,7 +1877,6 @@ input {
 }
 .s-cursus__wrapper .title__container .back__arrow {
   margin-right: 2rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.6rem 1.4rem;
@@ -1961,4 +1893,84 @@ input {
   padding: 0;
   margin: 0;
   color: #B7A3FF;
+}
+
+.tips__header {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.tips__header .navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3rem 20vw;
+}
+.tips__header .navigation .nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.tips__header .navigation .nav__list :not(:last-child) {
+  margin-right: 4rem;
+}
+.tips__header .header__banner {
+  background-color: #B7A3FF;
+  width: 100%;
+}
+.tips__header .header__banner .banner__pattern {
+  width: 100vw;
+  padding: 10vh 20vw 16vh 20vw;
+}
+.tips__header .header__banner .banner__pattern * {
+  font-family: "syne", sans-serif;
+}
+.tips__header .image__container {
+  position: relative;
+}
+.tips__header .ct_banner {
+  width: 60vw;
+  height: auto;
+  position: absolute;
+  right: 20vw;
+  top: -8vh;
+  border-radius: 12px;
+}
+.tips__header .pt_banner {
+  width: 60vw;
+  height: auto;
+  position: absolute;
+  right: 20vw;
+  top: -8vh;
+  border-radius: 12px;
+}
+
+.tips__main {
+  width: 100%;
+  padding: 0 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tips__main .description {
+  width: 30vw;
+}
+.tips__main .list {
+  list-style: circle;
+}
+.tips__main .list * {
+  list-style: circle;
+}
+.tips__main .list .list__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.home__footer {
+  border-top: 1px solid #FFFFFF;
+  padding: 2vh 20vw 2vh 20vw;
+  margin-top: 10vh;
 }/*# sourceMappingURL=index.css.map */

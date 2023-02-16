@@ -1,0 +1,53 @@
+.tips__header
+    width: 100%
+    height: fit-content
+    .navigation
+        @include flex(row, center, space-between)
+        width: 100%
+        padding: 3rem 20vw
+        .nav__list
+            @include flex(row, center, space-between)
+            :not(:last-child)
+                margin-right: 4rem
+    .header__banner
+        background-color: $color__primary
+        width: 100%
+        .banner__pattern
+            width: 100vw
+            padding: 10vh 20vw 16vh 20vw
+            *
+                font-family: "syne", sans-serif
+    .image__container
+        position: relative
+    .ct_banner
+        width: 60vw
+        height: auto
+        position: absolute
+        right: 20vw
+        top: -8vh
+        border-radius: 12px
+    .pt_banner
+        width: 60vw
+        height: auto
+        position: absolute
+        right: 20vw
+        top: -8vh
+        border-radius: 12px
+
+.tips__main
+    width: 100%
+    padding: 0 20vw
+    @include flex(column, center, center)
+    .description
+        width: 30vw
+    .list
+        list-style: circle
+        *
+            list-style: circle
+        .list__item:not(:last-child)
+            margin-bottom: 1rem
+
+.home__footer
+    border-top: 1px solid $color__light
+    padding: 2vh 20vw 2vh 20vw
+    margin-top: 10vh
