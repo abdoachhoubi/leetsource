@@ -231,7 +231,7 @@ const Cursus = () => {
             collaborative learning environment.
             <br />
             <br />
-            It's worth noting that the same pool rules still apply at 1337.
+            It&apos;s worth noting that the same pool rules still apply at 1337.
             <br />
             This means that you should continue to embrace the challenge of
             pushing yourself beyond your limits and into uncharted territory.
@@ -256,8 +256,9 @@ const Cursus = () => {
             consumed you, there may be no returning.
             <br />
             <br />
-            Initially, you will have approximately 70 days until the blackhole's
-            deadline, but this can be extended through project validation.
+            Initially, you will have approximately 70 days until the
+            blackhole&apos;s deadline, but this can be extended through project
+            validation.
             <br />
             <br />
             As young adults, you hold full responsibility for your actions.
