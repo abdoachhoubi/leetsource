@@ -95,7 +95,7 @@ const FourOhFour = () => {
       >
         <h1 className="heading primary mb-2 t-center">404 - Not Found</h1>
         <h2 className="subheading mb-4 t-center">
-          The page or resource you are looking for doesn't seem to exist!
+          The page or resource you are looking for doesn&apos;t seem to exist!
         </h2>
         <Link className="button__primary eclipse" href="/">
           Home
