@@ -1,0 +1,312 @@
+// Text
+.primary
+    color: $color__primary
+
+.light
+    color: $color__light
+
+.dark
+    color: $color__dark
+
+.heading
+    font-size: $font__xxl__h1
+    font-weight: 700
+    @media screen and ( max-width: $max_screen )
+        font-size: $font__max__h1
+    @media screen and ( max-width: $med_screen )
+        font-size: $font__med__h1
+    @media screen and ( max-width: $min_screen )
+        font-size: $font__min__h1
+
+.s-heading
+    font-size: $font__mob__h1
+    font-weight: 700
+    text-align: center
+
+.subheading
+    font-size: $font__xxl__h2
+    font-weight: 600
+    @media screen and ( max-width: $max_screen )
+        font-size: $font__max__h2
+    @media screen and ( max-width: $med_screen )
+        font-size: $font__med__h2
+    @media screen and ( max-width: $min_screen )
+        font-size: $font__min__h2
+
+.s-subheading
+    font-size: $font__mob__h2
+    font-weight: 700
+
+.text
+    font-size: $font__xxl__p
+    font-weight: 400
+    letter-spacing: .8px
+    line-height: 150%
+    @media screen and ( max-width: $max_screen )
+        font-size: $font__mob__p
+    @media screen and ( max-width: $med_screen )
+        font-size: $font__med__p
+        letter-spacing: unset
+    @media screen and ( max-width: $min_screen )
+        font-size: $font__min__p
+    @media screen and ( max-width: $mob_screen )
+        font-size: $font__mob__p
+
+.t-center
+    text-align: center
+
+.text-dark
+    *
+        color: $color__dark
+
+// Background
+.bg__dark
+    background-color: $color__dark
+
+.bg__light
+    background-color: $color__light
+
+.bg-primary
+    background-color: $color__primary
+
+.bg-pattern
+    background-repeat: no-repeat
+    background-size: 150%
+    background-position: center
+
+// Display
+.d-flex
+    @include flex(row, flex-start, space-between)
+
+.w-half
+    width: 50%
+
+.w-full
+    width: 100%
+
+// Margin Bottom
+.mb-0
+    margin-bottom: 0
+.mb-1
+    margin-bottom: 1rem
+
+.mb-2
+    margin-bottom: 2rem
+
+.mb-3
+    margin-bottom: 3rem
+
+.mb-4
+    margin-bottom: 4rem
+
+.mb-5
+    margin-bottom: 5rem
+
+.mb-6
+    margin-bottom: 6rem
+
+.mb-h
+    margin-bottom: 6rem
+    @media screen and ( max-width: $max_screen )
+        margin-bottom: 3rem
+    
+.mb-s
+    margin-bottom: 3rem
+    @media screen and ( max-width: $max_screen )
+        margin-bottom: 1rem
+        
+
+// Margin top
+
+.mt-1
+    margin-top: 1rem
+
+.mt-2
+    margin-top: 2rem
+
+.mt-3
+    margin-top: 3rem
+
+.mt-4
+    margin-top: 4rem
+
+.mt-5
+    margin-top: 5rem
+
+.mt-6
+    margin-top: 6rem
+
+.mt-10vh
+    margin-top: 10vh
+
+// Padding
+.p-1
+    padding: 1rem
+
+.p-2
+    padding: 2rem
+
+.p-3
+    padding: 3rem
+
+// Height
+.h-80
+    min-height: 80vh
+
+// font-weight
+
+.fw-100
+    font-weight: 100
+
+.fw-200
+    font-weight: 200
+
+.fw-300
+    font-weight: 300
+
+.fw-400
+    font-weight: 400
+
+.fw-500
+    font-weight: 500
+
+.fw-600
+    font-weight: 600
+
+.fw-700
+    font-weight: 700
+
+.fw-800
+    font-weight: 800
+
+.fw-900
+    font-weight: 900
+
+// Buttons
+
+.button__dark
+    display: block
+    width: fit-content
+    padding: 1.2rem 4rem
+    border-radius: 8px
+    background-color: $color__dark
+    color: $color__light
+    transition: all .3s ease-in-out
+    border: 1px solid transparent
+    &:hover
+        background-color: transparent
+        color: $color__dark
+        border: 1px solid $color__dark
+    @media screen and ( max-width: $med_screen )
+        padding: 1rem 3rem
+    @media screen and ( max-width: $med_screen )
+        padding: 1rem 3rem
+
+.button__light
+    display: block
+    width: fit-content
+    padding: 1.2rem 4rem
+    border-radius: 8px
+    background-color: $color__light
+    color: $color__dark
+    transition: all .3s ease-in-out
+    border: 1px solid transparent
+    &:hover
+        background-color: transparent
+        color: $color__light
+        border: 1px solid $color__light
+    @media screen and ( max-width: $med_screen )
+        padding: 1rem 3rem
+    @media screen and ( max-width: $med_screen )
+        padding: 1rem 3rem
+
+.button__primary
+    display: block
+    width: fit-content
+    padding: 1.2rem 4rem
+    border-radius: 8px
+    background-color: $color__primary
+    color: $color__dark
+    transition: all .3s ease-in-out
+    border: 1px solid transparent
+    &:hover
+        background-color: transparent
+        color: $color__primary
+        border: 1px solid $color__primary
+    @media screen and ( max-width: $med_screen )
+        padding: 1rem 3rem
+    @media screen and ( max-width: $med_screen )
+        padding: 1rem 3rem
+
+// Display
+
+.invisible
+    display: none !important
+
+.visible
+    display: default !important
+
+// width
+.w-100
+    width: 100%
+
+// Shapes
+.eclipse
+    border-radius: 100rem
+
+// Ailgnment
+.self-center
+    align-self: center
+
+// Nav
+.s-mob__nav
+    height: 10%
+    width: 100vw
+    padding: 1rem 2rem
+    background-color: rgba(10, 10, 10, .6)
+    backdrop-filter: blur(6px)
+    @include flex(row, center, space-between)
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 2
+.s-mob__drawer
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+    background-color: $color__dark
+.drawer__nav
+    height: 10%
+    width: 100%
+    padding: 1rem 2rem
+    background-color: $color__dark
+    @include flex(row, center, space-between)
+.s-mob__drawer-list
+    width: 100%
+    height: 100%
+    @include flex(column, center, center)
+    .nav__item
+        &:not(:last-child)
+            margin-bottom: 3rem
+        
+.loader__animation
+    display: block !important
+    animation-name: loader__animation
+    animation-duration: 600ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+
+@keyframes loader__animation
+    0%
+        transform: translateX(0px)
+    25%
+        transform: translateX(60px) rotate(90deg)
+    50%
+        transform: translateX(0px) translateY(60px)
+    75%
+        transform: translateX(-60px) rotate(-90deg)
+    100%
+        transform: translateX(0px)
