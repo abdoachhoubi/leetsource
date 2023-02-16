@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import pattern__res from "../../public/pattern.svg";
 import pt_banner from "../../public/pt_banner.png";
+import { NavDesktop, FooterDesktop, FooterMobile } from "./cursus";
+import Nav from "../../views/mobile/Slanding/Components/Nav";
 
 const { src: pattern } = pattern__res;
 
@@ -16,11 +18,18 @@ const bg__pattern = {
 
 const Pool = () => {
   const [height, setHeight] = useState(0);
+  const [win, setWin] = useState(0);
+  const [variant, setVariant] = useState();
   const image = useRef();
   useEffect(() => {
+    window.addEventListener("resize", () => {
+      setVariant(window.innerWidth);
+      setHeight(image.current.clientHeight);
+      setWin(window.innerWidth);
+    });
+    setWin(window.innerWidth);
     setHeight(image.current.clientHeight);
-  }, [image]);
-  console.log(height);
+  }, [variant]);
 
   return (
     <>
@@ -65,40 +74,7 @@ const Pool = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="tips__header">
-        <nav className="navigation">
-          <h1 className="subheading">
-            <Link href="/">
-              <span className="primary">*</span>LeetSource
-            </Link>
-          </h1>
-          <ul className="nav__list">
-            <li className="text nav__list__item">
-              <Link href="/" className="nav__list__link">
-                Home
-              </Link>
-            </li>
-            <li className="text nav__list__item">
-              <Link href="/pool" className="nav__list__link">
-                Pool
-              </Link>
-            </li>
-            <li className="text nav__list__item">
-              <Link href="/Pool" className="nav__list__link">
-                Pool
-              </Link>
-            </li>
-            <li className="text nav__list__item">
-              <Link href="/paths" className="nav__list__link">
-                Paths
-              </Link>
-            </li>
-            <li className="text nav__list__item">
-              <Link href="/resources" className="nav__list__link">
-                Resources
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        {win > 900 ? <NavDesktop /> : <Nav />}
         <div className="header__banner text-dark">
           <div className="banner__pattern" style={bg__pattern}>
             <p className="subheading mb-2">Pool Tips</p>
@@ -113,7 +89,12 @@ const Pool = () => {
           className="image__container"
           style={{ height: `calc(${height}px - 8vh + 4rem)` }}
         >
-          <Image ref={image} src={pt_banner} className="pt_banner" />
+          <Image
+            ref={image}
+            src={pt_banner}
+            className="pt_banner"
+            alt="Illustration"
+          />
         </div>
       </header>
       <main className="tips__main">
@@ -160,36 +141,7 @@ const Pool = () => {
           </ul>
         </section>
       </main>
-      <footer className="home__footer">
-        <section className="copyright__line">
-          <p className="subheading mb-1">
-            <span className="primary">*</span>LeetSource
-          </p>
-          <p className="copyright text fw-300">
-            &copy; 2023 LeetSource, All rights reserved.
-          </p>
-        </section>
-        <section className="nav">
-          <Link className="text light" href="/">
-            Home
-          </Link>
-          <Link className="text light" href="/terms">
-            Terms and Conditions
-          </Link>
-          <Link className="text light" href="/about">
-            About
-          </Link>
-          <Link className="text light" href="/privacy">
-            Privacy Policy
-          </Link>
-          <Link className="text light" href="/blog">
-            Blog
-          </Link>
-          <Link className="text light" href="/cookie">
-            Cookie Policy
-          </Link>
-        </section>
-      </footer>
+      {win > 900 ? <FooterDesktop /> : <FooterMobile />}
     </>
   );
 };

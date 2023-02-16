@@ -185,19 +185,19 @@ const Landing = () => {
           <Link className="text light" href="/">
             Home
           </Link>
-          <Link className="text light" href="/terms">
+          <Link className="text light" href="/">
             Terms and Conditions
           </Link>
-          <Link className="text light" href="/about">
+          <Link className="text light" href="/">
             About
           </Link>
-          <Link className="text light" href="/privacy">
+          <Link className="text light" href="/">
             Privacy Policy
           </Link>
-          <Link className="text light" href="/blog">
+          <Link className="text light" href="/">
             Blog
           </Link>
-          <Link className="text light" href="/cookie">
+          <Link className="text light" href="/">
             Cookie Policy
           </Link>
         </section>

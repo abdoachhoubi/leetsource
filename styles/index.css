@@ -1900,7 +1900,13 @@ input {
   height: -moz-fit-content;
   height: fit-content;
 }
-.tips__header .navigation {
+@media screen and (max-width: 1200px) {
+  .tips__header {
+    padding-top: 10vh;
+  }
+}
+
+.navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1908,30 +1914,43 @@ input {
   width: 100%;
   padding: 3rem 20vw;
 }
-.tips__header .navigation .nav__list {
+.navigation .nav__list {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.tips__header .navigation .nav__list :not(:last-child) {
+.navigation .nav__list :not(:last-child) {
   margin-right: 4rem;
 }
-.tips__header .header__banner {
+@media screen and (max-width: 1700px) {
+  .navigation .nav__list :not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+.navigation .header__banner {
   background-color: #B7A3FF;
   width: 100%;
 }
-.tips__header .header__banner .banner__pattern {
+.navigation .header__banner .banner__pattern {
   width: 100vw;
   padding: 10vh 20vw 16vh 20vw;
 }
-.tips__header .header__banner .banner__pattern * {
+@media screen and (max-width: 1200px) {
+  .navigation .header__banner .banner__pattern {
+    padding: 10vh 1rem 16vh 1rem;
+  }
+}
+.navigation .header__banner .banner__pattern .heading {
+  font-size: 1.8rem;
+}
+.navigation .header__banner .banner__pattern * {
   font-family: "syne", sans-serif;
 }
-.tips__header .image__container {
+.navigation .image__container {
   position: relative;
 }
-.tips__header .ct_banner {
+.navigation .ct_banner {
   width: 60vw;
   height: auto;
   position: absolute;
@@ -1939,13 +1958,27 @@ input {
   top: -8vh;
   border-radius: 12px;
 }
-.tips__header .pt_banner {
+@media screen and (max-width: 1200px) {
+  .navigation .ct_banner {
+    width: calc(100vw - 2rem);
+    right: 1rem;
+    top: -10vh;
+  }
+}
+.navigation .pt_banner {
   width: 60vw;
   height: auto;
   position: absolute;
   right: 20vw;
   top: -8vh;
   border-radius: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .navigation .pt_banner {
+    width: calc(100vw - 2rem);
+    right: 1rem;
+    top: -10vh;
+  }
 }
 
 .tips__main {
@@ -1959,11 +1992,19 @@ input {
 .tips__main .description {
   width: 30vw;
 }
-.tips__main .list {
-  list-style: circle;
+@media screen and (max-width: 1700px) {
+  .tips__main .description {
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .tips__main .description {
+    width: 100vw;
+    padding: 0 1rem;
+  }
 }
 .tips__main .list * {
-  list-style: circle;
+  list-style: circle inside;
 }
 .tips__main .list .list__item:not(:last-child) {
   margin-bottom: 1rem;
@@ -1972,5 +2013,10 @@ input {
 .home__footer {
   border-top: 1px solid #FFFFFF;
   padding: 2vh 20vw 2vh 20vw;
+  margin-top: 10vh;
+}
+
+.s-home__footer {
+  border-top: 1px solid #FFFFFF;
   margin-top: 10vh;
 }/*# sourceMappingURL=index.css.map */

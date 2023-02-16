@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { FooterDesktop, FooterMobile, NavDesktop } from "./tips/cursus";
+import Nav from "../views/mobile/Slanding/Components/Nav";
+
+const fourohfour__mobile = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: "50vh",
+  marginTop: "10vh",
+  width: "100vw",
+  padding: "0 1rem",
+};
+
+const fourohfour__desktop = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: "50vh",
+  marginTop: "10vh",
+  width: "100vw",
+  padding: "0 10vw",
+};
 
 const FourOhFour = () => {
+  const [win, setWin] = useState(0);
+  const [variant, setVariant] = useState(0);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setVariant(window.innerWidth);
+      setWin(window.innerWidth);
+    });
+    setWin(window.innerWidth);
+  }, [variant]);
   return (
     <>
       <Head>
@@ -54,80 +87,21 @@ const FourOhFour = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className="fourohfour__header">
-        <h1 className="fourohfour__title subheading">
-          <Link href="/">
-            <span className="primary">*</span>LeetSource
-          </Link>
-        </h1>
-        <nav className="navbar">
-          <ul className="nav__list">
-            <li className="nav__item">
-              <Link className="text" href="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link className="text" href="/pool">
-                Pool
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link className="text" href="/cursus">
-                Cursus
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link className="text" href="/paths">
-                Paths
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link className="text" href="/resources">
-                Resources
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        {win > 900 ? <NavDesktop /> : <Nav />}
       </header>
-      <main className="fourohfour__main">
-        <h1 className="heading primary">404 - Not Found</h1>
-        <h2 className="subheading">
+      <main
+        className="fourohfour__main"
+        style={win > 900 ? fourohfour__desktop : fourohfour__mobile}
+      >
+        <h1 className="heading primary mb-2 t-center">404 - Not Found</h1>
+        <h2 className="subheading mb-4 t-center">
           The page or resource you are looking for doesn't seem to exist!
         </h2>
         <Link className="button__primary eclipse" href="/">
           Home
         </Link>
       </main>
-      <footer className="home__footer">
-        <section className="copyright__line">
-          <p className="subheading mb-1">
-            <span className="primary">*</span>LeetSource
-          </p>
-          <p className="copyright text fw-300">
-            &copy; 2023 LeetSource, All rights reserved.
-          </p>
-        </section>
-        <section className="nav">
-          <Link className="text light" href="/">
-            Home
-          </Link>
-          <Link className="text light" href="/terms">
-            Terms and Conditions
-          </Link>
-          <Link className="text light" href="/about">
-            About
-          </Link>
-          <Link className="text light" href="/privacy">
-            Privacy Policy
-          </Link>
-          <Link className="text light" href="/blog">
-            Blog
-          </Link>
-          <Link className="text light" href="/cookie">
-            Cookie Policy
-          </Link>
-        </section>
-      </footer>
+      {win > 900 ? <FooterDesktop /> : <FooterMobile />}
     </>
   );
 };

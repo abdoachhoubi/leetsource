@@ -139,19 +139,19 @@ const SLanding = () => {
           <Link className="s-text light" href="/">
             Home
           </Link>
-          <Link className="s-text light" href="/terms">
+          <Link className="s-text light" href="/">
             Terms and Conditions
           </Link>
-          <Link className="s-text light" href="/about">
+          <Link className="s-text light" href="/">
             About
           </Link>
-          <Link className="s-text light" href="/privacy">
+          <Link className="s-text light" href="/">
             Privacy Policy
           </Link>
-          <Link className="s-text light" href="/blog">
+          <Link className="s-text light" href="/">
             Blog
           </Link>
-          <Link className="s-text light" href="/cookie">
+          <Link className="s-text light" href="/">
             Cookie Policy
           </Link>
         </section>

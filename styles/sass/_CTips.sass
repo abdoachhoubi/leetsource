@@ -1,20 +1,29 @@
 .tips__header
     width: 100%
     height: fit-content
-    .navigation
+    @media screen and ( max-width: $min_screen )
+        padding-top: 10vh
+.navigation
+    @include flex(row, center, space-between)
+    width: 100%
+    padding: 3rem 20vw
+    .nav__list
         @include flex(row, center, space-between)
-        width: 100%
-        padding: 3rem 20vw
-        .nav__list
-            @include flex(row, center, space-between)
-            :not(:last-child)
-                margin-right: 4rem
+        :not(:last-child)
+            margin-right: 4rem
+            @media screen and ( max-width: $med_screen )
+                margin-right: 2rem
+                    
     .header__banner
         background-color: $color__primary
         width: 100%
         .banner__pattern
             width: 100vw
             padding: 10vh 20vw 16vh 20vw
+            @media screen and ( max-width: $min_screen )
+                padding: 10vh 1rem 16vh 1rem
+            .heading
+                font-size: 1.8rem
             *
                 font-family: "syne", sans-serif
     .image__container
@@ -26,6 +35,10 @@
         right: 20vw
         top: -8vh
         border-radius: 12px
+        @media screen and ( max-width: $min_screen )
+            width: calc( 100vw - 2rem )
+            right: 1rem
+            top: -10vh
     .pt_banner
         width: 60vw
         height: auto
@@ -33,6 +46,10 @@
         right: 20vw
         top: -8vh
         border-radius: 12px
+        @media screen and ( max-width: $min_screen )
+            width: calc( 100vw - 2rem )
+            right: 1rem
+            top: -10vh
 
 .tips__main
     width: 100%
@@ -40,14 +57,22 @@
     @include flex(column, center, center)
     .description
         width: 30vw
+        @media screen and ( max-width: $med_screen )
+            width: 40vw
+        @media screen and ( max-width: $min_screen )
+            width: 100vw
+            padding: 0 1rem
     .list
-        list-style: circle
         *
-            list-style: circle
+            list-style: circle inside
         .list__item:not(:last-child)
             margin-bottom: 1rem
 
 .home__footer
     border-top: 1px solid $color__light
     padding: 2vh 20vw 2vh 20vw
+    margin-top: 10vh
+
+.s-home__footer
+    border-top: 1px solid $color__light
     margin-top: 10vh
