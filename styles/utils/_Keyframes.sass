@@ -1,0 +1,29 @@
+@mixin anime-right()
+	transform: translateX(0)
+	animation-name: anime-right
+	animation-duration: 1s
+	animation-timing-function: ease-in-out
+	animation-iteration-count: infinite
+
+@mixin anime-left()
+	transform: translateX(0)
+	animation-name: anime-left
+	animation-duration: 1s
+	animation-timing-function: ease-in-out
+	animation-iteration-count: infinite
+
+@keyframes anime-right
+	0%
+		transform: translateX(0)
+	50%
+		transform: translateX(30px)
+	100%
+		transform: translateX(0)
+
+@keyframes anime-left
+	0%
+		transform: translateX(0)
+	50%
+		transform: translateX(-30px)
+	100%
+		transform: translateX(0)

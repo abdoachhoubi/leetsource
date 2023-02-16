@@ -1,0 +1,63 @@
+@mixin flex($direction, $align, $justify)
+	display: flex
+	flex-direction: $direction
+	align-items: $align
+	justify-content: $justify
+
+@mixin grid($cols, $rows, $col_gap, $row_gap)
+	display: grid
+	grid-template-columns: $cols
+	grid-template-rows: $rows
+	column-gap: $col_gap
+	row-gap: $row_gap
+
+@mixin pos($pos, $zi, $top, $right, $bottom, $left)
+	position: $pos
+	top: $top
+	right: $right
+	bottom: $bottom
+	left: $left
+	z-index: $zi
+
+@mixin transition($dur, $tfunc)
+	transition-duration: $dur
+	transition-timing-function: $tfunc
+
+@mixin scrollbars()
+	scrollbar-width: auto
+	scrollbar-color: $color__light $color__dark
+	&::-webkit-scrollbar
+		width: 12px
+		@media screen and ( max-width: 900px )
+			display: none
+			width: 0
+	&::-webkit-scrollbar-track
+		background: $color__dark
+	&::-webkit-scrollbar-thumb
+		background-color: $color__light
+
+@mixin section_scrollbars($width)
+	scrollbar-width: $width
+	scrollbar-color: $color__light $color__dark
+	&::-webkit-scrollbar
+		width: 12px
+		@media screen and ( max-width: 900px )
+			display: none
+			width: 0
+	&::-webkit-scrollbar-track
+		background: $color__dark
+	&::-webkit-scrollbar-thumb
+		background-color: $color__light
+
+@mixin area_scroll()
+	scrollbar-width: 0
+	scrollbar-color: $color__light transparent
+	&::-webkit-scrollbar
+		width: 0
+		@media screen and ( max-width: 900 )
+			display: none
+			width: 0
+	&::-webkit-scrollbar-track
+		background: transparent
+	&::-webkit-scrollbar-thumb
+		background-color: $color__light

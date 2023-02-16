@@ -6,30 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest --watch"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.1",
+    "@apollo/client": "^3.7.4",
     "@emailjs/browser": "^3.10.0",
+    "@next/font": "^13.1.6",
+    "apollo": "^2.34.0",
     "axios": "^1.2.2",
     "cross-fetch": "^3.1.5",
-    "eslint": "8.27.0",
-    "eslint-config-next": "^13.1.1",
-    "framer-motion": "^7.6.6",
+    "emailjs": "^4.0.1",
+    "eslint": "^8.33.0",
+    "eslint-config-next": "^13.1.6",
+    "framer-motion": "^9.0.1",
+    "gql": "^1.1.2",
     "graphql": "^16.6.0",
-    "next": "13.0.3",
-    "next-auth": "^4.17.0",
+    "next": "^13.1.6",
+    "next-auth": "^4.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-feather": "^2.0.10",
-    "v8": "^0.1.0"
+    "react-feather": "^2.0.10"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@types/react": "^18.0.25",
-    "jest": "^29.3.1",
-    "jest-environment-jsdom": "^29.3.1"
+    "@types/react": "^18.0.26"
   }
 }

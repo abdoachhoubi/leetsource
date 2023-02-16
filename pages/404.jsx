@@ -1,27 +1,45 @@
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import Head from "next/head";
-import { useEffect, useState, createContext } from "react";
-import Landing from "../views/desktop/Landing/Landing";
-import SLanding from "../views/mobile/Slanding/SLanding";
+import { FooterDesktop, FooterMobile, NavDesktop } from "./tips/cursus";
+import Nav from "../views/mobile/Slanding/Components/Nav";
 
-const HomeContext = createContext();
+const fourohfour__mobile = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: "50vh",
+  marginTop: "10vh",
+  width: "100vw",
+  padding: "0 1rem",
+};
 
-export default function Home() {
-  const [size, setSize] = useState(0);
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-  const resize = (w, h) => {
-    setWidth(w);
-    setHeight(h);
-  };
+const fourohfour__desktop = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  minHeight: "50vh",
+  marginTop: "10vh",
+  width: "100vw",
+  padding: "0 10vw",
+};
+
+const FourOhFour = () => {
+  const [win, setWin] = useState(0);
+  const [variant, setVariant] = useState(0);
   useEffect(() => {
-    window.addEventListener("resize", () => setSize(window.innerWidth));
-    resize(window.innerWidth, window.innerHeight);
-  }, [size]);
-
+    window.addEventListener("resize", () => {
+      setVariant(window.innerWidth);
+      setWin(window.innerWidth);
+    });
+    setWin(window.innerWidth);
+  }, [variant]);
   return (
-    <HomeContext.Provider value={{ width, height }}>
+    <>
       <Head>
-        <title>Leet Source</title>
+        <title>Not Found</title>
         <meta
           name="google-site-verification"
           content="ovvmP3s_dWVp7bb05Bb8nGIrneErM1TaR8UDf2Yu32c"
@@ -68,7 +86,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {width == 0 ? <></> : width > 900 ? <Landing /> : <SLanding />}
-    </HomeContext.Provider>
+      <header className="fourohfour__header">
+        {win > 900 ? <NavDesktop /> : <Nav />}
+      </header>
+      <main
+        className="fourohfour__main"
+        style={win > 900 ? fourohfour__desktop : fourohfour__mobile}
+      >
+        <h1 className="heading primary mb-2 t-center">404 - Not Found</h1>
+        <h2 className="subheading mb-4 t-center">
+          The page or resource you are looking for doesn't seem to exist!
+        </h2>
+        <Link className="button__primary eclipse" href="/">
+          Home
+        </Link>
+      </main>
+      {win > 900 ? <FooterDesktop /> : <FooterMobile />}
+    </>
   );
-}
+};
+
+export default FourOhFour;
