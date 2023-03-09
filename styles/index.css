@@ -471,15 +471,16 @@ td, th {
   width: fit-content;
   padding: 1.2rem 4rem;
   border-radius: 8px;
-  background-color: #101010;
-  color: #FFFFFF;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid transparent;
-}
-.button__dark:hover {
   background-color: transparent;
   color: #101010;
-  border: 1px solid #101010;
+  border: 2px solid #101010;
+  transition: all 0.2s ease-in;
+  max-width: max-content;
+}
+.button__dark:hover {
+  background-color: #101010;
+  color: #FFFFFF;
+  border: 2px solid transparent;
 }
 @media screen and (max-width: 1700px) {
   .button__dark {
@@ -581,6 +582,11 @@ td, th {
   top: 0;
   right: 0;
   z-index: 2;
+}
+
+.s-menu__open__button,
+.s-menu__close__button {
+  cursor: pointer;
 }
 
 .s-mob__drawer {
@@ -765,6 +771,17 @@ input {
 }
 .home__header .nav__item {
   font-size: 1.2rem;
+}
+.home__header .nav__item ::after {
+  display: block;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width .1s ease-in;
+}
+.home__header .nav__item:hover ::after {
+  width: 100%;
 }
 .home__header .content {
   max-width: 100%;
@@ -1695,10 +1712,6 @@ input {
 }
 .s-home__main .s-main__section4 svg {
   margin-right: 0.5rem;
-}
-.s-home__main .s-main__section4 .button__dark {
-  padding: 1rem 0;
-  width: 100%;
 }
 
 .s-home__footer {
